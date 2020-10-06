@@ -1,0 +1,27 @@
+{{$class := "is-medium" }}
+{{ $placeholder := resources.Get "img/jpg/placeholder.jpg" }}
+<section class="hero {{$class}} is-primary is-bold has-bg-image" style="background-image:url('{{$placeholder.Permalink}}')">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-7">
+          {{with .Params.hero.overline}}<p class="is-size-6 title mb-0">{{.}}</p>{{end}}
+          {{with .Params.hero.heading}}<h1 class="is-size-1 is-spaced title">{{.}}</h1>{{end}}
+          {{with .Params.hero.subheading}}<h2 class="is-size-3 is-spaced subtitle">{{.}}</h2>{{end}}
+          {{with .Params.hero.summary}}<p class="is-size-5 subtitle">{{.}}</p>{{end}}
+          {{with .Params.hero.content}}
+            <div class="content">
+              {{ . | markdownify }}
+            </div>
+          {{end}}
+          <!--p>{{.Site.Params.lorem}}</p-->
+          {{with .Params.hero.cta }}
+            {{range .}}
+              <p><a href="{{.href}}" class="button{{with .class}} {{.}}{{end}}">{{.text}}</a></p>
+            {{end}}
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

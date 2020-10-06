@@ -1,0 +1,28 @@
+<!--
+  {{/* partial "placeholder" (dict "context" . "ratio" "400x400") */}}
+  https://gohugo.io/content-management/image-processing/
+  Fill
+  Fit
+  Resize
+-->
+
+{{ $placeholder := resources.Get .src }}
+{{if eq .src nil }}
+  {{ $placeholder := resources.Get "img/jpg/placeholder-1.jpg" }}
+{{else}}
+
+{{end}}
+
+{{$alt := .alt }}
+{{if eq $alt nil }}
+{{$alt := "Build Partners"}}
+{{end}}
+
+
+
+{{ $placeholder := $placeholder.Fill .ratio }}
+{{ $ratios := split .ratio "x" }}
+{{ $width := index ($ratios) 0 }}
+{{ $height := index ($ratios) 1 }}
+
+<img class="has-ratio {{.class}}" src="{{$placeholder.Permalink}}" width="{{$width}}" height="{{$height}}" alt="{{$alt}}">

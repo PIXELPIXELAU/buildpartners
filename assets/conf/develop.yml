@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: develop # Branch to update (optional; defaults to master)
+
+  ## Set to false to prevent transforming images in media gallery view
+  use_large_media_transforms_in_media_library: false
+
+
+# Publish Mode - disabled until handover to production
+publish_mode: editorial_workflow
+
+#media_folder: static/img
+media_folder: assets/uploads
+public_folder: /uploads
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# Editable content

@@ -1,0 +1,38 @@
+{{ $resource := resources.Get "img/jpg/placeholder.jpg" }}
+{{ $image := $resource.Resize "1200x" }}
+{{ $imageSquare := $resource.Fill "1200x1200" }}
+{{ $imageRectangle := $resource.Fill "2400x1200" }}
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="{{.Title}}">
+<meta itemprop="description" content="{{.Description}}">
+<meta itemprop="image" content="{{ $imageRectangle.Permalink }}" >
+
+<!-- Twitter Card data https://cards-dev.twitter.com/validator -->
+<meta name="twitter:card" content="summary_large_image">
+{{- with .Site.Social.twitter }}
+<meta name="twitter:site" content="{{.}}">
+{{- end}}
+<meta name="twitter:title" content="{{.Title}}">
+<meta name="twitter:description" content="{{.Description}}"> <!-- less than 200 characters -->
+{{- with .Site.Social.twitter }}
+<!--meta name="twitter:creator" content="@garyswanepoel"--><!-- if isset author -->
+{{- end}}
+<meta name="twitter:image:src" content="{{ $imageSquare.Permalink}}"> <!-- 1:1  144x144 <> 4096x4096 (280x150px) // 2:1 300x157 <> 4096x4096 -->
+
+<!-- Open Graph data -->
+<meta property="og:title" content="{{.Title}}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{.Permalink}}" />
+<meta property="og:image" content="{{$imageSquare.Permalink}}" /> <!-- 1:1 1080 <> 1200 x 1200  -->
+<meta property="og:description" content="{{.Description}}" />
+<meta property="og:site_name" content="{{.Site.Title}}" />
+<meta property="og:locale" content="en_GB" />
+
+<meta property="article:published_time" content="{{.Date}}" />
+<meta property="article:modified_time" content="{{.Date}}" />
+
+
+<!--meta property="article:section" content="" /-->
+<!--meta property="article:tag" content="Article Tag" /-->
+<!--meta property="fb:admins" content="Facebook numberic ID" /-->

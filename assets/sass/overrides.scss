@@ -1,0 +1,83 @@
+
+/* Bulma Customer Override File */
+
+// Setup Globals
+$typescale: $PerfectFourth;
+$typescaleMobile: $MinorThird;
+
+/* Colours
+*/
+$white:	hsl(0, 0%, 100%);
+$black:	hsl(0, 0%, 4%);
+$light:	hsl(0, 0%, 96%);
+$dark:	hsl(0, 0%, 21%);
+$primary:	hsl(171, 100%, 41%);
+$info:	hsl(204, 86%, 53%);
+$link:	hsl(217, 71%, 53%);
+$success:	hsl(141, 71%, 48%);
+$warning:	hsl(48, 100%, 67%);
+$danger:	hsl(348, 100%, 61%);
+$black-bis:	hsl(0, 0%, 7%);
+$black-ter:	hsl(0, 0%, 14%);
+$grey-darker:	hsl(0, 0%, 21%);
+$grey-dark:	hsl(0, 0%, 29%);
+$grey:	hsl(0, 0%, 48%);
+$grey-light:#F2F2F2;
+$grey-lightest:#F9F9F9;
+
+$grey-lighter:hsl(0, 0%, 86%);
+$white-ter:hsl(0, 0%, 96%);
+$white-bis: #FCFCFC;
+
+
+// Setup Brand - Colours
+
+//>> Insert Brand Colours
+
+
+/* Typography */
+$size-1: 1rem * $typescale * $typescale * $typescale * $typescale * $typescale;
+$size-2:1rem * $typescale * $typescale * $typescale * $typescale;
+$size-3:1rem * $typescale * $typescale * $typescale;
+$size-4:1rem * $typescale * $typescale;
+$size-5:1rem * $typescale;
+$size-6:1rem;
+
+$family-sans-serif: "Montserrat",sans-serif;
+  //$title-color : $dark;
+$title-family	: "Montserrat",sans-serif;
+$title-alt-family	: "Montserrat",sans-serif;
+$title-line-height:1.3;
+//$title-weight: $extralight;
+$subtitle-line-height:1.3;
+
+$content-heading-line-height: 1.4;
+
+/* Buttons */
+  $button-family: $family-sans-serif;
+  //$button-padding-vertical: 0rem;//calc(0.5em - #{$button-border-width});
+  //$button-padding-horizontal: 0rem;
+  $button-padding-vertical : 1.75rem;
+
+/* Inputs */
+
+$control-padding-vertical : 1.75rem;
+$input-placeholder-color: rgba(0,0,0,.5);
+
+
+  /* Spacers */
+$section-padding: 3rem 1.5rem;
+
+/* Navbar */
+  //$navbar-height : 4.125rem;
+  //$navbar-item-color : $black;
+
+/* Footer */
+  $footer-background-color: $dark; // $scheme-main-bis;
+  $footer-color: $white;
+  $footer-padding: 3rem 0 3rem 0;
+
+/*Breadcrumbs*/
+  $breadcrumb-item-separator-color: $primary;
+  $breadcrumb-item-color: $grey-darker;
+  $breadcrumb-item-hover-color: $primary;

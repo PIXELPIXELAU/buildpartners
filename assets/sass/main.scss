@@ -1,0 +1,135 @@
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "init.scss";
+@import "overrides.scss";
+@import "node_modules/bulma/bulma.sass";
+@import "node_modules/bulma-extensions/bulma-carousel/src/sass/index.sass";
+@import "node_modules/bulma-extensions/bulma-pricingtable/src/sass/index.sass";
+//@import "node_modules/bulma-extensions/bulma-timeline/src/sass/index.sass";
+@import "node_modules/bulma-extensions/bulma-divider/src/sass/index.sass";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+/** Bulma Bug fixes
+*/
+.navbar {
+  &.is-transparent {
+    background-color: transparent;
+    background-image: none;
+  }
+}
+
+.columns.is-vbottom { align-items: flex-end; }
+
+/******************
+ * Bulma Additions
+ ******************/
+
+.has-grow-1 { flex-grow: 1;}
+.has-grow-2 { flex-grow: 2;}
+.has-grow-3 { flex-grow: 3;}
+.has-grow-4 { flex-grow: 4;}
+.has-grow-5 { flex-grow: 5;}
+.has-grow-6 { flex-grow: 6;}
+
+.has-spacer { padding:$spacer1/2 0;}
+.has-spacer-1 { padding:$spacer1 0;}
+.has-spacer-2 { padding:$spacer2 0;}
+.has-spacer-3 { padding:$spacer3 0;}
+.has-spacer-4 { padding:$spacer4 0;}
+.has-spacer-5 { padding:$spacer5 0;}
+.has-spacer-6 { padding:$spacer6 0;}
+
+.has-padding { padding:$spacer1/2;}
+.has-padding-1 { padding:$spacer1;}
+.has-padding-2 { padding:$spacer2;}
+.has-padding-3 { padding:$spacer3;}
+.has-padding-4 { padding:$spacer4;}
+.has-padding-5 { padding:$spacer5;}
+.has-padding-6 { padding:$spacer6;}
+
+.has-elevation {box-shadow: $elevation1;}
+.has-elevation-1 {box-shadow: $elevation1; transition: all 0.3s $cubic;}
+.has-elevation-1:hover { box-shadow: $elevationHover}
+.has-elevation-2 {box-shadow:$elevation2;}
+.has-elevation-3 {box-shadow:$elevation3;}
+.has-elevation-4 {box-shadow:$elevation4;}
+.has-elevation-5 {box-shadow:$elevation5;}
+
+.is-transparent {color: transparent;}
+
+.has-spacer.is-divider { margin:$spacer1/2 0;}
+
+.is-truncated {width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.has-overflow {overflow: auto;}
+
+/* Sizes - Default */
+$size1:1rem * $typescale * $typescale * $typescale * $typescale * $typescale;
+$size2:1rem * $typescale * $typescale * $typescale * $typescale;
+$size3:1rem * $typescale * $typescale * $typescale;
+$size4:1rem * $typescale * $typescale;
+$size5:1rem * $typescale;
+$size6:1rem;
+
+/* Font Sizes */
+h1,.is-size-1 {font-size:1rem * $typescale * $typescale * $typescale * $typescale * $typescale  !important;}
+h2,.is-size-2 {font-size:1rem * $typescale * $typescale * $typescale * $typescale  !important;}
+h3,.is-size-3 {font-size:1rem * $typescale * $typescale * $typescale  !important;}
+h4,.is-size-4 {font-size:1rem * $typescale * $typescale  !important;}
+h5,.is-size-5 {font-size:1rem * $typescale !important;}
+h6,.is-size-6 {font-size:1rem;}
+
+@media screen and (max-width: $on-tablet) {
+  h1,.is-size-1 {font-size:1rem * $typescaleMobile * $typescaleMobile * $typescaleMobile * $typescaleMobile * $typescaleMobile  !important;}
+  h2,.is-size-2 {font-size:1rem * $typescaleMobile * $typescaleMobile * $typescaleMobile * $typescaleMobile  !important;}
+  h3,.is-size-3 {font-size:1rem * $typescaleMobile * $typescaleMobile * $typescaleMobile  !important;}
+  h4,.is-size-4 {font-size:1rem * $typescaleMobile * $typescaleMobile  !important;}
+  h5,.is-size-5 {font-size:1rem * $typescaleMobile !important;}
+  h6,.is-size-6 {font-size:1rem;}
+
+  .has-spacer-1 { padding:$spacer1 0;}
+  .has-spacer-2 { padding:$spacer2/2 0;}
+  .has-spacer-3 { padding:$spacer3/2 0;}
+  .has-spacer-4 { padding:$spacer4/2 0;}
+  .has-spacer-5 { padding:$spacer5/2 0;}
+  .has-spacer-6 { padding:($spacer6/2) 0;}
+
+  .section {padding-top: $spacer1; padding-bottom: $spacer1;}
+}
+
+.has-max-width-mobile {max-width: $on-mobile;}
+.has-max-width,
+.has-max-width-tablet {max-width: $on-tablet;}
+.has-max-width-desktop {max-width: $on-desktop;}
+.has-max-width-widescreen {max-width: $on-widescreen;}
+.has-max-width-fullhd {max-width: $on-fullhd;}
+
+.is-margin-auto {margin:auto;}
+
+.is-divider, .is-divider-vertical {margin: 1.5rem 0;}
+
+q,
+blockquote {quotes: "“" "”" "‘" "’";/*font-style: italic;*/}
+
+q:before,
+blockquote:before {content: open-quote;}
+
+q:after,
+blockquote:after {content: close-quote;}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {color: $orange;font-size: 2em; line-height: 0;}
+q:before,
+blockquote:before{vertical-align: -0.25em;}
+q:after,
+blockquote:after {vertical-align: -0.5em;}
+blockquote {/*margin-left: 0;padding-left: 1em;border-left: 5px solid $orange;*/}
+
+.is-background-contained {background-size: contain;}
+
+/******************
+ * Custom StyleSheet
+ ******************/
+
+ @import "custom.scss";

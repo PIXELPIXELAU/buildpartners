@@ -1,0 +1,30 @@
+{{ $Pages := where .Site.RegularPages "Section" "pages"  }}
+
+
+<footer class="footer is-primary">
+  <div class="section">
+    <div class="container">
+      <div class="columns is-vcenter">
+        <div class="column is-3">
+          <a href="/">
+            {{ $logo := resources.Get "img/svg/logo-on-dark.svg" }}
+            {{ $logo.Content | safeHTML }}
+          </a>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="pt-6">
+          <nav class="breadcrumb is-size-7" aria-label="breadcrumbs">
+            <ul>
+              <li><a href="/" title="{{.Site.Title}}">{{.Site.Title}}</a>&copy; 2020&nbsp;&nbsp;</li>
+              {{ range $index, $page :=  where $Pages "Params.navigation" "intersect" (slice "footer - links") }}
+              <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+              {{ end }}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

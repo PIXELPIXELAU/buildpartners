@@ -1,0 +1,87 @@
+
+/* Typescale */
+$MinorSecond:1.067;
+$MajorSecond:1.125;
+$MinorThird:1.200;
+$MajorThird:1.250;
+$PerfectFourth:1.333;
+$AugmentedFourth:1.414;
+$PerfectFifth:1.500;
+$GoldenRatio:1.618;
+$MajorThird:1.250;
+
+/*Weights */
+$thin:100;
+$extralight:200;
+$light:300;
+$regular:400;
+$medium:500;
+$bold:700;
+$extrabold:800;
+$ultrabold:900;
+
+/* Colors */
+$black : rgba(0,0,0,1);
+$black100 : rgba(0,0,0,0.1);
+$black200 : rgba(0,0,0,0.2);
+$black300 : rgba(0,0,0,0.3);
+$black400 : rgba(0,0,0,0.4);
+$black500 : rgba(0,0,0,0.5);
+$black600 : rgba(0,0,0,0.6);
+$black700 : rgba(0,0,0,0.7);
+$black800 : rgba(0,0,0,0.8);
+$black900 : rgba(0,0,0,0.9);
+$white : rgba(0,0,0,1);
+$white100 : rgba(255,255,255,0.1);
+$white200 : rgba(255,255,255,0.2);
+$white300 : rgba(255,255,255,0.3);
+$white400 : rgba(255,255,255,0.4);
+$white500 : rgba(255,255,255,0.5);
+$white600 : rgba(255,255,255,0.6);
+$white700 : rgba(255,255,255,0.7);
+$white800 : rgba(255,255,255,0.8);
+$white900 : rgba(255,255,255,0.9);
+$grey: hsl(0,0,60%);
+$grey50 : hsl(0,0,95%);
+$grey100 : hsl(0,0,90%);
+$grey200 : hsl(0,0,80%);
+$grey300 : hsl(0,0,70%);
+$grey400 : hsl(0,0,60%);
+$grey500 : hsl(0,0,50%);
+$grey600 : hsl(0,0,40%);
+$grey700 : hsl(0,0,30%);
+$grey800 : hsl(0,0,20%);
+$grey900 : hsl(0,0,10%);
+
+
+/* Spacers */
+/* TODO: Reverse Spacers ie. spacer6 = 1.5rem */
+$spacer1: 1.5rem*1;
+$spacer2: 1.5rem*2;
+$spacer3: 1.5rem*3;
+$spacer4: 1.5rem*4;
+$spacer5: 1.5rem*5;
+$spacer6: 1.5rem*6;
+
+
+/* elevationtion */
+$elevationHover: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$elevation1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$elevation2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+$elevation3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$elevation4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+$elevation5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+$text-glow: 0 2px rgba(0,0,0,.5), 0 1px 1em rgba(0,0,0,1);
+
+/* Animation */
+$cubic: cubic-bezier(.25,.8,.25,1);
+
+/* Devices Sizes
+*/
+
+$on-mobile:30rem;     //mobile: up to 768px
+$on-tablet:48rem;     //tablet: from 769px
+$on-desktop:64rem;    //desktop: from 1024px
+$on-widescreen:76rem; //widescreen: from 1216px
+$on-fullhd:88rem;     //fullhd: from 1408px

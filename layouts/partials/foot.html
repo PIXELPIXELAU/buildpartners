@@ -1,0 +1,28 @@
+
+<!-- Netlify Authentication -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+{{ $jQuery := resources.Get "js/jquery/jquery.js" }}
+{{ $fontawesome := resources.Get "node_modules/@fortawesome/fontawesome-free/js/all.js" }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $moment := resources.Get "node_modules/moment/src/moment.js"  }}
+
+{{ $js := slice $jQuery $fontawesome $main | resources.Concat "js/bundle.js" }}
+
+{{ if .Site.IsServer }}
+  <script src="{{ $js.Permalink }}"></script>
+{{ else }}
+  {{ $js := $js | minify | fingerprint }}
+  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}
