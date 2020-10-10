@@ -1,4 +1,279 @@
+{{ define "main" }}
 
-{{ define "<html>"}}
-<html itemscope="itemscope" itemtype="https://schema.org/Organisation">
-{{end}}
+<section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+        <div class="container img-hero">
+            <figure class="box image is-16by9">
+                <img
+                src="{{ .Params.Hero }}"
+                alt=""
+                />
+            </figure>
+            
+            <div class="box is-overlain">
+                <h2 class="is-overline mb-1">Build.Partners</h2>
+                <h3 class="is-box-title has-text-black mb-6">
+                    {{ .Params.Statement }}
+                </h3>
+                
+                <div class="buttons is-full">
+                    <a href="/projects" class="button is-primary is-fullwidth">
+                        View Our Work
+                    </a>
+                    <a href="/services" class="button is-primary is-fullwidth is-inverted">
+                        What We Do
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section
+class="hero img-bg is-primary is-fullheight-with-navbar"
+style="
+--image: url('{{ .Params.CTA.Image }}');
+"
+>
+<div class="container img-hero">
+    <div class="box is-overlain is-right" style="max-width: 550px">
+        <h2 class="is-overline mb-1">{{ .Params.CTA.Overline }}</h2>
+        <h3 class="is-box-title has-text-black mb-2">
+            {{ .Params.CTA.Headline }}
+        </h3>
+        
+        {{ range .Params.CTA.Description }}
+        <p class="mb-2">
+            {{ . }}
+        </p>
+        {{ end }}
+        
+        <div class="buttons is-full">
+            <a href="/contact" class="button is-primary is-fullwidth">
+                Make an Enquiry
+            </a>
+            <a href="/downloads" class="button is-primary is-fullwidth is-inverted">
+                Download PDF
+            </a>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="section pb-2">
+    <div class="container pt-6">
+        <h2 class="title is-uppercase">Our Work</h2>
+    </div>
+</section>
+
+{{ with index (where ((.Site.GetPage "projects").RegularPages) "Params.featured" true) 0 }}
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8 lm-projects-banner">
+                    <img
+                    class="has-shadow"
+                    src="{{ .Params.Image }}"
+                    alt=""
+                    />
+                </div>
+                
+                <div class="column is-4">
+                    <article
+                    class="box is-shadowless"
+                    style="position: relative; left: -1.5rem"
+                    >
+                    <h3 class="is-box-title has-text-black mb-2">{{ .Params.Zones.Title }}</h3>
+                    
+                    <p class="mb-2">
+                        {{ index .Params.KeyStats 0 }}
+                    </p>
+                    
+                    <a
+                    href="{{ .Permalink }}"
+                    class="button is-primary is-inverted is-fullwidth"
+                    >
+                    View Project
+                </a>
+            </article>
+            
+            <div class="has-text-black">
+                <h3 class="is-overline has-text-weight-semibold mb-3">
+                    Deliverables
+                </h3>
+                <ul class="is-size-5">
+                    {{ range .Params.Deliverables }}<li>{{ . }}</li>{{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+{{ end }}
+
+<section class="container py-6">
+    <h2 class="is-section-header">Some of our other selected projects</h2>
+    
+    <div class="columns is-multiline is-variable 6">
+        
+        {{ range where ((.Site.GetPage "projects").RegularPages) "Params.featured" true }}
+        <div class="column is-4">
+            <div>
+                <figure class="image has-shadow mb-5">
+                    <img
+                    src="{{ .Params.Image }}"
+                    alt="Project"
+                    />
+                </figure>
+                <h3 class="is-size-4 has-text-black has-text-weight-bold">
+                    {{ .Title }}
+                </h3>
+                <h4 class="is-overline has-text-weight-semibold">
+                    {{ .Params.Project.Name }}, {{ .Params.Project.Location }}
+                </h4>
+            </div>
+        </div>
+        {{ end }}
+        
+    </div>
+    
+    <div class="buttons is-right">
+        <a href="/projects" class="button is-primary is-inverted">View All Projects</a>
+    </div>
+</section>
+
+<section class="section pb-2">
+    <div class="container">
+        <h2 class="title is-uppercase">What We Do</h2>
+    </div>
+</section>
+
+<section class="hero is-primary">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-4 py-6">
+                    <h2 class="is-size-3 has-text-weight-bold mb-6 pb-5">
+                        {{ .Params.WhatWeDo.Headline }}
+                    </h2>
+                    
+                    <article class="lm-pdf-push">
+                        <img
+                        class="has-shadow mr-5"
+                        src="img/pdf-cover.png"
+                        alt="PDF Cover"
+                        />
+                        
+                        <div class="lm-pdf-push-body has-text-black">
+                            <h3 class="is-size-5 has-text-weight-semibold mb-2">
+                                Want to know more?
+                            </h3>
+                            <p class="mb-4">
+                                Get a copy of our services pack with full details of our
+                                products & services.
+                            </p>
+                            <button class="button is-primary is-inverted is-fullwidth">
+                                Download PDF
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="column is-6 is-offset-2">
+                    {{ range ((.Site.GetPage "/services").Pages) }}
+                    <article class="lm-service">
+                        <h3 class="is-size-4 has-text-black mb-2 has-text-weight-semibold">
+                            {{ .Title }}
+                        </h3>
+                        <p class="mb-5 has-text-dark">
+                            {{ .Params.Description }}
+                        </p>
+                        <div class="buttons is-right">
+                            <a href="{{ .Permalink }}" class="button is-primary">Find Out More</a>
+                        </div>
+                    </article>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-6">
+    <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
+    
+    <div class="columns lm-clients mb-6">
+        {{ range .Params.WhoWeWork.Clients }}
+        <div class="column is-3">
+            <img src="{{ .img }}" alt="{{ .title }}" style="height: 100px;" />
+        </div>
+        {{ end }}
+    </div>
+    
+    <blockquote class="lm-testimonial columns is-variable is-6">
+        <div class="column is-5 is-offset-1 lm-testimonial-quote">
+            <q class="is-size-2 has-text-black has-text-weight-semibold mb-2">
+                {{ .Params.WhoWeWork.Quote.Message }}
+            </q>
+            <span class="is-overline">{{ .Params.WhoWeWork.Quote.Author }}</span>
+        </div>
+        
+        <div class="column is-5">
+            <img
+            class="has-shadow"
+            src="{{ .Params.WhoWeWork.Quote.Image }}"
+            alt=""
+            />
+        </div>
+    </blockquote>
+</section>
+
+<section class="section pb-2">
+    <div class="container">
+        <h2 class="title is-uppercase">Expertise</h2>
+    </div>
+</section>
+
+<section class="container pt-2 pb-6 mb-6">
+    <h2 class="is-section-header">
+        How can you get the most out of your project?
+    </h2>
+    
+    <div class="columns">
+        <div class="column is-8">
+            <div class="box is-primary p-6">
+                <h3 class="is-overline mb-1">{{ .Params.Expertise.Overline }}</h3>
+                <h4 class="is-box-title has-text-black mb-4">
+                    {{ .Params.Expertise.Headline }}
+                </h4>
+                
+                <p class="has-text-weight-medium has-text-dark">
+                    {{ .Params.Expertise.Description }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        {{ range first 3 ((.Site.GetPage "/services").Pages) }}
+        <div class="column is-3">
+            <div>
+                {{ $service := . }}
+                {{ $projects := ((.Site.GetPage "/projects").Pages) }}
+                {{ range first 1 (where $projects "Params.tags" .File.TranslationBaseName) }}
+                <div>
+                    <figure class="image has-shadow mb-5">
+                        <img alt="Project" src="{{ .Params.Image }}">
+                    </figure>
+                    <h3 class="is-size-4 has-text-black has-text-weight-bold">{{ .Params.Title }}</h3>
+                    <h4 class="is-overline has-text-weight-semibold">{{ $service.Title }}</h4>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

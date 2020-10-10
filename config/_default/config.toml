@@ -1,9 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Build Partners"
-#theme = "PIXELPIXEL"
 
-# favicon = ""
 summaryLength = 24
 
 [module]
@@ -58,13 +56,3 @@ summaryLength = 24
  tag = "tags" #default
  category = "categories" #default
  # trainer = "trainers"
-
-
-[menu]
-  [[menu.primary]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  #[[menu.footer]]
-  #[[menu.footerlinks]]

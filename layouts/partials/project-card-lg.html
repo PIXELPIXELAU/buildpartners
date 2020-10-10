@@ -1,0 +1,28 @@
+<section class="hero is-primary is-fullheight img-bg py-5" style="--image: url('{{ .Params.Image }}');">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-5 is-offset-7">
+                    <div class="box">
+                        <h2 class="is-overline">Featured Project, Location</h2>
+                        <h1 class="is-box-title has-text-black mb-5">{{ .Title }}</h1>
+                        <a class="button is-primary is-fullwidth" href="{{ .Permalink }}">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-foot">
+        <div class="container">
+            <div class="columns">
+                {{ range .Params.Zones.Photos }}
+                <div class="column is-2">
+                    <figure class="image is-16by9 has-shadow">
+                        <img alt="" src="{{ . }}">
+                    </figure>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>

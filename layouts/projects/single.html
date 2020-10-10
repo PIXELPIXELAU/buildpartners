@@ -1,0 +1,112 @@
+{{ define "main" }}
+
+<section class="hero is-primary is-fullheight img-bg py-6" style="--image: url('https://images.unsplash.com/photo-1601334168575-faa1f2640cff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');">
+    <div class="hero-head">
+        <div class="container">
+            <div class="hero-sub">
+                <h2 class="is-overline"><span class="has-text-black has-text-weight-bold">Our Work &mdash;</span> {{ .Title }}</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container py-6">
+    <div class="columns">
+        <div class="column flex-col sis-12 has-text-black">
+            <h2 class="is-size-4 has-text-weight-semibold is-uppercase mb-3">Deliverables</h2>
+            <ul class="is-size-5 mb-4">
+                {{ range .Params.Deliverables }}<li>{{ . }}</li>{{ end }}
+            </ul>
+            <div class="spacer"></div>
+            <h2 class="is-size-3 has-text-weight-bold is-uppercase block pt-5">{{ .Params.Zones.Title }}</h2>
+        </div>
+        <div class="column is-6">
+            <article class="box is-shadowless move-up">
+                <h2 class="is-overline">{{ .Params.Project.Name }}, {{ .Params.Project.Location }}</h2>
+                <h1 class="is-box-title has-text-black mb-2">{{ .Title }}</h1>
+                {{ .Content }}
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="container py-3">
+    <div class="tile is-ancestor">
+        <div class="tile">
+            <div class="tile is-8 is-parent">
+                <figure class="tile is-child image is-16by9 has-shadow">
+                    <img alt="" src="{{ index .Params.Zones.Photos 0 }}">
+                </figure>
+            </div>
+            <div class="tile is-vertical">
+                <div class="tile is-parent">
+                    <div class="tile is-child">
+                        <figure class="image is-16by9 has-shadow">
+                            <img alt="" src="{{ index .Params.Zones.Photos 1 }}">
+                        </figure>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child">
+                        <figure class="image is-16by9 has-shadow">
+                            <img alt="" src="{{ index .Params.Zones.Photos 2 }}">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container py-6">
+    <div class="columns">
+        <div class="column is-8">
+            {{ range .Params.Services }}
+            <div class="block limit-width at-600">
+                <h3 class="is-box-title mb-2">{{ .title }}</h3>
+                {{ range .description }}
+                <p class="block">{{ . }}</p>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+        <div class="column box is-primary p-5">
+            <h3 class="is-overline has-text-weight-bold mb-5">Key Stats & Takeaway</h3>
+            {{ range .Params.KeyStats }}
+            <p class="block">{{ . }}</p>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section class="container py-6">
+    <div class="lm-testimonial-quote">
+        <q class="is-size-2 is-box-title has-text-black has-text-weight-semibold mb-2 limit-width at-600">{{ .Params.Quote.Message }}</q> <span class="is-overline">{{ .Params.Quote.Author }}</span>
+    </div>
+</section>
+
+{{- partial "hero.html" . -}}
+
+<section class="container py-6 mb-6">
+    <h2 class="is-section-header">Have a look at some other of our projects</h2>
+    <div class="columns">
+        {{ if .PrevInSection }}{{ with .PrevInSection }}{{- partial "project-card.html" . -}}{{ end }}{{ else }}<div class="column is-4"></div>{{ end }}
+        <div class="column is-4"></div>
+        {{ if .NextInSection }}{{ with .NextInSection }}{{- partial "project-card.html" . -}}{{ end }}{{ else }}<div class="column is-4"></div>{{ end }}
+    </div>
+    <div class="level">
+        {{ if .PrevInSection }}{{ with .PrevInSection }}
+        <div class="level-left">
+            <a class="button is-primary is-inverted" href="{{ .Permalink }}"><span class="icon"><svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0002 9.99996V14H11.0002L14.5002 17.5L12.0802 19.92L4.16016 12L12.0802 4.07996L14.5002 6.49996L11.0002 9.99996H20.0002Z" fill="currentColor"></path></svg></span> <span>Previous Project</span></a>
+        </div>
+        {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
+        {{ if .NextInSection }}{{ with .NextInSection }}
+        <div class="level-right">
+            <a class="button is-primary is-inverted" href="{{ .Permalink }}"><span>Next Project</span> <span class="icon"><svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 9.99996V14H13L9.5 17.5L11.92 19.92L19.84 12L11.92 4.07996L9.5 6.49996L13 9.99996H4Z" fill="currentColor"></path></svg></span></a>
+        </div>
+        {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
+    </div>
+</section>
+
+{{ end }}

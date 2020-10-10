@@ -1,44 +1,11 @@
-<!-- https://gohugo.io/templates/base/ -->
-<!doctype html>
-{{block "<html>" . }}
-<html lang="en" itemscope="itemscope" itemtype="https://schema.org/Webpage">
-{{end}}
-<head>
-{{ partial "head" . }}
-{{ partial "head_meta--social" . }}
-</head>
-
-{{block "<body>" . }}
-  <body class="has-background-white-bis has-navbar-fixed-top template_default--baseof">
-{{end}}
-
-{{ block "header" . }}
-  {{partial "navigation" . }}
-{{ end }}
-
-{{ block "hero" . }}
-  {{ partial "hero" . }}
-{{ end }}
-
-
-{{ block "body" .}}
-<section id="body">
-  <div class="section">
-    <div id="main" class="container">
-      {{ block "main" .}}
-        {{.Content}}
-      {{end}}
-    </div>
-  </div>
-</section>
-{{end}}
-
-{{ block "section" .}}<!--empty-->{{end}}
-
-
-{{ block "footer" . }}
-   {{partial "footer" . }}
-{{end}}
-</body>
-{{ partial "foot" .}}
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div id="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
 </html>
