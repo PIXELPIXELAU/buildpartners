@@ -59,41 +59,23 @@
 <section class="container py-6 mb-6">
     <h2 class="is-section-header">Have a look at some other of our other services</h2>
     <div class="columns">
-        {{ if .PrevInSection }}{{ with .PrevInSection }}
-        <div class="column is-4">
-            <h3 class="is-size-3 has-text-weight-semibold has-text-black mb-4">
-                {{ .Title }}
-            </h3>
-            <p class="block">
-                {{ .Description }}
-            </p>
-        </div>
-        {{ end }}{{ else }}<div class="column is-4"></div>{{ end }}
-        <div class="column is-4"></div>
-        {{ if .NextInSection }}{{ with .NextInSection }}
-        <div class="column is-4">
-            <h3 class="is-size-3 has-text-weight-semibold has-text-black mb-4">
-                {{ .Title }}
-            </h3>
-            <p class="block">
-                {{ .Params.Description }}
-            </p>
-        </div>
-        {{ end }}{{ else }}<div class="column is-4"></div>{{ end }}
-    </div>
-    <div class="level">
-        {{ if .PrevInSection }}{{ with .PrevInSection }}
-        <div class="level-left">
-            <a class="button is-primary is-inverted" href="{{ .Permalink }}"><span class="icon"><svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.0002 9.99996V14H11.0002L14.5002 17.5L12.0802 19.92L4.16016 12L12.0802 4.07996L14.5002 6.49996L11.0002 9.99996H20.0002Z" fill="currentColor"></path></svg></span> <span>Previous Project</span></a>
-            </div>
-            {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
-            {{ if .NextInSection }}{{ with .NextInSection }}
-            <div class="level-right">
-                <a class="button is-primary is-inverted" href="{{ .Permalink }}"><span>Next Project</span> <span class="icon"><svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 9.99996V14H13L9.5 17.5L11.92 19.92L19.84 12L11.92 4.07996L9.5 6.49996L13 9.99996H4Z" fill="currentColor"></path></svg></span></a>
-                </div>
-                {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
-            </div>
-        </section>
+        {{ if .PrevInSection }}
+            {{ with .PrevInSection }}
+                {{- partial "footer-service.html" (dict "context" . "position" "prev") -}}
+            {{ end }}
+        {{ else }}
+            <div class="column is-4"></div>
         {{ end }}
+
+        <div class="column is-4"></div>
+        
+        {{ if .NextInSection }}
+            {{ with .NextInSection }}
+            {{- partial "footer-service.html" (dict "context" . "position" "next") -}}
+            {{ end }}
+        {{ else }}
+            <div class="column is-4"></div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

@@ -3,7 +3,7 @@
 <section class="container py-6">
     <h2 class="is-overline">{{ .Params.Overline }}</h2>
     <h1 class="is-size-1 has-text-weight-semibold mb-4">{{ .Params.Headline }}</h1>
-    <p class="mb-6" style="width: 500px">{{ .Description }}</p>
+    <p class="mb-6 limit-width at-500">{{ .Description }}</p>
     <div class="tile is-ancestor">
         {{ $pages := .RegularPages }}
         {{ range seq 3 }}

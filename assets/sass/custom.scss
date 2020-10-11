@@ -1,3 +1,13 @@
+body {
+  width: 100%;
+}
+
+.columns.is-variable {
+  @media screen and (max-width: 1024px) {
+    --columnGap: 0.75rem !important;
+  }
+}
+
 .box {
   &.is-primary {
     background: $primary;
@@ -8,20 +18,38 @@
   }
 }
 
-.buttons.is-full {
-  width: 100%;
-  flex-wrap: nowrap;
+.buttons {
+  &.is-full {
+    @media screen and (min-width: 769px) {
+      width: 100%;
+      flex-wrap: nowrap;
 
-  & > * {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+      & > * {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
 
-    &:first-child {
-      margin-left: 0;
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
+  }
 
-    &:last-child {
-      margin-right: 0;
+  @media screen and (max-width: 769px) {
+    width: 100%;
+
+    & > * {
+      width: 100%;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }
@@ -34,8 +62,8 @@
 }
 
 .has-shadow {
-  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, .12),
-    0px 2px 6px 0px rgba(0, 0, 0, .22);
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 6px 0px rgba(0, 0, 0, 0.22);
 }
 
 .is-overline {
@@ -70,38 +98,76 @@
   }
 }
 
-.hero-sub {
-  color: $primary;
-  border-left: solid 4px $primary;
-  padding: 0.25rem 0.5rem;
-  background: rgba(255, 255, 255, 1);
-  width: max-content;
-
-  &.on-primary {
-    border-color: $white;
-    color: $white;
-    background: none;
+.hero {
+  position: relative;
+  &-overlay {
+    position: absolute;
+    top: -100px;
+    left: -60px;
+    z-index: 99;
+    height: calc(100% + 100px);
+    pointer-events: none;
+    @media screen and (max-width: 769px) {
+      top: -120px;
+      height: 100%;
+      left: 0;
+    }
+  }
+  &-sub {
+    color: $primary;
+    border-left: solid 4px $primary;
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 1);
+    width: max-content;
+  
+    &.on-primary {
+      border-color: $white;
+      color: $white;
+      background: none;
+    }
+  }
+  &-body {
+    position: relative;
+    z-index: 100;
   }
 }
 
 .img-hero {
-  // @extend .p-6;
+  & .hero-body > .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 500px;
+    padding: map-get($spacing-values, "6") * 0.5;
 
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 500px;
-  padding: map-get($spacing-values, "6") * 0.5;
+    & > .box.is-overlain {
+      position: absolute;
+      bottom: -4rem;
+      left: 0;
 
-  & > .box.is-overlain {
-    position: absolute;
-    bottom: -4rem;
-    left: 0;
+      &.is-right {
+        left: unset;
+        right: 0;
+      }
 
-    &.is-right {
-      left: unset;
-      right: 0;
+      @media screen and (max-width: 769px) {
+        position: static;
+        left: 0;
+        right: 0;
+        bottom: unset;
+      }
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    min-height: 100% !important;
+
+    & .hero-body,
+    & .hero-body > .container {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
     }
   }
 }
@@ -110,6 +176,14 @@
   background: var(--image);
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 769px) {
+    & > .container {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      min-height: 100vh;
+    }
+  }
 }
 
 .lm-projects {
@@ -130,6 +204,16 @@
 
   & > img {
     height: 100%;
+  }
+
+  @media screen and (max-width: 769px) {
+    flex-direction: column;
+    height: auto;
+
+    & > img {
+      margin-right: 0 !important;
+      margin-bottom: 3rem;
+    }
   }
 }
 
@@ -157,6 +241,11 @@
 
   & q {
     line-height: 130%;
+  }
+
+  @media screen and (max-width: 769px) {
+    text-align: center;
+    // --columnGap: 0.75rem !important;
   }
 }
 
@@ -187,6 +276,7 @@
   position: relative;
   display: flex;
   height: 100%;
+  min-height: 100px;
 
   & > svg {
     position: absolute;
@@ -194,6 +284,12 @@
     right: 0;
     bottom: -4rem;
     width: 100%;
+  }
+
+  @media screen and (max-width: 769px) {
+    & > svg {
+      bottom: -1.5rem;
+    }
   }
 }
 
@@ -209,12 +305,90 @@
 .move-up {
   position: relative;
   top: -6rem;
+
+  @media screen and (max-width: 769px) {
+    &:not(.lm-blog-post) {
+      top: 0;
+    }
+  }
 }
 
 .lm-blog-post {
   border: solid 1px $grey-lightest;
+
+  @media screen and (max-width: 769px) {
+    padding: 1rem !important;
+  }
+}
+
+.navbar {
+  overflow: hidden;
+  &-overlay {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: -40px;
+    pointer-events: none;
+    @media screen and (max-width: 769px) {
+      left: 0;
+    }
+  }
+  &-brand {
+    display: flex;
+    align-items: center;
+    img {
+      margin-left: 2rem;
+      @media screen and (max-width: 769px) {
+        height: 40px;
+        margin-left: 1rem;
+      }
+    }
+  }
+  &-internal {
+    @media screen and (max-width: 769px) {
+      .navbar-logo {
+        filter: invert(1);
+      }
+    }
+  }
+  @media screen and (max-width: 769px) {
+    z-index: 999;
+    background: $primary;
+    position: relative;
+  }
 }
 
 nav img {
   height: 100%;
+}
+
+.navbar-menu.is-active {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.tile {
+  &.is-mobile {
+    &,
+    & .tile:not(.is-child) {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    &.is-horizontal-mobile {
+      flex-direction: row;
+    }
+
+    &.is-vertical-mobile {
+      flex-direction: column;
+    }
+  }
+}
+
+.container {
+  @media screen and (max-width: 769px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

@@ -2,7 +2,7 @@
     <div class="hero-body">
         <div class="container">
             <div class="columns">
-                <div class="column is-5 is-offset-7">
+                <div class="column is-5-desktop is-offset-7-desktop">
                     <div class="box">
                         <h2 class="is-overline">Featured Project, Location</h2>
                         <h1 class="is-box-title has-text-black mb-5">{{ .Title }}</h1>
@@ -14,9 +14,19 @@
     </div>
     <div class="hero-foot">
         <div class="container">
-            <div class="columns">
+            <div class="columns is-hidden-touch">
                 {{ range .Params.Zones.Photos }}
                 <div class="column is-2">
+                    <figure class="image is-16by9 has-shadow">
+                        <img alt="" src="{{ . }}">
+                    </figure>
+                </div>
+                {{ end }}
+            </div>
+
+            <div class="columns is-hidden-desktop is-mobile px-4">
+                {{ range .Params.Zones.Photos }}
+                <div class="column">
                     <figure class="image is-16by9 has-shadow">
                         <img alt="" src="{{ . }}">
                     </figure>

@@ -30,14 +30,14 @@
 </section>
 
 <section class="container py-3">
-    <div class="tile is-ancestor">
-        <div class="tile">
+    <div class="tile is-ancestor is-mobile">
+        <div class="tile is-vertical-mobile">
             <div class="tile is-8 is-parent">
                 <figure class="tile is-child image is-16by9 has-shadow">
                     <img alt="" src="{{ index .Params.Zones.Photos 0 }}">
                 </figure>
             </div>
-            <div class="tile is-vertical">
+            <div class="tile is-vertical is-horizontal-mobile">
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <figure class="image is-16by9 has-shadow">
@@ -89,23 +89,23 @@
 <section class="container py-6 mb-6">
     <h2 class="is-section-header">Have a look at some other of our projects</h2>
     <div class="columns">
-        {{ if .PrevInSection }}{{ with .PrevInSection }}{{- partial "project-card.html" . -}}{{ end }}{{ else }}<div class="column is-4"></div>{{ end }}
+        {{ if .PrevInSection }}
+            {{ with .PrevInSection }}
+                {{- partial "footer-project-card.html" (dict "context" . "position" "prev") -}}
+            {{ end }}
+        {{ else }}
+            <div class="column is-4"></div>
+        {{ end }}
+
         <div class="column is-4"></div>
-        {{ if .NextInSection }}{{ with .NextInSection }}{{- partial "project-card.html" . -}}{{ end }}{{ else }}<div class="column is-4"></div>{{ end }}
-    </div>
-    <div class="level">
-        {{ if .PrevInSection }}{{ with .PrevInSection }}
-        <div class="level-left">
-            <a class="button is-primary is-inverted" href="{{ .Permalink }}"><span class="icon"><svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.0002 9.99996V14H11.0002L14.5002 17.5L12.0802 19.92L4.16016 12L12.0802 4.07996L14.5002 6.49996L11.0002 9.99996H20.0002Z" fill="currentColor"></path></svg></span> <span>Previous Project</span></a>
-        </div>
-        {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
-        {{ if .NextInSection }}{{ with .NextInSection }}
-        <div class="level-right">
-            <a class="button is-primary is-inverted" href="{{ .Permalink }}"><span>Next Project</span> <span class="icon"><svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 9.99996V14H13L9.5 17.5L11.92 19.92L19.84 12L11.92 4.07996L9.5 6.49996L13 9.99996H4Z" fill="currentColor"></path></svg></span></a>
-        </div>
-        {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
+
+        {{ if .NextInSection }}
+            {{ with .NextInSection }}
+                {{- partial "footer-project-card.html" (dict "context" . "position" "next") -}}
+            {{ end }}
+        {{ else }}
+            <div class="column is-4"></div>
+        {{ end }}
     </div>
 </section>
 
