@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+<section class="container py-6">
+    <h1 class="is-box-title has-text-black mb-6">{{ .Title }}</h1>
+    <div class="columns is-multiline">
+        {{ range .Pages }}
+        {{- partial "blog-card.html" . -}}
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

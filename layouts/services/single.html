@@ -1,0 +1,81 @@
+{{ define "main" }}
+<section class="hero is-primary is-fullheight-with-navbar">
+    <div class="hero-head">
+        <div class="container">
+            <div class="hero-sub on-primary">
+                <h2 class="is-overline"><span class="has-text-black has-text-weight-bold">What We Do &mdash;</span> Project Management</h2>
+            </div>
+        </div>
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="limit-width at-500 is-size-2 has-text-weight-bold mb-6">A cool and gripping headline about effective project management.</h1>
+            <div class="buttons">
+                <a href="/contact" class="button is-primary is-inverted">Make an Enquiry</a> <a class="button is-primary" href="/services">All Our Services</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container pt-6">
+    {{ range .Params.Writeup }}
+    <div class="lm-service-explanation mb-6" id="project-management">
+        <h3 class="is-box-title mb-3">{{ .title }}</h3>
+        {{ range .description }}
+        <p class="block">{{ . }}</p>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+<section class="section pb-2">
+    <div class="container">
+        <h2 class="title is-uppercase">Our {{ .Title }} Projects</h2>
+    </div>
+</section>
+<section class="section has-background-light">
+    <div class="container">
+        <h2 class="is-section-header">Some of our select {{ .Title }} projects</h2>
+        <div class="columns is-multiline is-variable is-6">
+            {{ $projects := ((.Site.GetPage "/projects").Pages) }}
+            {{ range where $projects "Params.tags" .File.TranslationBaseName }}
+            <div class="column is-4">
+                <div>
+                    <figure class="image has-shadow mb-5">
+                        <img alt="Project" src="{{ .Params.Image }}">
+                    </figure>
+                    <h3 class="is-size-4 has-text-black has-text-weight-bold">{{ .Params.Title }}</h3>
+                    <h4 class="is-overline has-text-weight-semibold">Company Name, Location</h4>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <div class="buttons is-right">
+            <a class="button is-primary is-inverted" href="/projects">View All Projects</a>
+        </div>
+    </div>
+</section>
+
+{{- partial "hero.html" . -}}
+
+<section class="container py-6 mb-6">
+    <h2 class="is-section-header">Have a look at some other of our other services</h2>
+    <div class="columns">
+        {{ if .PrevInSection }}
+            {{ with .PrevInSection }}
+                {{- partial "footer-service.html" (dict "context" . "position" "prev") -}}
+            {{ end }}
+        {{ else }}
+            <div class="column is-4"></div>
+        {{ end }}
+
+        <div class="column is-4"></div>
+        
+        {{ if .NextInSection }}
+            {{ with .NextInSection }}
+            {{- partial "footer-service.html" (dict "context" . "position" "next") -}}
+            {{ end }}
+        {{ else }}
+            <div class="column is-4"></div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

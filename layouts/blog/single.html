@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="hero is-primary is-fullheight-with-navbar img-bg py-6" style="--image: url('{{ .Params.Image }}');">
+    <div class="hero-head">
+        <div class="container">
+            <div class="hero-sub">
+                <h2 class="is-overline"><span class="has-text-black has-text-weight-bold"><a href="/blog" class="has-text-dark">Blog</a> &mdash;</span> <a href="/categories/{{ index .Params.categories 0 | anchorize }}">{{ index .Params.categories 0 }}</a></h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container is-max-desktop">
+    <article class="box is-shadowless move-up p-6 lm-blog-post">
+        <header class="mb-6">
+            <h2 class="is-overline">{{ .Params.Subline }}</h2>
+            <h1 class="is-box-title has-text-black mb-2">{{ .Title }}</h1>
+        </header>
+        <main class="content">
+            {{ .Content }}
+        </main>
+    </article>
+</section>
+<section class="container py-6 mb-6">
+    <h2 class="is-section-header">Have a look at some other of our blog posts</h2>
+    <div class="columns">
+        {{ range first 3 .Parent.Pages }}
+            {{- partial "blog-card.html" . -}}
+        {{ end }}
+    </div>
+    <div class="level">
+        {{ if .PrevInSection }}{{ with .PrevInSection }}
+        <div class="level-left">
+            <a class="button is-primary is-inverted" href="{{ .Permalink }}"><span class="icon"><svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0002 9.99996V14H11.0002L14.5002 17.5L12.0802 19.92L4.16016 12L12.0802 4.07996L14.5002 6.49996L11.0002 9.99996H20.0002Z" fill="currentColor"></path></svg></span> <span>Previous Post</span></a>
+        </div>
+        {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
+        {{ if .NextInSection }}{{ with .NextInSection }}
+        <div class="level-right">
+            <a class="button is-primary is-inverted" href="{{ .Permalink }}"><span>Next Post</span> <span class="icon"><svg height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 9.99996V14H13L9.5 17.5L11.92 19.92L19.84 12L11.92 4.07996L9.5 6.49996L13 9.99996H4Z" fill="currentColor"></path></svg></span></a>
+        </div>
+        {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
+    </div>
+</section>
+{{ end }}

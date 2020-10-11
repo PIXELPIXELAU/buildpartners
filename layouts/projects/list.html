@@ -1,0 +1,136 @@
+{{ define "main" }}
+
+{{ with index (where .Pages "Params.featured" true) 0 }}
+{{- partial "project-card-lg.html" . -}}
+{{ end }}
+
+<section class="container py-6">
+    {{ with index (where .Pages "Params.featured" true) 1 }}
+    <article class="columns is-variable is-6 mb-6 is-desktop">
+        <div class="column is-half-desktop is-full-tablet">
+            <div class="container p-4">
+
+                <div class="tile is-ancestor is-mobile">
+                    <div class="tile is-vertical">
+                        <div class="tile is-parent">
+                            <figure class="tile is-child image is-16by9 has-shadow">
+                                <img src="{{ index .Params.Zones.Photos 0 }}" alt="">
+                            </figure>
+                        </div>
+                        
+                        <div class="tile">
+                            <div class="tile is-parent">
+                                <div class="tile is-child">
+                                    <figure class="image is-16by9 has-shadow">
+                                        <img src="{{ index .Params.Zones.Photos 1 }}" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <div class="tile is-child">
+                                    <figure class="image is-16by9 has-shadow">
+                                        <img src="{{ index .Params.Zones.Photos 2 }}" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column is-half-desktop is-full-tablet">
+            <div class="container p-4 has-text-centered-touch">
+                <h3 class="is-overline">{{ .Params.Project.Name }}, {{ .Params.Project.Location }}</h3>
+                <h2 class="is-box-title has-text-black mb-5">
+                    {{ .Title }}
+                </h2>
+                
+                <div class="columns mb-6 is-variable is-0">
+                    <div class="column is-half-desktop is-full-tablet">
+                        <a href="{{ .Permalink }}" class="button is-primary is-fullwidth">
+                            View
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lm-testimonial-quote">
+                    <q class="is-size-2 is-box-title has-text-black has-text-weight-semibold mb-2">
+                        {{ .Params.Quote.Message }}
+                    </q>
+                    <span class="is-overline">{{ .Params.Quote.Author }}</span>
+                </div>
+            </div>
+        </div>
+    </article>
+    {{ end }}
+    {{ with index (where .Pages "Params.featured" true) 2 }}
+    <article class="columns is-variable is-6 mb-6 is-desktop">
+        <div class="column is-half-desktop is-full-tablet">
+            <div class="container p-4 has-text-centered-touch">
+                <h3 class="is-overline">{{ .Params.Project.Name }}, {{ .Params.Project.Location }}</h3>
+                <h2 class="is-box-title has-text-black mb-5">
+                    {{ .Title }}
+                </h2>
+                
+                <div class="columns mb-6 is-variable is-0">
+                    <div class="column is-half-desktop is-full-tablet">
+                        <a href="{{ .Permalink }}" class="button is-primary is-fullwidth">
+                            View
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lm-testimonial-quote">
+                    <q class="is-size-2 is-box-title has-text-black has-text-weight-semibold mb-2">
+                        {{ .Params.Quote.Message }}
+                    </q>
+                    <span class="is-overline">{{ .Params.Quote.Author }}</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="column is-half-desktop is-full-tablet">
+            <div class="container p-4">
+                <div class="tile is-ancestor is-mobile">
+                    <div class="tile is-vertical">
+                        <div class="tile is-parent">
+                            <figure class="tile is-child image is-16by9 has-shadow">
+                                <img src="{{ index .Params.Zones.Photos 0 }}" alt="">
+                            </figure>
+                        </div>
+                        
+                        <div class="tile">
+                            <div class="tile is-parent">
+                                <div class="tile is-child">
+                                    <figure class="image is-16by9 has-shadow">
+                                        <img src="{{ index .Params.Zones.Photos 1 }}" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="tile is-parent">
+                                <div class="tile is-child">
+                                    <figure class="image is-16by9 has-shadow">
+                                        <img src="{{ index .Params.Zones.Photos 2 }}" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    {{ end }}
+</section>
+<section class="container py-6">
+    <div class="columns is-multiline is-variable is-6 is-mobile">
+        {{ range first 6 (where .Pages "Params.featured" false) }}
+            {{- partial "project-card.html" . -}}
+        {{ end }}
+    </div>
+</section>
+
+{{- partial "hero.html" . -}}
+
+{{ end }}
