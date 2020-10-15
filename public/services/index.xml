@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Build Partners</title>
+    <link>https://buildpartners.com/services/</link>
+    <description>Recent content in Services on Build Partners</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://buildpartners.com/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Budgeting and Cost Manangement</title>
+      <link>https://buildpartners.com/services/budget-cost-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://buildpartners.com/services/budget-cost-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Design Services</title>
+      <link>https://buildpartners.com/services/design-services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://buildpartners.com/services/design-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Example 1</title>
+      <link>https://buildpartners.com/services/example-1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://buildpartners.com/services/example-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Example 2</title>
+      <link>https://buildpartners.com/services/example-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://buildpartners.com/services/example-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Example 3</title>
+      <link>https://buildpartners.com/services/example-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://buildpartners.com/services/example-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project Manangement</title>
+      <link>https://buildpartners.com/services/project-management/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://buildpartners.com/services/project-management/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
