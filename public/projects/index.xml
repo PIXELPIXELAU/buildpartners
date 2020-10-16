@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Build Partners</title>
+    <link>/buildpartners/projects/</link>
+    <description>Recent content in Projects on Build Partners</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/buildpartners/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Featured Project 1</title>
+      <link>/buildpartners/projects/feature1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/feature1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Featured Project 2</title>
+      <link>/buildpartners/projects/feature2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/feature2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Featured Project 3</title>
+      <link>/buildpartners/projects/feature3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/feature3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Normal Project 1</title>
+      <link>/buildpartners/projects/project1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/project1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Normal Project 2</title>
+      <link>/buildpartners/projects/project2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/project2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Normal Project 3</title>
+      <link>/buildpartners/projects/project3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/project3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Normal Project 4</title>
+      <link>/buildpartners/projects/project4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/project4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Normal Project 5</title>
+      <link>/buildpartners/projects/project5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/project5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Normal Project 6</title>
+      <link>/buildpartners/projects/project6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/buildpartners/projects/project6/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
