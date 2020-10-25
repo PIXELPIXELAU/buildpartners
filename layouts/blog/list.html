@@ -2,7 +2,7 @@
 
 <section class="container py-6">
     <div class="columns">
-        <div class="column is-8">
+        <div class="column is-9">
             <a class="image is-16by9 mb-4" href="{{ (index .Pages 0).Permalink }}">
                 <img alt="cool picture" src="{{ (index .Pages 0).Params.Image }}">
             </a> 
@@ -10,7 +10,7 @@
                 <h2 class="is-box-title">{{ (index .Pages 0).Title }}</h2>
             </a>
         </div>
-        <div class="column">
+        <div class="column is-3">
             <div class="box is-primary p-4 is-fullheight">
                 <h1 class="is-box-title has-text-white">{{ .Params.Statement }}</h1>
             </div>
@@ -21,7 +21,7 @@
 {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
 <section class="container py-6">
     <div class="hero-sub mb-4">
-        <h2 class="is-overline"><span class="has-text-black has-text-weight-bold">{{ $name }} &mdash;</span> <a href="{{ .Page.Permalink }}">View all</a></h2>
+        <h2 class="is-overline"><span class="has-text-black">{{ $name }} &mdash;</span> <a href="{{ .Page.Permalink }}">View all</a></h2>
     </div>
     <div class="columns is-multiline is-variable is-6">
         {{ range first 3 .Pages }}

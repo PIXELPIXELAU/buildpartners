@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+<section class="container py-6 px-4">
+  <h1 class="is-box-title has-text-black mb-6">{{ .Title }}</h1>
+
+  <form name="contact" method="POST" netlify>
+    <div class="field">
+      <label for="name" class="label">Your name</label>
+      <div class="control">
+        <input name="name" type="text" class="input" placeholder="John Doe" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="email" class="label">Your email</label>
+      <div class="control">
+        <input
+          name="email"
+          type="email"
+          class="input"
+          placeholder="john@example.com"
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="subject" class="label">Subject line</label>
+      <div class="control">
+        <input
+          name="subject"
+          type="text"
+          class="input"
+          placeholder="Your subject"
+        />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="message" class="label">Your message</label>
+      <div class="control">
+        <textarea
+          name="message"
+          class="textarea"
+          placeholder="Lorem ipsum"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="field mt-6">
+      <div class="control">
+        <button class="button is-primary" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+{{ end }}
