@@ -1,15 +1,15 @@
 {{ define "main" }}
-<section class="hero is-primary is-fullheight-with-navbar">
+<section class="hero is-primary is-fullheight-with-navbar py-6">
     <div class="hero-head">
         <div class="container">
             <div class="hero-sub on-primary">
-                <h2 class="is-overline"><span class="has-text-black has-text-weight-bold">What We Do &mdash;</span> Project Management</h2>
+                <h2 class="is-overline"><span class="has-text-black">What We Do &mdash;</span> Project Management</h2>
             </div>
         </div>
     </div>
     <div class="hero-body">
         <div class="container">
-            <h1 class="limit-width at-500 is-size-2 has-text-weight-bold mb-6">A cool and gripping headline about effective project management.</h1>
+            <h1 class="limit-width at-500 is-size-2 has-text-weight-semibold mb-6">A cool and gripping headline about effective project management.</h1>
             <div class="buttons">
                 <a href="/contact" class="button is-primary is-inverted">Make an Enquiry</a> <a class="button is-primary" href="/services">All Our Services</a>
             </div>
@@ -42,14 +42,14 @@
                     <figure class="image has-shadow mb-5">
                         <img alt="Project" src="{{ .Params.Image }}">
                     </figure>
-                    <h3 class="is-size-4 has-text-black has-text-weight-bold">{{ .Params.Title }}</h3>
+                    <h3 class="is-size-4 has-text-black has-text-weight-semibold">{{ .Params.Title }}</h3>
                     <h4 class="is-overline has-text-weight-semibold">Company Name, Location</h4>
                 </div>
             </div>
             {{ end }}
         </div>
         <div class="buttons is-right">
-            <a class="button is-primary is-inverted" href="/projects">View All Projects</a>
+            <a class="button is-primary is-inverted is-transparent" href="/projects">View All Projects</a>
         </div>
     </div>
 </section>
