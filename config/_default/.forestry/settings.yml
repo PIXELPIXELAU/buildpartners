@@ -5,10 +5,24 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: content/services
+  label: Services
+  create: documents
+  match: "*"
+  exclude: "*index.md"
+- type: directory
+  path: content/projects
+  label: Projects
+  create: documents
+  match: "*"
+  exclude: "*index.md"
+  templates:
+  - projects
+- type: directory
   path: content/blog
   label: Blog
   create: documents
-  match: "**/*"
+  match: "*"
   exclude: "*index.md"
 - type: document
   path: content/_index.md
