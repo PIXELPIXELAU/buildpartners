@@ -12,7 +12,7 @@ name = "OFFICE HQ"
 src = "uploads/office-hq-logo.png"
 [quote]
 author = "Steve Lombardo, General Manager"
-message = "they handled everything from obtaining builder quotations and negotiations through to the interior fit-out, handover and also moving our team from our previous office locationSteve Lombardo – General Manager"
+message = "they handled everything from obtaining builder quotations and negotiations through to the interior fit-out, handover and also moving our team from our previous office location"
 [zones]
 photos = ["uploads/001-8-84-wises-rd-office-hq.jpg", "uploads/003-8-84-wises-rd-office-hq.jpg", "uploads/002-8-84-wises-rd-office-hq.jpg"]
 title = ""
