@@ -27,11 +27,11 @@ fields:
     label: Buttons
     fields:
     - type: text
-      name: href
-      label: Page URL
-    - type: text
       name: text
       label: Button Text
+    - type: text
+      name: href
+      label: Page URL
   description: Main focus of the page
 - type: field_group
   name: intro
