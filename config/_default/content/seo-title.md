@@ -22,9 +22,11 @@ overline = ""
 [field_group]
 text_area = "test area"
 [hero]
-cta = []
 heading = "Hero inside a thing"
 src = ""
+[[hero.cta]]
+href = "link"
+text = "text"
 [intro]
 content = ""
 heading = ""
