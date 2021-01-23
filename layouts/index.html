@@ -30,12 +30,13 @@
   </section>
 {{end}}
 
-<section class="hero img-bg img-hero is-primary is-fullheight" style="--image: url('{{ .Params.intro.src }}');">
+{{$introImage := resources.Get .Params.intro.src }}
+<section class="hero img-bg img-hero is-primary is-fullheight" style="--image: url('{{ $introImage.Permalink }}');">
   <div class="hero-body">
     <div class="container">
-      <div class="box is-overlain is-right" style="max-width: 550px">
+      <div class="box is-overlain is-right content" style="max-width: 550px">
         <h2 class="is-overline mb-1">{{ .Params.intro.overline }}</h2>
-        <h3 class="is-box-title has-text-black mb-2">
+        <h3 class="is-box-title has-text-black mb-2 mt-3">
           {{ .Params.intro.heading }}
         </h3>
 
@@ -177,9 +178,7 @@
             </h3>
             <p class="mb-5 has-text-dark">{{ .Params.Description }}</p>
             <div class="buttons is-right">
-              <a href="{{ .Permalink }}" class="button is-primary"
-                >Find Out More</a
-              >
+              <a href="{{ .Permalink }}" class="button is-primary">Find Out More</a>
             </div>
           </article>
           {{ end }}
@@ -231,9 +230,9 @@
 
   <div class="columns">
     <div class="column is-8">
-      <div class="box is-primary p-6">
+      <div class="box is-primary p-6 content">
         <h3 class="is-overline mb-1">{{ .Params.Expertise.Overline }}</h3>
-        <h4 class="is-box-title has-text-black mb-4">
+        <h4 class="is-box-title has-text-black mb-4 mt-3">
           {{ .Params.Expertise.Headline }}
         </h4>
 
