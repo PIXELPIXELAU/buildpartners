@@ -27,7 +27,7 @@
                                 <a class="tile is-child lm-service-tile" href="{{ .Permalink }}">
                                     <div class="p-4">
                                         <h3 class="is-box-title has-text-white mb-4">{{ .Title }}</h3>
-                                        <p class="has-text-black is-size-5">{{ .Params.Description }}</p>
+                                        <p class="has-text-black is-size-5">{{ .Description }}</p>
                                     </div>
                                 </a>
                             </div>
@@ -55,7 +55,7 @@
         {{ end }}
     </div> -->
 </section>
-<section class="container py-6">
+<!-- <section class="container py-6">
     {{ range .RegularPages }}
     <article class="lm-service-explanation mb-6" id="project-management">
         <h3 class="is-box-title mb-3">{{ .Title }}</h3>
@@ -64,7 +64,7 @@
         {{ end }}
     </article>
     {{ end }}
-</section>
+</section> -->
 {{- partial "hero.html" . -}}
 
 {{ end }}
