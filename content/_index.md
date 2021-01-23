@@ -13,8 +13,8 @@ hero:
   overline: Commercial Design & Project Management
 intro:
   overline: Commerical Design & Project Management
-  heading: We partner with our clients to deliver premium building services including
-    space design, quantity surveying, project management and retail and venue maintenance.
+  heading: We deliver our partners premium building services including space design,
+    quantity surveying, project management and retail and venue maintenance.
   src: uploads/001-8-84-wises-rd-office-hq.jpg
   content: "\nOur clients are high-end retail and hospitality as well as expanding
     businesses across Australia and New Zealand.  If you need a partner to help your
