@@ -9,5 +9,5 @@
 git rm -rf public
 mkdir public
 hugo
-git add public && git commit -m "pushing to ph-pages"
+git add -f public && git commit -m "pushing to ph-pages"
 git push origin `git subtree split --prefix public gh-pages`:gh-pages --force
