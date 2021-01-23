@@ -57,7 +57,7 @@ fields:
   - type: text
     name: headline
     label: Heading
-  description: Summarise your services
+  description: Summary of your services
 - type: field_group
   name: whowework
   label: whowework
