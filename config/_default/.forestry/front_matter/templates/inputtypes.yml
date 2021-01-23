@@ -1,4 +1,47 @@
 ---
 label: InputTypes
 hide_body: false
-fields: []
+fields:
+- name: text_field
+  type: text
+  config:
+    required: true
+    min: 10
+    max: 50
+  label: Text Field
+  description: description
+  default: This is default text
+- name: text_area
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Text Area
+- name: number
+  type: number
+  label: Number
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: toggle
+  type: boolean
+  label: Toggle
+- name: select_field
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Select Field
