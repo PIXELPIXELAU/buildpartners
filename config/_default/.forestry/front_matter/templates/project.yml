@@ -5,14 +5,15 @@ display_field: title
 fields:
 - type: text
   name: title
-  label: SEO Title
-  description: Title that will show in a search
+  label: Project Title
+  description: Title that will show in a search and in thumbnails throughout the site
   config:
     required: true
 - type: text
   name: description
-  label: SEO Description
-  description: The description that will show in a search
+  label: Project Summary
+  description: The description that will show in a search and in thumbnails throughout
+    the site
   config:
     required: true
 - type: boolean
