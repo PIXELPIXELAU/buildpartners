@@ -17,6 +17,7 @@ intro:
   content: |2-
 
     We specialise in creating office spaces which inspire your team and help you grow your business.
+
     Speak to one of our friendly team members about your next project
 whatwedo:
   headline: Heading
