@@ -3,7 +3,7 @@ title: Build Partners
 description: Commercial Design & Project Management servicing Brisbane, Sunshine Coast,
   Gold Coast, Sydney
 hero:
-  heading: Commercial Design & Project Management
+  heading: Structuring expertise & creativity to deliver impactful spaces
   src: uploads/002-8-84-wises-rd-office-hq.jpg
   cta:
   - href: "/projects/"
