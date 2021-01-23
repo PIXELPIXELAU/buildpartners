@@ -22,7 +22,7 @@ fields:
     config:
       maxSize: 64
     label: Image
-  - type: field_group_list
+  - type: field_group
     name: cta
     label: Buttons
     fields:
