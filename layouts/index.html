@@ -195,21 +195,32 @@
 <section class="container py-6">
   <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
 
-  <div class="columns lm-clients mb-6">
-    {{ range .Params.WhoWeWork.Clients }}
-    <div class="column is-3">
-      <img src="{{ .img }}" alt="{{ .title }}" style="height: 100px" />
-    </div>
-    {{ end }}
+  <div class="columns lm-clients mb-6 is-multiline">
+    {{ $projects := .Site.RegularPages}}
+    {{ range $projects }}
+      {{with .Params.project.src}}
+        {{$logo := resources.Get .}}
+        {{if ne $logo nil}}
+          <div class="column is-3">
+            <img src="{{$logo.Permalink}}" >
+          </div>
+        {{end}}
+      {{end}}
+    {{end}}
   </div>
+  
 
-  <blockquote class="lm-testimonial columns is-variable is-6">
-    <div class="column is-6 is-offset-3 lm-testimonial-quote">
-      <q class="is-size-1 has-text-black has-text-weight-semibold mb-4">
-        {{ .Params.WhoWeWork.Quote.Message }}
-      </q>
-      <span class="is-overline">{{ .Params.WhoWeWork.Quote.Author }}</span>
-    </div>
+  <blockquote class="lm-testimonial">
+    {{ range $projects }}
+      {{with .Params.quote}}
+        <div class="lm-testimonial-quote">
+          <q class="is-size-1 has-text-black has-text-weight-semibold mb-4">
+            {{ .message }}
+          </q>
+          <span class="is-overline">{{ .author}}</span>
+        </div>
+      {{end}}
+    {{end}}
 
     <!-- <div class="column is-5">
       <img
@@ -236,7 +247,7 @@
     <div class="column is-8">
       <div class="box is-primary p-6 content">
         <h3 class="is-overline mb-1">{{ .Params.Expertise.Overline }}</h3>
-        <h4 class="is-box-title has-text-black mb-4 mt-3">
+        <h4 class="is-box-title has-text-white mb-4 mt-3">
           {{ .Params.Expertise.Headline }}
         </h4>
 
