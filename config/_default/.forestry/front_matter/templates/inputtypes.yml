@@ -103,3 +103,15 @@ fields:
     max: 
     labelField: 
   label: Repeatable Field Group
+- name: block
+  type: blocks
+  label: Block
+  template_types: []
+  config:
+    min: 
+    max: 
+- name: include
+  type: include
+  config: {}
+  template: home-page
+  label: Include
