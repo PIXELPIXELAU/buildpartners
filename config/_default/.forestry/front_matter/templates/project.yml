@@ -1,0 +1,62 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: image
+  label: image
+- type: boolean
+  name: featured
+  label: featured
+- type: text
+  name: tags
+  label: tags
+- type: list
+  name: deliverables
+  label: deliverables
+- type: field_group
+  name: project
+  label: project
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: location
+    label: location
+- type: list
+  name: keystats
+  label: keystats
+- type: field_group
+  name: zones
+  label: zones
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: image_gallery
+    name: photos
+    label: photos
+- type: field_group_list
+  name: services
+  label: services
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: description
+    label: description
+- type: field_group
+  name: quote
+  label: quote
+  fields:
+  - type: text
+    name: message
+    label: message
+  - type: text
+    name: author
+    label: author
