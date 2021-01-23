@@ -41,6 +41,12 @@ fields:
     name: name
     label: Company Name
     description: The name of the company or organisation
+  - name: src
+    type: file
+    config:
+      maxSize: 64
+    label: Company Logo
+    description: Upload a logo for this company, preferably a landscape or wide version
   - type: text
     name: location
     label: Project location
@@ -50,14 +56,17 @@ fields:
   description: Summarise the key achievements that you provided for this client?
 - type: field_group
   name: zones
-  label: Project Details
+  label: Project Photos
   fields:
   - type: text
     name: title
     label: title
+    hidden: true
+    description: This has been removed.
   - type: image_gallery
     name: photos
-    label: photos
+    label: Project Photos
+    description: Upload some good quality photos of the project.
   description: Provide more detailed information about his project
 - type: field_group_list
   name: services
