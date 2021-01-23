@@ -1,10 +1,10 @@
 {{ define "main" }}
-
-<section class="hero is-primary is-fullheight img-bg py-6" style="--image: url('https://images.unsplash.com/photo-1601334168575-faa1f2640cff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');">
+{{$heroImage := resources.Get .Params.image }}
+<section class="hero is-primary is-fullheight img-bg py-6" {{if ne $heroImage nil}} style="--image: url('{{$heroImage.Permalink}}');"{{end}}>
     <div class="hero-head">
         <div class="container">
             <div class="hero-sub">
-                <h2 class="is-overline"><span class="has-text-black">Our Work &mdash;</span> {{ .Title }}</h2>
+                <h2 class="is-overline"><span class="has-text-black">Our Work &mdash;</span> <span class="has-text-shadow">{{ .Title }}</span></h2>
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
                 <h2 class="is-overline">{{ .Params.Project.Name }}, {{ .Params.Project.Location }}</h2>
                 <h1 class="is-box-title has-text-black mb-2">{{ .Title }}</h1>
                 <div class="content">
-                    {{ .Content }}
+                    {{ .Description }}
                 </div>
             </article>
         </div>
@@ -33,25 +33,37 @@
 </section>
 
 <section class="container py-3">
+    {{$imageURL1 := index .Params.Zones.Photos 0 }}
+    {{$imageURL2 := index .Params.Zones.Photos 1 }}
+    {{$imageURL3 := index .Params.Zones.Photos 2 }}
     <div class="tile is-ancestor is-mobile">
         <div class="tile is-vertical-mobile">
             <div class="tile is-8 is-parent">
                 <figure class="tile is-child image is-16by9 has-shadow">
-                    <img alt="" src="{{ index .Params.Zones.Photos 0 }}">
+                    {{$image := resources.Get $imageURL1 }}
+                    {{if ne $image nil}}
+                    <img alt="" src="{{$image.Permalink}}">
+                    {{end}}
                 </figure>
             </div>
             <div class="tile is-vertical is-horizontal-mobile">
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <figure class="image is-16by9 has-shadow">
-                            <img alt="" src="{{ index .Params.Zones.Photos 1 }}">
+                            {{$image := resources.Get $imageURL2 }}
+                            {{if ne $image nil}}
+                            <img alt="" src="{{$image.Permalink}}">
+                            {{end}}
                         </figure>
                     </div>
                 </div>
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <figure class="image is-16by9 has-shadow">
-                            <img alt="" src="{{ index .Params.Zones.Photos 2 }}">
+                            {{$image := resources.Get $imageURL3 }}
+                            {{if ne $image nil}}
+                            <img alt="" src="{{$image.Permalink}}">
+                            {{end}}
                         </figure>
                     </div>
                 </div>

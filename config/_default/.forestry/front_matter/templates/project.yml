@@ -9,7 +9,7 @@ fields:
   description: Title that will show in a search
   config:
     required: true
-- type: text
+- type: textarea
   name: description
   label: SEO Description
   description: The description that will show in a search
