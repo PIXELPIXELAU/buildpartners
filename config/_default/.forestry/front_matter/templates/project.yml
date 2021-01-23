@@ -74,7 +74,7 @@ fields:
   - type: text
     name: title
     label: Heading
-  - type: text_area
+  - type: textarea
     name: description
     label: Summary
   description: Use this section to expand in a little more detail about the specific

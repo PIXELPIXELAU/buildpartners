@@ -29,11 +29,11 @@ zones:
 
 services:
     - title: Design Services
-      description: 
+      description: >-
         - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore illo id minus. Impedit nostrum, ipsam reprehenderit atque nemo odio. Blanditiis provident tempora voluptatum eligendi sed dolores quas quod quasi fuga.
         - Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt maxime harum alias omnis veritatis rerum fugit ducimus reiciendis minima cupiditate eveniet, nulla veniam, expedita exercitationem dicta. Nobis fugiat obcaecati amet!
     - title: Planning & Manangement
-      description: 
+      description: >-
         - Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore illo id minus. Impedit nostrum, ipsam reprehenderit atque nemo odio. Blanditiis provident tempora voluptatum eligendi sed dolores quas quod quasi fuga.
         - Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt maxime harum alias omnis veritatis rerum fugit ducimus reiciendis minima cupiditate eveniet, nulla veniam, expedita exercitationem dicta. Nobis fugiat obcaecati amet!
 

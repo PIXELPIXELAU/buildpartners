@@ -66,9 +66,9 @@
             {{ range .Params.Services }}
             <div class="block limit-width at-600">
                 <h3 class="is-box-title mb-2">{{ .title }}</h3>
-                {{ range .description }}
-                <p class="block">{{ . }}</p>
-                {{ end }}
+                <div class="content">
+                    {{.description | markdownify}}
+                </div>
             </div>
             {{ end }}
         </div>
