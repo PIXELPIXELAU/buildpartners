@@ -1,5 +1,5 @@
 +++
-deliverables = ["Concept design including brand incorporation", "Detailed design", "Internal and external space for a growing local business", "Cost management", "Builder selection and quality assurance", "Project Management"]
+deliverables = ["Concept design", "Brand Incorporation", "Detailed design", "Cost management", "Builder selection and QA", "Project Management"]
 description = "Bespoke Office Space for Growing Sunshine Coast Business"
 featured = true
 image = "uploads/003-8-84-wises-rd-office-hq.jpg"
