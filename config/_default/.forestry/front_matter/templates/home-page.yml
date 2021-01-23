@@ -46,8 +46,10 @@ fields:
   - type: textarea
     name: content
     label: Summary
-  - type: textarea
+  - type: image_upload
     name: src
+    config:
+      maxSize: 64
     label: Background Image
   description: Primary outline of the business
 - type: field_group
