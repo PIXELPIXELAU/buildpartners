@@ -14,10 +14,12 @@ fields:
   fields:
   - type: text
     name: heading
-    label: heading
-  - type: textarea
-    name: src
-    label: src
+    label: Heading
+  - name: src
+    type: file
+    config:
+      maxSize: 64
+    label: Image
   - type: field_group_list
     name: cta
     label: cta
