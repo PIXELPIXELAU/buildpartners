@@ -5,7 +5,12 @@ display_field: title
 fields:
 - type: text
   name: title
-  label: title
+  label: SEO Title
+  description: Title that will show in a search
+- type: text
+  name: description
+  label: SEO Description
+  description: The description that will show in a search
 - type: file
   name: image
   label: image
