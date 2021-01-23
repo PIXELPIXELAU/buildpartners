@@ -11,12 +11,15 @@ fields:
   name: description
   label: SEO Description
   description: The description that will show in a search
-- type: file
-  name: image
-  label: image
 - type: boolean
   name: featured
-  label: featured
+  label: Is this a Featured Project?
+  description: Select his option to display this project on the home page and featured
+    areas around the site
+- type: file
+  name: image
+  label: Hero Image
+  description: This is the primary image you want to use on the page and in thumbails
 - type: text
   name: tags
   label: tags
