@@ -15,6 +15,7 @@ body {
 .box {
   &.is-primary {
     background: $primary;
+    color: rgba(0,0,0,.9);
   }
 
   &.is-fullheight {
@@ -480,4 +481,32 @@ nav img {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+
+
+/* Projects */
+
+#projects_page {
+
+  .hero.is-fullheight {
+    min-height: calc(100vh - 18rem);
+  }
+  ul.is-size-5 {
+    li {
+      position: relative;
+      margin-left: 1rem;
+      margin-bottom: .5rem;
+      &:before {
+        content: '';
+        width: .5em; height: .5em;
+        background-color: $primary;
+        position: absolute;
+        top: .5em; left: 0;
+        display: block;
+        left: -1rem;
+      }
+    }
+  }
+
 }
