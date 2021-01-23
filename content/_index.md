@@ -4,7 +4,7 @@ description: Commercial Design & Project Management servicing Brisbane, Sunshine
   Gold Coast, Sydney
 hero:
   heading: Ultimate Positioning Statement
-  src: ''
+  src: "/static/uploads/003-8-84-wises-rd-office-hq.jpg"
   cta:
   - href: "/projects"
     text: View Our Work
