@@ -28,12 +28,7 @@ fields:
   name: tags
   label: What services does this project relate to?
   description: Select which services areas you want this project to appear in
-  default:
-  - Building Design
-  - Workplaces
-  - Project Management
-  - 'Retail and Venue Maintenance '
-  - 'Regional Construction Rollout Partner '
+  default: []
 - type: list
   name: deliverables
   label: What services where delivered?
