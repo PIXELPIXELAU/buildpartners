@@ -13,13 +13,13 @@ hero:
   overline: Commercial Design & Project Management
 intro:
   overline: Commerical Design & Project Management
-  heading: Boutique commercial design and building project management services
+  heading: We partner with our clients to deliver premium building services including
+    space design, quantity surveying, project management and retail and venue maintenance.
   src: uploads/001-8-84-wises-rd-office-hq.jpg
-  content: |2-
-
-    We specialise in creating office spaces which inspire your team and help you grow your business.
-
-    Speak to one of our friendly team members about your next project
+  content: "\nOur clients are high-end retail and hospitality as well as expanding
+    businesses across Australia and New Zealand.  If you need a partner to help your
+    business with its workspaces or specialist attention for your project, Build Partners
+    can help.  \n\nSpeak to one of our friendly team members about your next project"
 whatwedo:
   headline: Heading
 whowework:
