@@ -27,7 +27,7 @@ fields:
 - type: tag_list
   name: tags
   label: What services does this project relate to?
-  description: Select when services areas you want this project to appear in
+  description: Select which services areas you want this project to appear in
 - type: list
   name: deliverables
   label: What services where delivered?
@@ -35,7 +35,7 @@ fields:
     succinct
 - type: field_group
   name: project
-  label: Project Summary
+  label: Company Summary
   fields:
   - type: text
     name: name
