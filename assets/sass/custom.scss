@@ -316,6 +316,11 @@ body {
 
 // }
 
+.lm-testimonial-quote {
+  q {
+   &:before {margin-left: -1.5rem;} 
+  }
+}
 .lm-testimonial {
   &-quote {
     display: flex;
