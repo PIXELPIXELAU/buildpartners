@@ -25,4 +25,5 @@ fields:
     service's detail page
 pages:
 - content/services/building-design.md
+- content/services/project-management.md
 - content/services/workplaces-concept-to-construction-service.md
