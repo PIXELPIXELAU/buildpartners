@@ -1,7 +1,6 @@
 +++
 deliverables = ["Concept design including brand incorporation", "Detailed design", "Internal and external space for a growing local business", "Cost management", "Builder selection and quality assurance", "Project Management"]
 description = "Bespoke Office Space for Growing Sunshine Coast Business"
-draft = true
 featured = true
 image = "uploads/003-8-84-wises-rd-office-hq.jpg"
 keystats = ["Project completed within budget offering high quality, comfortable office space for future growth and flexible use", "Training facilities was supplied as well as an outdoor space for company social events"]
