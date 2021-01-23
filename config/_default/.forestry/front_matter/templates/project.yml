@@ -14,10 +14,7 @@ fields:
 - type: file
   name: image
   label: image
-- type: boolean
-  name: featured
-  label: featured
-- type: text
+- type: tag_list
   name: tags
   label: tags
 - type: list
