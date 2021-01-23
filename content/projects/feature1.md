@@ -1,7 +1,7 @@
 ---
 title: Featured Project 1
 image: "/img/project/benjamin-child-0sT9YhNgSEs-unsplash.jpg"
-featured: true
+# featured: true
 tags: budget-cost-management
 deliverables:
 - Feature 1
