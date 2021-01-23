@@ -11,7 +11,7 @@ hero:
   - href: "/services"
     text: What We Do
 intro:
-  overline: Commerical Build & Project Management
+  overline: Commerical Design & Project Management
   heading: Boutique commercial design and building project management services
   src: https://images.unsplash.com/photo-1565183928294-7063f23ce0f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80
   content: |2-
