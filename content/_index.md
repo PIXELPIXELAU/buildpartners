@@ -8,7 +8,7 @@ hero:
   cta:
   - href: "/projects/"
     text: View Our Work
-  - href: "/services"
+  - href: "/services/"
     text: What We Do
 intro:
   overline: Commerical Design & Project Management
