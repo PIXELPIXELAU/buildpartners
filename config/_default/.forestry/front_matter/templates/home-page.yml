@@ -4,13 +4,15 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
+  label: SEO Title
+  description: Title that will show in a search
 - type: text
   name: description
-  label: description
+  label: SEO Description
+  description: The description that will show in a search
 - type: field_group
   name: hero
-  label: hero
+  label: Page Hero
   fields:
   - type: text
     name: heading
@@ -30,9 +32,10 @@ fields:
     - type: text
       name: text
       label: text
+  description: Main focus of the page
 - type: field_group
   name: intro
-  label: intro
+  label: Business Summary
   fields:
   - type: text
     name: overline
@@ -46,9 +49,10 @@ fields:
   - type: textarea
     name: content
     label: content
+  description: Primary outline of the business
 - type: field_group
   name: whatwedo
-  label: whatwedo
+  label: What We Do
   fields:
   - type: text
     name: headline
@@ -83,18 +87,21 @@ fields:
     - type: textarea
       name: image
       label: image
+  hidden: true
 - type: field_group
   name: expertise
-  label: expertise
+  label: Expertise
   fields:
   - type: text
     name: overline
-    label: overline
+    label: Overline
+    description: Keyword summary or statement
   - type: text
     name: headline
-    label: headline
+    label: Heading
   - type: textarea
     name: description
-    label: description
+    label: Summary
+  description: Summary of your expertise
 pages:
 - content/_index.md
