@@ -115,3 +115,5 @@ fields:
   config: {}
   template: home-page
   label: Include
+pages:
+- config/_default/content/seo-title.md
