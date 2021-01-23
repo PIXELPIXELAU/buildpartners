@@ -23,3 +23,8 @@ fields:
   label: Heading
   description: A clear statement about the service provided which is displayed on
     service's detail page
+pages:
+- content/services/building-design.md
+- content/services/project-management.md
+- content/services/retail-and-venue-maintenance.md
+- content/services/workplaces-concept-to-construction-service.md
