@@ -455,9 +455,12 @@ nav img {
   height: 100%;
 }
 
-.navbar-menu.is-active {
-  margin-left: -1rem;
-  margin-right: -1rem;
+.navbar-menu {
+  &.is-active {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .navbar-item {font-weight: 500; padding-left: 1.25em; padding-right: 1.25em;}
 }
 
 .tile {
@@ -490,8 +493,14 @@ nav img {
 
 
 
-/* Projects */
+/* Home */
+#page_home {
+ .box.is-overlain {
+   max-width: 30rem;
+ }
+}
 
+/* Projects */
 #projects_page {
 
   .hero.is-fullheight {
