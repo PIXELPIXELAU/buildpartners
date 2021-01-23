@@ -16,7 +16,6 @@
 {{ $jQuery := resources.Get "js/jquery/jquery.js" }}
 {{ $fontawesome := resources.Get "node_modules/@fortawesome/fontawesome-free/js/all.js" }}
 {{ $main := resources.Get "js/main.js" }}
-{{ $moment := resources.Get "node_modules/moment/src/moment.js"  }}
 
 {{ $js := slice $jQuery $fontawesome $main | resources.Concat "js/bundle.js" }}
 
