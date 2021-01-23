@@ -14,19 +14,23 @@ sections:
   match: "*"
   exclude: "*index.md"
   templates:
-  - projects
+  - project
 - type: directory
   path: content/services
   label: Services
   create: documents
   match: "*"
   exclude: "*index.md"
+  templates:
+  - service
 - type: directory
   path: content/blog
   label: Blog
   create: documents
   match: "*"
   exclude: "*index.md"
+  templates:
+  - blog-post
 upload_dir: assets/uploads
 public_path: uploads
 front_matter_path: ''
