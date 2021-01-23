@@ -1,17 +1,36 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: ''
 webhook_url: 
 sections:
 - type: document
   path: content/_index.md
   label: Home
 - type: directory
-  path: config/_default/content
-  label: Pages
-  create: all
+  path: content/projects
+  label: Projects
+  create: documents
   match: "*"
+  exclude: "*index.md"
+  templates:
+  - project
+- type: directory
+  path: content/services
+  label: Services
+  create: documents
+  match: "*"
+  exclude: "*index.md"
+  templates:
+  - service
+- type: directory
+  path: content/blog
+  label: Blog
+  create: documents
+  match: "*"
+  exclude: "*index.md"
+  templates:
+  - blog-post
 upload_dir: assets/uploads
 public_path: uploads
 front_matter_path: ''

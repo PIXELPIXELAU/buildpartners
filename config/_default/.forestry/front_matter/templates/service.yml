@@ -1,0 +1,14 @@
+---
+label: Service
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: list
+  name: cardsummary
+  label: cardsummary

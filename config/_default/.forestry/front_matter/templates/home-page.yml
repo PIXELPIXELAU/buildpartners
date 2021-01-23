@@ -24,14 +24,14 @@ fields:
     label: Image
   - type: field_group_list
     name: cta
-    label: cta
+    label: Buttons
     fields:
     - type: text
       name: href
-      label: href
+      label: Page URL
     - type: text
       name: text
-      label: text
+      label: Button Text
   description: Main focus of the page
 - type: field_group
   name: intro
@@ -39,16 +39,16 @@ fields:
   fields:
   - type: text
     name: overline
-    label: overline
+    label: Overline
   - type: text
     name: heading
-    label: heading
-  - type: textarea
-    name: src
-    label: src
+    label: Heading
   - type: textarea
     name: content
-    label: content
+    label: Summary
+  - type: textarea
+    name: src
+    label: Background Image
   description: Primary outline of the business
 - type: field_group
   name: whatwedo
@@ -56,7 +56,8 @@ fields:
   fields:
   - type: text
     name: headline
-    label: headline
+    label: Heading
+  description: Summarise your services
 - type: field_group
   name: whowework
   label: whowework
