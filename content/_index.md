@@ -6,7 +6,7 @@ hero:
   heading: Commercial Design & Project Management
   src: uploads/002-8-84-wises-rd-office-hq.jpg
   cta:
-  - href: "/projects"
+  - href: "/projects/"
     text: View Our Work
   - href: "/services"
     text: What We Do
