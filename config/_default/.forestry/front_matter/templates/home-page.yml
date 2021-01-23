@@ -14,6 +14,12 @@ fields:
   name: hero
   label: Page Hero
   fields:
+  - name: overline
+    type: text
+    config:
+      required: false
+    label: Overline
+    description: Keyword summary of content
   - type: text
     name: heading
     label: Heading
