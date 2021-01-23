@@ -5,10 +5,26 @@ display_field: title
 fields:
 - type: text
   name: title
-  label: title
-- type: list
-  name: categories
-  label: categories
+  label: Blog Title
+  description: Descriptive title of your blog post. Try to use active tense.
+  config:
+    required: true
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Blog Summary
+  description: Summarise the blog. This will display in thumbnails throughout the
+    site and in SEO
 - type: file
   name: image
-  label: image
+  label: Blog Image
+  description: The hero image for your blog
+- type: list
+  name: categories
+  label: Select Tags
+  description: Select the areas of the site this blog relates to
