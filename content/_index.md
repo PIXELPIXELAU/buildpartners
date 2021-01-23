@@ -1,6 +1,7 @@
 ---
-title: Home
-description: 
+title: Build Partners
+description: Commercial Design & Project Management servicing Brisbane, Sunshine Coast,
+  Gold Coast, Sydney
 hero:
   heading: Ultimate Positioning Statement
   src: ''
@@ -23,13 +24,13 @@ whowework:
   headline: Who we've worked with
   clients:
   - title: Company A
-    img: 
+    img: ''
   - title: Company B
-    img: 
+    img: ''
   - title: Company C
-    img: 
+    img: ''
   - title: Company D
-    img: 
+    img: ''
   quote:
     message: I loved every moment when working with Luke Murray.
     author: JOHN GAMING, BLIZZARD ENTERTAINMENT
