@@ -1,52 +1,45 @@
 {{ define "main" }}
 
-<section class="hero img-hero is-primary is-fullheight">
-  <img src="/img/headzone.svg" class="hero-overlay" />
-  <div class="hero-body">
-    <div class="container">
-      <figure class="box image is-16by9">
-        <img src="{{ .Params.Hero }}" alt="" />
-      </figure>
+{{with .Params.hero}}
+  <section class="hero img-hero is-primary is-fullheight">
+    <img src="/img/headzone.svg" class="hero-overlay" />
+    <div class="hero-body">
+      <div class="container">
+        <figure class="box image is-16by9">
+          <img src="{{ .src }}" alt="{{.heading}}" />
+        </figure>
 
-      <div class="box is-overlain">
-        <h2 class="is-overline mb-1">Build.Partners</h2>
-        <h3 class="is-box-title has-text-black mb-6">
-          {{ .Params.Statement }}
-        </h3>
+        <div class="box is-overlain">
+          <h2 class="is-overline mb-1">Build.Partners</h2>
+          <h3 class="is-box-title has-text-black mb-6">
+            {{ .heading }}
+          </h3>
 
-        <div class="buttons is-full">
-          <a href="/projects" class="button is-primary is-fullwidth">
-            View Our Work
-          </a>
-          <a
-            href="/services"
-            class="button is-primary is-fullwidth is-inverted"
-          >
-            What We Do
-          </a>
+          {{with .cta }}
+          <div class="buttons is-full">
+            {{range $index, $buttons := . }}
+            <a href="{{.href}}" class="button is-primary is-fullwidth{{if gt $index 0}} is-inverted{{end}}">{{.text}}</a>
+            {{end}}
+          </div>
+          {{end}}
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+{{end}}
 
-<section
-  class="hero img-bg img-hero is-primary is-fullheight"
-  style="
---image: url('{{ .Params.CTA.Image }}');
-"
->
+<section class="hero img-bg img-hero is-primary is-fullheight" style="--image: url('{{ .Params.intro.src }}');">
   <div class="hero-body">
     <div class="container">
       <div class="box is-overlain is-right" style="max-width: 550px">
-        <h2 class="is-overline mb-1">{{ .Params.CTA.Overline }}</h2>
+        <h2 class="is-overline mb-1">{{ .Params.intro.overline }}</h2>
         <h3 class="is-box-title has-text-black mb-2">
-          {{ .Params.CTA.Headline }}
+          {{ .Params.intro.heading }}
         </h3>
 
-        {{ range .Params.CTA.Description }}
-        <p class="mb-4">{{ . }}</p>
-        {{ end }}
+        <div class="content">
+          {{.Params.intro.content | markdownify}}
+        </div>
 
         <div class="buttons is-full">
           <a href="/contact" class="button is-primary is-fullwidth">
@@ -90,15 +83,8 @@
             <h3 class="is-box-title has-text-black mb-2">
               {{ .Params.Zones.Title }}
             </h3>
-
             <p class="mb-4">{{ index .Params.KeyStats 0 }}</p>
-
-            <a
-              href="{{ .Permalink }}"
-              class="button is-primary is-inverted"
-            >
-              View Project
-            </a>
+            <a href="{{ .Permalink }}" class="button is-primary is-inverted">View Project</a>
           </article>
 
           <div class="has-text-black px-5">
@@ -140,9 +126,7 @@
   </div>
 
   <div class="buttons is-right">
-    <a href="/projects" class="button is-primary is-inverted"
-      >View All Projects</a
-    >
+    <a href="/projects" class="button is-primary is-inverted">View All Projects</a>
   </div>
 </section>
 
@@ -300,5 +284,8 @@
     </div>
   </div>
 </section>
+
+
+
 
 {{ end }}
