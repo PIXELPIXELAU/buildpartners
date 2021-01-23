@@ -4,7 +4,7 @@
     <div class="hero-head">
         <div class="container">
             <div class="hero-sub">
-                <h2 class="is-overline"><span class="has-text-black">Our Work &mdash;</span> <span class="has-text-shadow">{{ .Title }}</span></h2>
+                <h2 class="is-overline"><span class="has-text-black">Our Work &mdash;</span> <span class="">{{ .Title }}</span></h2>
             </div>
         </div>
     </div>
@@ -94,9 +94,11 @@
 </section>
 
 <section class="container py-6">
-    <div class="lm-testimonial-quote">
-        <q class="is-size-1 has-text-black has-text-weight-semibold mb-4 limit-width at-600">{{ .Params.Quote.Message }}</q>
-        <span class="is-overline">{{ .Params.Quote.Author }}</span>
+    <div class="section">
+        <div class="lm-testimonial-quote">
+            <q class="is-size-2 has-text-black has-text-weight-semibold mb-4">{{ .Params.Quote.Message }}</q>
+            <span class="is-overline">{{ .Params.Quote.Author }}</span>
+        </div>
     </div>
 </section>
 

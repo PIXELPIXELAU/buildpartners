@@ -67,24 +67,26 @@
 </section>
 
 {{ with index (where ((.Site.GetPage "projects").RegularPages) "Params.featured" true) 0 }}
-<section class="hero is-primary">
+<section class="hero is-primary is-medium">
   <div class="hero-body">
     <div class="container">
       <div class="columns is-variable is-0">
         <div class="column is-8 lm-projects-banner">
-          <h2 class="is-box-title has-text-black mb-2">
+          <!-- <h2 class="is-box-title has-text-black mb-2">
             Project Statement
-          </h2>
+          </h2> -->
           <img class="has-shadow" src="{{ .Params.Image }}" alt="" />
         </div>
 
         <div class="column is-4">
-          <article class="box is-shadowless">
+          <article class="box is-shadowless content">
+            {{with .Params.Zones.overline}}
             <h3 class="is-overline has-text-weight-semibold">
-              Overline
+              {{ . }}
             </h3>
+            {{end}}
             <h3 class="is-box-title has-text-black mb-2">
-              {{ .Params.Zones.Title }}
+              {{ .Title }}
             </h3>
             <p class="mb-4">{{ index .Params.KeyStats 0 }}</p>
             <a href="{{ .Permalink }}" class="button is-primary is-inverted">View Project</a>
@@ -94,7 +96,7 @@
             <h3 class="is-overline has-text-weight-semibold mb-3">
               Deliverables
             </h3>
-            <ul class="is-size-5">
+            <ul class="is-size-6">
               {{ range .Params.Deliverables }}
               <li>{{ . }}</li>
               {{ end }}
@@ -112,17 +114,19 @@
 
   <div class="columns is-multiline is-variable 6">
     {{ range where ((.Site.GetPage "projects").RegularPages) "Params.featured" true }}
-    <div class="column is-4">
-      <a href="{{ .Permalink }}">
+    <div class="column is-4 mb-6">
+      <a href="{{ .Permalink }}" title="{{.Title}}">
         <figure class="image has-shadow mb-5">
           <img src="{{ .Params.Image }}" alt="Project" />
         </figure>
-        <h3 class="is-size-4 has-text-black has-text-weight-semibold">
-          {{ .Title }}
-        </h3>
-        <h4 class="is-overline has-text-black has-text-weight-semibold">
-          {{ .Params.Project.Name }}, {{ .Params.Project.Location }}
-        </h4>
+        <div class="content">
+          <h3 class="is-size-4 has-text-black has-text-weight-semibold">
+            {{ .Title }}
+          </h3>
+          <h4 class="is-overline has-text-grey-dark has-text-weight-semibold">
+            {{ .Params.Project.Name }}, {{ .Params.Project.Location }}
+          </h4>
+        </div>
       </a>
     </div>
     {{ end }}
