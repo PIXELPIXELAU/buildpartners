@@ -1,6 +1,6 @@
 +++
 deliverables = ["Concept design", "Brand Incorporation", "Detailed design", "Cost management", "Builder selection and QA", "Project Management"]
-description = "Bespoke Office Space for Growing Sunshine Coast Business"
+description = "Custom design, project management of construction and furnishing of Office HQ's new offices on the Sunshine Coast."
 featured = true
 image = "uploads/003-8-84-wises-rd-office-hq.jpg"
 keystats = ["Project completed within budget offering high quality, comfortable office space for future growth and flexible use", "Training facilities was supplied as well as an outdoor space for company social events"]
