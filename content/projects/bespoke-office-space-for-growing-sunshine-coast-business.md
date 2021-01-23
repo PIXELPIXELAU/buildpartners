@@ -16,7 +16,7 @@ src = "uploads/office-hq-logo.png"
 author = ""
 message = ""
 [zones]
-photos = []
+photos = ["uploads/001-8-84-wises-rd-office-hq.jpg", "uploads/003-8-84-wises-rd-office-hq.jpg", "uploads/002-8-84-wises-rd-office-hq.jpg"]
 title = ""
 
 +++
