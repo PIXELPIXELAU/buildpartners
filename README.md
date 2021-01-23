@@ -11,6 +11,8 @@
 
 ## Build
 
+The repositories are stored in the PIXELPIXALAU organisation. Contact gary@pixelpixel.com.au for access.
+
 **Production**
 
 ```sh
@@ -26,9 +28,21 @@ hugo server -D
 ```
 
 
-#
 
 # CMS Editor
 
-The CMS editor is setup in forestry.
+The CMS editor is setup in forestry. Configuration settings are in `config/default
+
+
+# Publishing to GitPages
+
+A demo of the site can be published to GitPages.
+
+Review the deployment instructions in `.deloy.sh`
+
+The link to review the site is below
+
+```
+https://pixelpixelau.github.io/buildpartners/
+```
 
