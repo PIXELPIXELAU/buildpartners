@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Services on Build Partners</title>
-    <link>https://buildpartners.com/services/</link>
+    <link>/services/</link>
     <description>Recent content in Services on Build Partners</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://buildpartners.com/services/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Budgeting and Cost Manangement</title>
-      <link>https://buildpartners.com/services/budget-cost-management/</link>
+      <link>/services/budget-cost-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/services/budget-cost-management/</guid>
+      <guid>/services/budget-cost-management/</guid>
       <description>Heading 1 This is full summary of the content here.</description>
     </item>
     
     <item>
       <title>Building Design</title>
-      <link>https://buildpartners.com/services/building-design/</link>
+      <link>/services/building-design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/services/building-design/</guid>
+      <guid>/services/building-design/</guid>
       <description>This is is a full description about the building design services</description>
     </item>
     
     <item>
       <title>Project Management</title>
-      <link>https://buildpartners.com/services/project-management/</link>
+      <link>/services/project-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/services/project-management/</guid>
+      <guid>/services/project-management/</guid>
       <description>Insert content</description>
     </item>
     
     <item>
       <title>Regional Construction Rollout Partner </title>
-      <link>https://buildpartners.com/services/regional-construction-rollout-partner/</link>
+      <link>/services/regional-construction-rollout-partner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/services/regional-construction-rollout-partner/</guid>
+      <guid>/services/regional-construction-rollout-partner/</guid>
       <description>Insert content</description>
     </item>
     
     <item>
       <title>Retail and Venue Maintenance </title>
-      <link>https://buildpartners.com/services/retail-and-venue-maintenance/</link>
+      <link>/services/retail-and-venue-maintenance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/services/retail-and-venue-maintenance/</guid>
+      <guid>/services/retail-and-venue-maintenance/</guid>
       <description>Insert Content</description>
     </item>
     
     <item>
       <title>Workplaces - Concept to Construction Service</title>
-      <link>https://buildpartners.com/services/workplaces-concept-to-construction-service/</link>
+      <link>/services/workplaces-concept-to-construction-service/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/services/workplaces-concept-to-construction-service/</guid>
+      <guid>/services/workplaces-concept-to-construction-service/</guid>
       <description>Insert content</description>
     </item>
     

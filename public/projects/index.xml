@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Build Partners</title>
-    <link>https://buildpartners.com/projects/</link>
+    <link>/projects/</link>
     <description>Recent content in Projects on Build Partners</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://buildpartners.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bespoke Office Space for Growing Sunshine Coast Business</title>
-      <link>https://buildpartners.com/projects/bespoke-office-space-for-growing-sunshine-coast-business/</link>
+      <link>/projects/bespoke-office-space-for-growing-sunshine-coast-business/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/projects/bespoke-office-space-for-growing-sunshine-coast-business/</guid>
+      <guid>/projects/bespoke-office-space-for-growing-sunshine-coast-business/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Featured Project 1</title>
-      <link>https://buildpartners.com/projects/feature1/</link>
+      <link>/projects/feature1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/projects/feature1/</guid>
+      <guid>/projects/feature1/</guid>
       <description>Magna cupidatat ut dolor nostrud dolor nostrud eiusmod consectetur exercitation aute. Enim nostrud elit sunt tempor quis et commodo cillum eiusmod tempor et ut. Eu deserunt est minim veniam laborum est nisi esse in sunt sint.</description>
     </item>
     

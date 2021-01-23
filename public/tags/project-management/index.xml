@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project Management on Build Partners</title>
-    <link>https://buildpartners.com/tags/project-management/</link>
+    <link>/tags/project-management/</link>
     <description>Recent content in Project Management on Build Partners</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://buildpartners.com/tags/project-management/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/tags/project-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bespoke Office Space for Growing Sunshine Coast Business</title>
-      <link>https://buildpartners.com/projects/bespoke-office-space-for-growing-sunshine-coast-business/</link>
+      <link>/projects/bespoke-office-space-for-growing-sunshine-coast-business/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://buildpartners.com/projects/bespoke-office-space-for-growing-sunshine-coast-business/</guid>
+      <guid>/projects/bespoke-office-space-for-growing-sunshine-coast-business/</guid>
       <description></description>
     </item>
     
