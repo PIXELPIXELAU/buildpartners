@@ -19,7 +19,7 @@ intro:
     We specialise in creating office spaces which inspire your team and help you grow your business.
     Speak to one of our friendly team members about your next project
 whatwedo:
-  headline: Lorem Ipsum Dolor Sit Amet
+  headline: Heading
 whowework:
   headline: Who we've worked with
   clients:
