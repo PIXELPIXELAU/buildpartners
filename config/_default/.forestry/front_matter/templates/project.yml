@@ -69,21 +69,23 @@ fields:
   description: Upload some good quality photos of the project
 - type: field_group_list
   name: services
-  label: services
+  label: Describe the services provided
   fields:
   - type: text
     name: title
-    label: title
+    label: Heading
   - type: list
     name: description
-    label: description
+    label: Summary
+  description: Use this section to expand in a little more detail about the specific
+    services that were delivered for this project
 - type: field_group
   name: quote
-  label: quote
+  label: Add Testimonial
   fields:
   - type: text
     name: message
-    label: message
+    label: Add Quote
   - type: text
     name: author
-    label: author
+    label: Persons Name, Position or Company
