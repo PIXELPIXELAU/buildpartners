@@ -15,7 +15,7 @@ intro:
   overline: Commerical Design & Project Management
   heading: We deliver our partners premium building services including space design,
     quantity surveying, project management and retail and venue maintenance.
-  src: uploads/001-8-84-wises-rd-office-hq.jpg
+  src: uploads/img_1926-jpg-fresh.jpeg
   content: "\nOur clients are high-end retail and hospitality as well as expanding
     businesses across Australia and New Zealand.  If you need a partner to help your
     business with its workspaces or specialist attention for your project, Build Partners
