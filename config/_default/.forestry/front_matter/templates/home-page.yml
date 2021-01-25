@@ -6,10 +6,14 @@ fields:
   name: title
   label: SEO Title
   description: Title that will show in a search
+  config:
+    required: true
 - type: text
   name: description
   label: SEO Description
   description: The description that will show in a search
+  config:
+    required: true
 - type: field_group
   name: hero
   label: Page Hero
