@@ -4,7 +4,7 @@ description = "Custom design, project management of construction and furnishing 
 featured = true
 image = "uploads/003-8-84-wises-rd-office-hq.jpg"
 keystats = ["Project completed within budget offering high quality, comfortable office space for future growth and flexible use", "Training facilities was supplied as well as an outdoor space for company social events"]
-tags = ["Project Management", "Cost Management"]
+tags = ["Project Management", "Cost Management", "Retail and Venue Maintenance"]
 title = "Bespoke Office Space for Growing Sunshine Coast Business"
 [project]
 location = "Maroochydore"
