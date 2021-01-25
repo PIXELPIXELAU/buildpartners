@@ -4,7 +4,7 @@ description: Commercial Design & Project Management servicing Brisbane, Sunshine
   Gold Coast, Sydney
 hero:
   heading: Structuring expertise & creativity to deliver impactful spaces
-  src: uploads/002-8-84-wises-rd-office-hq.jpg
+  src: uploads/bhp-3.jpg
   cta:
   - href: "/projects/"
     text: View Our Work
