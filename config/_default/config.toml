@@ -7,7 +7,7 @@ socialcards = true
 [[menu.main]]
 name = "Team"
 url = "/team/"
-weight = 5
+weight = 4
 [[module.mounts]]
 source = "assets"
 target = "assets"
