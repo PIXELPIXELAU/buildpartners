@@ -1,4 +1,26 @@
 ---
 label: Testimonials
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: What was the title of the project
+- name: Customer
+  type: text
+  config:
+    required: false
+  label: Customer
+  description: Who provided the testimonial?
+- name: copy
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Copy
+  description: Testimonial statement
