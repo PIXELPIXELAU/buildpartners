@@ -1,6 +1,7 @@
 ---
-label: Testimonials
+label: Testimonial Detail
 hide_body: true
+display_field: Customer
 fields:
 - name: title
   type: text

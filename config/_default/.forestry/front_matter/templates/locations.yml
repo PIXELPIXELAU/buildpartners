@@ -2,7 +2,7 @@
 label: Locations
 hide_body: true
 fields:
-- name: Location1
+- name: location
   type: textarea
   default: ''
   config:
@@ -10,9 +10,9 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Location
-  description: Address and contact details
-- name: Location3
+  label: Suburb or City
+  description: Primary Location of Office
+- name: email
   type: textarea
   default: ''
   config:
@@ -20,9 +20,8 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Location
-  description: Address and contact details
-- name: Location2
+  label: Contact Email Address
+- name: phone
   type: textarea
   default: ''
   config:
@@ -30,5 +29,15 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Location
-  description: Address and contact details
+  label: Contact Number
+  description: Primary contact number
+- name: address
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Physical Address
+  description: Complete location of office
