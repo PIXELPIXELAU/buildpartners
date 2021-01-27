@@ -1,7 +1,7 @@
 ---
-title: We need 1 blog to kick off
+title: What does the post Covid workspace look like.
 categories:
-- Test
+- Commercial
 - Category
 image: "/img/project/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg"
 description: Summary for Blog Post
