@@ -9,6 +9,10 @@ sections:
 - type: document
   path: content/_index.md
   label: Home
+- type: document
+  path: content/blog/_index.md
+  label: Blog
+  match: "**/*"
 - type: heading
   label: Content
 - type: directory
@@ -27,9 +31,6 @@ sections:
   exclude: "*index.md"
   templates:
   - service
-- type: document
-  path: content/team
-  label: Team
 - type: directory
   path: content/blog
   label: Blog
@@ -38,6 +39,9 @@ sections:
   exclude: "*index.md"
   templates:
   - blog-post
+- type: document
+  path: content/team
+  label: Team
 upload_dir: assets/uploads
 public_path: uploads
 front_matter_path: ''
