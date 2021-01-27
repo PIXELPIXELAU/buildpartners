@@ -38,3 +38,11 @@ facebook = "buildpartners"
 [taxonomies]
 category = "categories"
 tag = "tags"
+
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "The Blog"
+    # pre = "<i class='fa fa-heart'></i>"
+    url = "/blog/"
+    weight = 1
