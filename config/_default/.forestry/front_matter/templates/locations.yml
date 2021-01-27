@@ -1,4 +1,34 @@
 ---
 label: Locations
 hide_body: true
-fields: []
+fields:
+- name: Location1
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Location
+  description: Address and contact details
+- name: Location3
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Location
+  description: Address and contact details
+- name: Location2
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Location
+  description: Address and contact details
