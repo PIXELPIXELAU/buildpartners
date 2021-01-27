@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: content/team/_index.md
+  label: Team
+  match: "**/*"
 - type: heading
   label: Pages
 - type: document
@@ -12,6 +16,10 @@ sections:
 - type: document
   path: content/blog/_index.md
   label: Blog
+  match: "**/*"
+- type: document
+  path: content/services/_index.md
+  label: Services
   match: "**/*"
 - type: heading
   label: Content
@@ -40,7 +48,7 @@ sections:
   templates:
   - blog-post
 - type: document
-  path: content/team
+  path: content/team/*
   label: Team
 upload_dir: assets/uploads
 public_path: uploads
