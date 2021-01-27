@@ -5,10 +5,7 @@ title = "Build Partners"
 [enable]
 socialcards = true
 [[menu.main]]
-identifier = "blog"
-name = "The Blog"
-url = "/blog/"
-weight = 2
+
 [[module.mounts]]
 source = "assets"
 target = "assets"
