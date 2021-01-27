@@ -1,4 +1,20 @@
 ---
 label: Team Members
 hide_body: true
-fields: []
+fields:
+- name: title_here
+  type: text
+  config:
+    required: false
+  label: Title here
+  description: Team title here
+- name: team_overview
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Team Overview
+  description: Paragraph on the collective team
