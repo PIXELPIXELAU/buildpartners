@@ -4,10 +4,6 @@ summaryLength = 24
 title = "Build Partners"
 [enable]
 socialcards = true
-[[menu.main]]
-name = "Team"
-url = "/team/"
-weight = 2
 [[module.mounts]]
 source = "assets"
 target = "assets"
