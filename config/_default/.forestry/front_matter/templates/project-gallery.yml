@@ -1,4 +1,9 @@
 ---
 label: Project Gallery
 hide_body: true
-fields: []
+fields:
+- name: project_gallery
+  type: image_gallery
+  config: {}
+  label: Project Gallery
+  description: Preferred images of projects worked on
