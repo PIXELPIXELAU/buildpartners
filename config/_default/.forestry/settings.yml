@@ -15,7 +15,6 @@ sections:
 - type: document
   path: content/projects/_index.md
   label: Projects
-  match: "**/*"
 - type: document
   path: content/services/_index.md
   label: Services
