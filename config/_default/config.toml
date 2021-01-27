@@ -5,7 +5,9 @@ title = "Build Partners"
 [enable]
 socialcards = true
 [[menu.main]]
-
+name = "Team"
+url = "/team/"
+weight = 5
 [[module.mounts]]
 source = "assets"
 target = "assets"

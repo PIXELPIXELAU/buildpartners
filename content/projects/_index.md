@@ -1,5 +1,8 @@
 ---
 title: Projects
-description:
-menu: primary
+description: 
+menu:
+  main:
+    weight: 3
+
 ---
