@@ -50,6 +50,8 @@ sections:
 - type: document
   path: content/team/*
   label: Team
+- type: heading
+  label: Settings
 - type: directory
   path: content/locations
   label: Locations
