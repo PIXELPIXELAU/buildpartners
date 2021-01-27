@@ -41,3 +41,5 @@ fields:
       format: markdown
   label: Physical Address
   description: Complete location of office
+pages:
+- content/locations/brisbane.md
