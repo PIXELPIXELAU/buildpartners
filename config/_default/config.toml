@@ -1,58 +1,40 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Build Partners"
-
 summaryLength = 24
-
-[module]
-  [[module.mounts]]
-    source = "assets"
-    target = "assets"
-  [[module.mounts]]
-    source = "static"
-    target = "static"
-  [[module.mounts]]
-    source = "node_modules"
-    target = "assets/node_modules"
-  [[module.mounts]]
-    source = "node_modules/jquery/dist"
-    target = "assets/js/jquery"
-  [[module.mounts]]
-    source = "assets/uploads"
-    target = "static/uploads"
-
-
-[outputs]
-  home = ["HTML","RSS","JSON"]
-
-[setup]
-  netlifycms = true
-  gtm = ""
-
+title = "Build Partners"
 [enable]
-  socialcards = true
-
-[social]
-  #twitter = "buildpartners"
-  facebook = "buildpartners"
-  #instagram = "buildpartners"
-  #linkedin = "buildpartners"
-
+socialcards = true
+[[module.mounts]]
+source = "assets"
+target = "assets"
+[[module.mounts]]
+source = "static"
+target = "static"
+[[module.mounts]]
+source = "node_modules"
+target = "assets/node_modules"
+[[module.mounts]]
+source = "node_modules/jquery/dist"
+target = "assets/js/jquery"
+[[module.mounts]]
+source = "assets/uploads"
+target = "static/uploads"
+[outputs]
+home = ["HTML", "RSS", "JSON"]
 [params]
-  netlifyaml = "conf/develop.yml"
-  logo = "logo.svg"
-  Hello = "World"
-  Author = "Admin"
-  lazy = "The quick brown fox jumps over the lazy dog"
-  lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  loremipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-  keyword = ""
-
-#[permalinks]
-  #posts = "/:year/:month/:title/"
-
+Author = "Admin"
+Hello = "World"
+keyword = ""
+lazy = "The quick brown fox jumps over the lazy dog"
+logo = "logo.svg"
+lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+loremipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+netlifyaml = "conf/develop.yml"
+[setup]
+gtm = ""
+netlifycms = true
+[social]
+facebook = "buildpartners"
 [taxonomies]
-#when adding custom taxominies you'll need to list out all being used including default
- tag = "tags" #default
- category = "categories" #default
- # trainer = "trainers"
+category = "categories"
+tag = "tags"

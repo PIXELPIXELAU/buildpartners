@@ -26,7 +26,6 @@ sections:
 - type: document
   path: content/team
   label: Team
-  match: "**/*"
 - type: directory
   path: content/blog
   label: Blog
