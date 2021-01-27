@@ -50,6 +50,14 @@ sections:
 - type: document
   path: content/team/*
   label: Team
+- type: directory
+  path: content/locations
+  label: Locations
+  create: documents
+  match: "*"
+  exclude: _index.md
+  templates:
+  - locations
 upload_dir: assets/uploads
 public_path: uploads
 front_matter_path: ''
