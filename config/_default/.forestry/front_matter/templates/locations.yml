@@ -43,4 +43,5 @@ fields:
   description: Complete location of office
 pages:
 - content/locations/brisbane.md
+- content/locations/melbourne.md.md
 - content/locations/sydney.md.md
