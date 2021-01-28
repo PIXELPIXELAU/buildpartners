@@ -1,5 +1,5 @@
 +++
-address = "310 Edward Street\nBRISBANE, QLD 4567"
+address = "401 Collins Street\nMelbourne Victoria 3000"
 draft = true
 email = "brisbane@lukemurray.com"
 location = "Brisbane"
