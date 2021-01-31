@@ -1,8 +1,6 @@
 ---
 title: Team
 description: About our team
-menu:
-  main:
-    weight: 5
 
 ---
+Draft content about the build partners team.
