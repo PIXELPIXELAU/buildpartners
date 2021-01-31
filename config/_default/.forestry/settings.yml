@@ -10,17 +10,17 @@ sections:
   path: content/_index.md
   label: Home
 - type: document
-  path: content/blog/_index.md
-  label: Blog
+  path: content/services/_index.md
+  label: Services
 - type: document
   path: content/projects/_index.md
   label: Projects
 - type: document
-  path: content/services/_index.md
-  label: Services
-- type: document
   path: content/team/_index.md
   label: Team
+- type: document
+  path: content/blog/_index.md
+  label: Blog
 - type: heading
   label: Content
 - type: directory
