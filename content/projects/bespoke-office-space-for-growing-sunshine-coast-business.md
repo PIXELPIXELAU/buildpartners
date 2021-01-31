@@ -17,6 +17,9 @@ message = "They handled everything from obtaining builder quotations and negotia
 photos = ["uploads/001-8-84-wises-rd-office-hq.jpg", "uploads/003-8-84-wises-rd-office-hq.jpg", "uploads/002-8-84-wises-rd-office-hq.jpg"]
 title = ""
 [[services]]
+description = ""
+title = "Project Management"
+[[services]]
 description = "Insert some information about the concept design process"
 title = "Concept design"
 [[services]]
