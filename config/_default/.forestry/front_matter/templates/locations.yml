@@ -12,15 +12,6 @@ fields:
       format: markdown
   label: Suburb or City
   description: Primary Location of Office
-- name: email
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Contact Email Address
 - name: phone
   type: textarea
   default: ''
