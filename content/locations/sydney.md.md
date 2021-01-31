@@ -1,8 +1,8 @@
 +++
-address = "25 King Street, Bowen Hills Queensland 4006"
+address = "66 Clarence Street Barangaroo, Sydney 2000"
 draft = true
 email = ""
-location = "Brisbane"
+location = "Sydney"
 phone = "1300 655 506"
 title = "sydney.md"
 
