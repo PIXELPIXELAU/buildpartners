@@ -14,7 +14,7 @@ netlifyaml = "conf/develop.yml"
 [enable]
 socialcards = true
 [[menu.main]]
-name = "Custom Link"
+name = "Custom Link2"
 url = "https://google.com"
 weight = 5
 [[module.mounts]]
