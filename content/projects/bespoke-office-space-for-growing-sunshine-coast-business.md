@@ -6,6 +6,9 @@ image = "uploads/003-8-84-wises-rd-office-hq.jpg"
 keystats = ["Project completed within budget offering high quality, comfortable office space for future growth and flexible use", "Training facilities was supplied as well as an outdoor space for company social events"]
 tags = ["Project Management", "Cost Management", "Retail and Venue Maintenance"]
 title = "Bespoke Office Space for Growing Sunshine Coast Business"
+[menu.main]
+name = "Projects"
+weight = 3
 [project]
 location = "Maroochydore"
 name = "OFFICE HQ"
