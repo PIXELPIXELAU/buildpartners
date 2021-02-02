@@ -2,13 +2,17 @@
 label: Team Members
 hide_body: true
 fields:
-- name: title_here
+- name: name
   type: text
   config:
     required: false
-  label: Title here
-  description: Team title here
-- name: team_overview
+  label: Full Name
+- name: position
+  type: text
+  config:
+    required: false
+  label: Position
+- name: summary
   type: textarea
   default: ''
   config:
@@ -16,8 +20,8 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Team Overview
-  description: Paragraph on the collective team
+  label: Summary
+  description: Summary of team member
 - name: src
   type: file
   config:
