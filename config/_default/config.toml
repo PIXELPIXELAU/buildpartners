@@ -16,7 +16,7 @@ socialcards = true
 [[menu.main]]
 name = "Contact"
 url = "/contact/"
-weight = 5
+weight = 1
 [[module.mounts]]
 source = "assets"
 target = "assets"
