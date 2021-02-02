@@ -5,6 +5,12 @@ categories:
 - Category
 image: "/img/project/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg"
 description: It looks like it would suck a fart.
+menu:
+  main:
+    identifier: blog
+    name: Blog
+    title: ''
+    weight: 4
 
 ---
 I'm baby twee artisan green juice, shabby chic enamel pin swag humblebrag flannel wolf keffiyeh. Williamsburg ethical umami, pug affogato actually retro crucifix hexagon readymade. Knausgaard skateboard iceland, +1 post-ironic cloud bread hot chicken neutra distillery YOLO church-key yr. Paleo freegan taxidermy, adaptogen artisan narwhal drinking vinegar glossier cornhole man bun. Sriracha ramps prism tousled brunch keffiyeh twee.
