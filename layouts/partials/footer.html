@@ -70,17 +70,17 @@
             {{end}}
         </div>
         <div class="columns is-vcentered">
-            <div class="lm-copyright column">
+            <div class="lm-copyright column is-narrow">
                 2019 - {{ now.Format "2006" }}  © Build.Partners.Projects
             </div>
-            <div class="column is-align-right">
-                {{$vba := resources.Get "VBA.png" }}
-                {{$qbcc := resources.Get "QBCC.png" }}
-                {{$master := resources.Get "Master Builders.jpg" }}                
+            <div class="column has-text-right">
+                {{$vba := resources.Get "uploads/VBA.png" }}
+                {{$qbcc := resources.Get "uploads/QBCC.png" }}
+                {{$master := resources.Get "uploads/Master-Builders.jpg" }}                
                 
-                <img src="{{$vba.Permalink}}" height="96"/>
-                <img src="{{$vba.Permalink}}" height="96"/>
-                <img src="{{$vba.Permalink}}" height="96"/>
+                <img class="mr-3" src="{{$vba.Permalink}}" height="48"/>
+                <img class="mr-3" src="{{$qbcc.Permalink}}" height="48"/>
+                <img class="mr-3" src="{{$master.Permalink}}" height="48"/>
             
             </div>
             
