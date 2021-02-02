@@ -11,37 +11,25 @@
             <div class="column">
                 <article class="media">
                     <figure class="media-left">
-                      <p class="image is-64x64">
-                        <img src="https://bulma.io/images/placeholders/128x128.png">
-                      </p>
+                      <figure class="image is-128x128">
+                        {{$avatar := resources.Get .Params.src }}
+                        {{ $avatar := $avatar.Fill "128x128" }}
+
+                        <img class="is-rounded has-elevation" src="{{$avatar.Permalink}}" width="128" height="128">
+                      </figure>
                     </figure>
                     <div class="media-content">
-                      <div class="content">
-                        <p>{{.Params.name}}</p>
-                        </p>
-                      </div>
-                      <nav class="level is-mobile">
-                        <div class="level-left">
-                          <a class="level-item">
-                            <span class="icon is-small"><i class="fas fa-reply"></i></span>
-                          </a>
-                          <a class="level-item">
-                            <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-                          </a>
-                          <a class="level-item">
-                            <span class="icon is-small"><i class="fas fa-heart"></i></span>
-                          </a>
+                      <div class="content ml-6">
+                        <p class="is-overline mb-0">{{.Params.position}}</p>
+                        <p class="title is-size-3">{{.Title}}</p>
+                        <p class="subtitle is-size-4">{{.Description}}</p>
+
+                        <div class="content">
+                          {{.Content}}
                         </div>
-                      </nav>
-                    </div>
-                    <div class="media-right">
-                      <button class="delete"></button>
+                      </div>
                     </div>
                   </article>
-                
-                {{.}}
-                xx
-
             </div>
             {{end}}
         </div>
