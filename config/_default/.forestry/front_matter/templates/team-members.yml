@@ -8,6 +8,11 @@ fields:
   config:
     required: false
   label: Full Name
+- name: position
+  type: text
+  config:
+    required: false
+  label: Position
 - name: description
   type: textarea
   default: ''
@@ -17,11 +22,6 @@ fields:
     schema:
       format: markdown
   label: Summary
-- name: position
-  type: text
-  config:
-    required: false
-  label: Position
 - name: src
   type: file
   config:
