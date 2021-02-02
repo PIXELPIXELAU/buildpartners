@@ -38,7 +38,3 @@ facebook = "buildpartners"
 [taxonomies]
 category = "categories"
 tag = "tags"
-
-[menu]
-  [[menu.main]]
-  
