@@ -7,6 +7,6 @@ menu:
   main:
     identifier: contact
     title: ''
-    weight: 2
+    weight: 1
 
 ---

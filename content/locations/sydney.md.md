@@ -4,5 +4,8 @@ email = ""
 location = "Sydney"
 phone = "1300 655 506"
 title = "sydney.md"
+[menu.main]
+name = "Contact"
+weight = 5
 
 +++
