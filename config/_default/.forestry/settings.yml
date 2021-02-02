@@ -44,12 +44,18 @@ sections:
   label: Blog
   create: documents
   match: "*"
-  exclude: "*index.md"
+  exclude: _index.md
   templates:
   - blog-post
-- type: document
-  path: content/team/*
+  - blog-post
+- type: directory
+  path: content/team
   label: Team
+  create: documents
+  match: "*"
+  exclude: _index.md
+  templates:
+  - team-members
 - type: heading
   label: Settings
 - type: directory
