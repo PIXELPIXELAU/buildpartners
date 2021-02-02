@@ -50,7 +50,7 @@ sections:
   - blog-post
 - type: directory
   path: content/team
-  label: Team
+  label: Team Members
   create: documents
   match: "*"
   exclude: _index.md
