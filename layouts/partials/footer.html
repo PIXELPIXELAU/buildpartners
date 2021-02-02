@@ -69,8 +69,21 @@
             {{ end }}
             {{end}}
         </div>
-        <div class="lm-copyright">
-            2019 - {{ now.Format "2006" }}  © Build.Partners.Projects
+        <div class="columns is-vcentered">
+            <div class="lm-copyright column">
+                2019 - {{ now.Format "2006" }}  © Build.Partners.Projects
+            </div>
+            <div class="column is-align-right">
+                {{$vba := resources.Get "VBA.png" }}
+                {{$qbcc := resources.Get "QBCC.png" }}
+                {{$master := resources.Get "Master Builders.jpg" }}                
+                
+                <img src="{{$vba.Permalink}}" height="96"/>
+                <img src="{{$vba.Permalink}}" height="96"/>
+                <img src="{{$vba.Permalink}}" height="96"/>
+            
+            </div>
+            
         </div>
     </div>
 </footer>
