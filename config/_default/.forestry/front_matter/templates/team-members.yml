@@ -1,18 +1,14 @@
 ---
 label: Team Members
-hide_body: true
+hide_body: false
+display_field: title
 fields:
 - name: title
   type: text
   config:
     required: false
   label: Full Name
-- name: position
-  type: text
-  config:
-    required: false
-  label: Position
-- name: summary
+- name: description
   type: textarea
   default: ''
   config:
@@ -21,7 +17,11 @@ fields:
     schema:
       format: markdown
   label: Summary
-  description: Summary of team member
+- name: position
+  type: text
+  config:
+    required: false
+  label: Position
 - name: src
   type: file
   config:
