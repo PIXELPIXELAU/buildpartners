@@ -6,6 +6,6 @@ menu:
   main:
     identifier: blog
     title: ''
-    weight: 3
+    weight: 4
 
 ---
