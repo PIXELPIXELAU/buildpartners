@@ -13,6 +13,10 @@ loremipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 netlifyaml = "conf/develop.yml"
 [enable]
 socialcards = true
+[[menu.main]]
+name = "Custom Link"
+url = "https://google.com"
+weight = 5
 [[module.mounts]]
 source = "assets"
 target = "assets"
