@@ -13,6 +13,8 @@ loremipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 netlifyaml = "conf/develop.yml"
 [enable]
 socialcards = true
+[[menu.main]]
+weight = 1
 [[module.mounts]]
 source = "assets"
 target = "assets"
@@ -38,5 +40,3 @@ facebook = "buildpartners"
 [taxonomies]
 category = "categories"
 tag = "tags"
-[menu]
-[[menu.main]]
