@@ -14,6 +14,10 @@ netlifyaml = "conf/develop.yml"
 [enable]
 socialcards = true
 [[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 6
+[[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
