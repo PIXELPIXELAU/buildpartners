@@ -1,5 +1,5 @@
 ---
-title: What does the Post-Covid workspace look like?
+title: Blog Page
 categories:
 - Commercial
 - Category
