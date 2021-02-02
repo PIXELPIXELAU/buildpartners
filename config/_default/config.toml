@@ -21,7 +21,7 @@ source = "assets/uploads"
 target = "static/uploads"
 [outputs]
 home = ["HTML", "RSS", "JSON"]
-[params]
+[Params]
 Author = "Admin"
 Hello = "World"
 keyword = ""
@@ -38,3 +38,30 @@ facebook = "buildpartners"
 [taxonomies]
 category = "categories"
 tag = "tags"
+[[menu.main]]
+name = "Sub Page"
+parent = "Pages"
+url = "#"
+weight = 1
+[[menu.main]]
+name = "Pages"
+url = "#"
+weight = 4
+[[menu.main]]
+identifier = "contact"
+name = "contact"
+title = ""
+url = "/contact/"
+weight = 3
+[[menu.main]]
+identifier = "blog"
+name = "blog"
+title = ""
+url = "/blog/"
+weight = 2
+[[menu.main]]
+identifier = "home"
+name = "home"
+title = ""
+url = "/"
+weight = 1
