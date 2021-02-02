@@ -12,16 +12,6 @@ fields:
   config:
     required: false
   label: Position
-- name: summary
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Summary
-  description: Summary of team member
 - name: src
   type: file
   config:
