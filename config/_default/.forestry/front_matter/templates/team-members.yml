@@ -18,3 +18,8 @@ fields:
       format: markdown
   label: Team Overview
   description: Paragraph on the collective team
+- name: src
+  type: file
+  config:
+    maxSize: 64
+  label: Photo
