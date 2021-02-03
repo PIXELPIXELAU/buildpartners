@@ -1,5 +1,5 @@
 +++
-categories = ["Project Management", "Retail"]
+categories = []
 description = "This is a 3rd article, purely for demonstrating how blogs work."
 draft = true
 image = "uploads/img_1942-jpg-adidas.jpeg"
