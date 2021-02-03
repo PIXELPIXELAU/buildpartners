@@ -1,6 +1,6 @@
 ---
 title: Team
-description: ''
+description: An overview of the BP team
 
 ---
 #### Over 50 years combined experience
