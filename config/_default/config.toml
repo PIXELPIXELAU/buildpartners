@@ -13,10 +13,7 @@ loremipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 netlifyaml = "conf/develop.yml"
 [enable]
 socialcards = true
-[[menu.main]]
-name = "Contact"
-url = "/contact/"
-weight = 1
+
 [[module.mounts]]
 source = "assets"
 target = "assets"
