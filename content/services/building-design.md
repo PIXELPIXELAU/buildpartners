@@ -1,6 +1,6 @@
 +++
-description = "We provide creative and practical designs for your business.  Build Partners are a fully licensed building designer with a passion for creating inspiring spaces and high-quality finishes."
-headline = "We bring new ideas coupled with the experience in construction to make it cost effective and practical.  "
+description = "At Build partners we provide creative and practical designs for your business.  As a fully licensed builder, our team has the experience and expertise to create inspiring spaces for your employees and instore experiences that you customers will love."
+headline = "New ideas coupled with the experience in construction to make it cost effective and practical.  "
 title = "Building Design"
 
 +++
