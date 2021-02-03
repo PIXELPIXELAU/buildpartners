@@ -1,8 +1,7 @@
 +++
-title= "Blog"
-description= "Blog Description"
-statement= "Page Statement about expertise"
-
+description = "Blog Description"
+statement = "approx 350 words"
+title = "Blog"
 
 +++
 ### Test blog 1 
