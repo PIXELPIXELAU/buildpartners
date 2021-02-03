@@ -1,4 +1,4 @@
 ---
 title: Projects
-menu: primary
+description: 
 ---

@@ -1,25 +1,37 @@
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <p>{{.Site.Title}}</p>
-    </a>
+<nav class="navbar is-primary {{ if not .IsHome }}navbar-internal{{ end }}" role="navigation" aria-label="main navigation">
+  {{ if not .IsHome }}<img src="/img/headzone.svg" class="navbar-overlay">{{ end }}
+  <div class="container">
+      <div class="navbar-brand">
+          <a href="/">
+              <img src="/img/logo.svg" alt="{{ .Site.Title }}" class="navbar-logo">
+          </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="/">Home</a>
-    </div>
-
-    <div class="navbar-end ">
-      <div class="navbar-item mr-6">
-        <a class="#"><i class="fab fa-facebook-square"></i></a>
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
       </div>
-    </div>
+      
+      <div class="navbar-menu" id="navMenu">
+          <div class="navbar-end">
+              {{ $currentPage := . }}
+              {{ range .Site.Menus.main }}
+              {{if .HasChildren}}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="{{ .URL }}" class="navbar-link">{{ .Title }}</a>
+                    <div class="navbar-dropdown">
+                        {{ range .Children }}
+                            <a href="{{ .URL }}" class="navbar-item">{{ .Title }}</a>
+                        {{end}}
+                    </div>
+                </div>
+              {{else}}
+                <a href="{{ .URL }}" class="navbar-item {{ if eq $currentPage.URL .URL }}is-active{{ end }}">{{ .Title }}</a>
+              {{ end }}
+              {{end}}
+          </div>
+      </div>
   </div>
 </nav>
+

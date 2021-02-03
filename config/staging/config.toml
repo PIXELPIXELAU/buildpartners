@@ -1,4 +1,2 @@
 baseURL = "https://staging.buildpartners.com/"
 
-[params]
-  netlifyaml = "conf/staging.yml"

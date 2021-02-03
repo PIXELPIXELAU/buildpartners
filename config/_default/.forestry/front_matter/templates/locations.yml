@@ -1,0 +1,38 @@
+---
+label: Locations
+hide_body: true
+fields:
+- name: location
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Suburb or City
+  description: Primary Location of Office
+- name: phone
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Contact Number
+  description: Primary contact number
+- name: address
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Physical Address
+  description: Complete location of office
+pages:
+- content/locations/brisbane.md
+- content/locations/melbourne.md.md
+- content/locations/sydney.md.md

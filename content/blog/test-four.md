@@ -1,9 +1,12 @@
 ---
-title: Yet Another Placeholder Post.
-categories: ['Test', 'Category']
-image: /img/project/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg
----
+title: Blog Page
+categories:
+- Commercial
+- Category
+image: "/img/project/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg"
+description: It looks like it would suck a fart.
 
+---
 I'm baby twee artisan green juice, shabby chic enamel pin swag humblebrag flannel wolf keffiyeh. Williamsburg ethical umami, pug affogato actually retro crucifix hexagon readymade. Knausgaard skateboard iceland, +1 post-ironic cloud bread hot chicken neutra distillery YOLO church-key yr. Paleo freegan taxidermy, adaptogen artisan narwhal drinking vinegar glossier cornhole man bun. Sriracha ramps prism tousled brunch keffiyeh twee.
 
 Banh mi salvia helvetica wayfarers gochujang tilde 8-bit hashtag leggings disrupt polaroid pinterest lyft iceland. Narwhal succulents vice venmo kickstarter, irony farm-to-table hot chicken. Pok pok humblebrag 90's mustache kitsch. Intelligentsia poutine fam slow-carb. Irony copper mug snackwave try-hard ugh.

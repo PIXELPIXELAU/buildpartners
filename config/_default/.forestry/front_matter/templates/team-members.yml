@@ -1,0 +1,31 @@
+---
+label: Team Members
+hide_body: false
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Full Name
+- name: position
+  type: text
+  config:
+    required: false
+  label: Position
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Summary
+- name: src
+  type: file
+  config:
+    maxSize: 64
+  label: Photo
+pages:
+- content/team/luke-murray.md

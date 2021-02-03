@@ -4,7 +4,7 @@ description: Commercial Design & Project Management servicing Brisbane, Sunshine
   Gold Coast, Sydney
 hero:
   heading: Structuring expertise & creativity to deliver impactful spaces
-  src: uploads/002-8-84-wises-rd-office-hq.jpg
+  src: uploads/img_1328-jpg-ap.jpeg
   cta:
   - href: "/projects/"
     text: View Our Work
@@ -15,7 +15,7 @@ intro:
   overline: Commerical Design & Project Management
   heading: We deliver our partners premium building services including space design,
     quantity surveying, project management and retail and venue maintenance.
-  src: uploads/001-8-84-wises-rd-office-hq.jpg
+  src: uploads/mbs-private-gaming-room-6.jpg
   content: "\nOur clients are high-end retail and hospitality as well as expanding
     businesses across Australia and New Zealand.  If you need a partner to help your
     business with its workspaces or specialist attention for your project, Build Partners
@@ -41,6 +41,7 @@ expertise:
   overline: EXPERIENCE AT ALL LEVELS
   headline: What makes us different is our personalised and true partnership approach.
   description: We bring a broad range of experience in commercial building projects
-    - including as designer, builder, cost consultant and project manager.
+    - including as designer, builder, cost consultant and project manager
+
 
 ---

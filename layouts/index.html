@@ -30,8 +30,16 @@
   </section>
 {{end}}
 
-{{$introImage := resources.Get .Params.intro.src }}
-<section class="hero img-bg img-hero is-primary is-fullheight" style="--image: url('{{ $introImage.Permalink }}');">
+
+
+
+<section class="hero img-bg img-hero is-primary is-fullheight" 
+  {{with .Params.intro.src }}
+    {{$introImage := resources.Get .}}
+    {{if ne $introImage nil }}style="--image: url('{{ $introImage.Permalink }}');"{{end}}
+  {{end}}
+  
+  >
   <div class="hero-body">
     <div class="container">
       <div class="box is-overlain is-right content" style="max-width: 550px">
