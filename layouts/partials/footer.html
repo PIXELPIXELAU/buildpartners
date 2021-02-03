@@ -78,9 +78,9 @@
                 {{$qbcc := resources.Get "/uploads/QBCC.png" }}
                 {{$master := resources.Get "/uploads/Master-Builders.jpg" }}                
                 
-                <img class="mr-5" src="{{$vba.Permalink}}" height="48"/>
-                <img class="mr-5" src="{{$qbcc.Permalink}}" height="48"/>
-                <img class="mr-5" src="{{$master.Permalink}}" height="48"/>
+                {{if ne $vba nil}} <img class="mr-5" src="{{$vba.Permalink}}" height="48"/>{{end}}
+                {{if ne $qbcc nil}}<img class="mr-5" src="{{$qbcc.Permalink}}" height="48"/>{{end}}
+                {{if ne $master nil}}<img class="mr-5" src="{{$master.Permalink}}" height="48"/>{{end}}
             
             </div>
             
