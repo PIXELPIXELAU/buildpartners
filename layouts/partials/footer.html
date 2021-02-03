@@ -74,7 +74,13 @@
                 2019 - {{ now.Format "2006" }}  © Build.Partners.Projects
             </div>
             <div class="column has-text-right">
+                {{$vba := resources.Get "/uploads/VBA.png" }}
+                {{$qbcc := resources.Get "/uploads/QBCC.png" }}
+                {{$master := resources.Get "/uploads/Master-Builders.jpg" }}                
                 
+                <img class="mr-5" src="{{$vba.Permalink}}" height="48"/>
+                <img class="mr-5" src="{{$qbcc.Permalink}}" height="48"/>
+                <img class="mr-5" src="{{$master.Permalink}}" height="48"/>
             
             </div>
             
