@@ -95,5 +95,3 @@ fields:
   - type: text
     name: author
     label: Persons Name, Position or Company
-pages:
-- content/projects/bespoke-office-space-for-growing-sunshine-coast-business.md
