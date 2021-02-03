@@ -1,5 +1,5 @@
 ---
-title: Team
+title: Our Team
 description: An overview of the BP team
 
 ---
