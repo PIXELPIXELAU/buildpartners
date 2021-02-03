@@ -1,7 +1,6 @@
 +++
 categories = []
 description = "Testing to check layout."
-draft = true
 image = "uploads/img_1942-jpg-adidas.jpeg"
 title = "A Second article"
 
