@@ -13,6 +13,31 @@ loremipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 netlifyaml = "conf/develop.yml"
 [enable]
 socialcards = true
+[[menu.main]]
+title = "Services"
+name = "services"
+url = "/services/"
+weight = 2
+[[menu.main]]
+title = "Projects"
+name = "projects"
+url = "/projects/"
+weight = 1
+[[menu.main]]
+title = "Blog"
+name = "blog"
+url = "/blog/"
+weight = 3
+[[menu.main]]
+title = "Contact"
+name = "contact"
+url = "/contact/"
+weight = 9
+[[menu.main]]
+title = "Team"
+name = "team"
+url = "/team/"
+weight = 8
 
 [[module.mounts]]
 source = "assets"
