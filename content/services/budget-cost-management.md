@@ -11,9 +11,5 @@ cardsummary:
   deleniti sapiente nisi ut a quos distinctio similique molestiae dignissimos officiis
   cumque obcaecati hic, debitis repellat accusamus accusantium nihil.
 headline: On time, on budget and built to scope.
-draft: true
 
 ---
-    Heading 1
-    
-    This is full summary of the content here.
