@@ -9,9 +9,9 @@ services = []
 tags = []
 title = "Marina Bay Sands Casino"
 [project]
-location = ""
-name = ""
-src = ""
+location = "Singapore"
+name = "Marina Bay Sands"
+src = "uploads/marina-bay.png"
 [quote]
 author = ""
 message = ""
