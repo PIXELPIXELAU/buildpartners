@@ -6,7 +6,7 @@ image = ""
 keystats = []
 services = []
 tags = []
-title = "Marina Bay Sands Casino"
+title = "Large Scale Project Marina Bay Sands Casino"
 [project]
 location = "Singapore"
 name = "Marina Bay Sands"
