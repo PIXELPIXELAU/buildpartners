@@ -1,7 +1,6 @@
 +++
 deliverables = []
 description = "A full fitout project at the prestigious Marina Bay Sands Casino in Singapore. the brief included the design, project management with a scope that including gaming rooms, kitchens and lobby."
-draft = true
 featured = true
 image = ""
 keystats = []
