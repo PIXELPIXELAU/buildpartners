@@ -1,7 +1,6 @@
 +++
 categories = []
 description = "Transitioning teams to a post-COVID workplace"
-draft = true
 image = "uploads/img_1942-jpg-adidas.jpeg"
 title = "Transitioning teams to a post-COVID workplace"
 
