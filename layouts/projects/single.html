@@ -38,35 +38,41 @@
     {{$imageURL3 := index .Params.Zones.Photos 2 }}
     <div class="tile is-ancestor is-mobile">
         <div class="tile is-vertical-mobile">
+            {{with $imageURL1 }}
             <div class="tile is-8 is-parent">
                 <figure class="tile is-child image is-16by9 has-shadow">
-                    {{$image := resources.Get $imageURL1 }}
+                    {{$image := resources.Get . }}
                     {{if ne $image nil}}
                     <img alt="" src="{{$image.Permalink}}">
                     {{end}}
                 </figure>
             </div>
+            {{end}}
             <div class="tile is-vertical is-horizontal-mobile">
+                {{with $imageURL2}}
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <figure class="image is-16by9 has-shadow">
-                            {{$image := resources.Get $imageURL2 }}
+                            {{$image := resources.Get .}}
                             {{if ne $image nil}}
                             <img alt="" src="{{$image.Permalink}}">
                             {{end}}
                         </figure>
                     </div>
                 </div>
+                {{end}}
+                {{with $imageURL3}}
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <figure class="image is-16by9 has-shadow">
-                            {{$image := resources.Get $imageURL3 }}
+                            {{$image := resources.Get . }}
                             {{if ne $image nil}}
                             <img alt="" src="{{$image.Permalink}}">
                             {{end}}
                         </figure>
                     </div>
                 </div>
+                {{end}}
             </div>
         </div>
     </div>
