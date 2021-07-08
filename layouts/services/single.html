@@ -9,10 +9,11 @@
     </div>
     <div class="hero-body">
         <div class="container">
-            <h2 class="is-size-1 has-text-weight-semibold mb-6">{{.Params.headline}}</h2>
-            <div class="buttons">
+            <h2 class="is-size-1 has-text-weight-semibold mb-3">{{.Params.headline}}</h2>
+            <p class="is-size-3 subtitle  mb-6">{{.Description}}</p>
+            <p class="buttons">
                 <a href="/contact" class="button is-primary is-inverted">Make an Enquiry</a> <a class="button is-primary" href="/services">All Our Services</a>
-            </div>
+            </p>
         </div>
     </div>
 </section>
@@ -45,7 +46,7 @@
                         <img alt="Project" src="{{$image.Permalink}}">
                     </figure>
                     <div class="content">
-                        <h3 class="is-size-4 has-text-black has-text-weight-semibold">{{ .Params.Title }}</h3>
+                        <h3 class="is-size-5 has-text-black has-text-weight-semibold">{{ .Params.Title }}</h3>
                         <h4 class="is-overline has-text-weight-semibold">{{.Params.project.name}}, {{.Params.project.location}}</h4>
                     </div>
                 </div>

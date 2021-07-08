@@ -30,3 +30,5 @@ fields:
   description: Select the areas of the site this blog relates to
 pages:
 - content/blog/a-second-blog-article.md
+- content/blog/a-third-article.md
+- content/blog/first-article.md

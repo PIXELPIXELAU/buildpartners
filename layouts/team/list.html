@@ -3,12 +3,15 @@
 <section class="container py-6">
     <h2 class="is-overline">{{ .Params.title }}</h2>
     <h1 class="is-size-1 has-text-weight-semibold mb-4">{{ .Description }}</h1>
-    <p class="mb-6 limit-width at-500">{{ .Description }}</p>
+    {{/*  <p class="mb-6 limit-width at-500">{{ .Description }}</p>  */}}
+    <div class="content">
+      {{.Content}}
+    </div>
     
-    <div class="columns is-multiline">
+    <div class="py-6">
             {{ $pages := .RegularPages }}
             {{range $pages}}
-            <div class="column">
+            <div >
                 <article class="media">
                     <figure class="media-left">
                       <figure class="image is-128x128">
@@ -33,7 +36,6 @@
             </div>
             {{end}}
         </div>
-    </div>
 </section>
     
 
