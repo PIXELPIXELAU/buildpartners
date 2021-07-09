@@ -331,6 +331,10 @@ body {
   q {
    &:before {margin-left: -1.25rem;} 
   }
+  p {
+    line-height: 1.2em;
+  }
+  text-align: right;
 }
 .lm-testimonial {
   &-quote {

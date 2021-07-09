@@ -206,14 +206,14 @@
 <section class="container py-6">
   <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
 
-  <div class="columns lm-clients mb-6 is-multiline">
-    {{ $projects := .Site.RegularPages}}
+  <div class="columns lm-clients mb-6 is-multiline is-vcentered">
+    {{ $projects := where .Site.RegularPages "Section" "projects"}}
     {{ range $projects }}
       {{with .Params.project.src}}
         {{$logo := resources.Get .}}
         {{if ne $logo nil}}
           <div class="column is-3">
-            <img src="{{$logo.Permalink}}" >
+            <img src="{{$logo.Permalink}}" height="48">
           </div>
         {{end}}
       {{end}}
@@ -221,14 +221,17 @@
   </div>
   
 
-  <blockquote class="lm-testimonial">
-    {{ range $projects }}
+  <blockquote class="lm-testimonial py-6">
+    {{ range first 1 $projects }}
       {{with .Params.quote}}
-        <div class="lm-testimonial-quote">
-          <q class="is-size-1 has-text-black has-text-weight-semibold mb-4">
-            {{ .message }}
-          </q>
-          <span class="is-overline">{{ .author}}</span>
+      <div class="columns">
+        <div class="column is-1"></div>
+          <div class="column lm-testimonial-quote ">
+            <p class="is-size-1 has-text-black has-text-weight-semibold mb-4">
+              &ldquo;{{ .message }}&rdquo;
+            </p>
+            <span class="is-overline">{{ .author}}</span>
+          </div>
         </div>
       {{end}}
     {{end}}
