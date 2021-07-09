@@ -1,5 +1,5 @@
 ---
-label: Project Detail 2
+label: Project Detail
 hide_body: true
 display_field: title
 fields:
@@ -25,11 +25,6 @@ fields:
   name: image
   label: Hero Image
   description: This is the primary image you want to use on the page and in thumbails
-- type: tag_list
-  name: tags
-  label: What services does this project relate to?
-  description: Select which services areas you want this project to appear in
-  default: []
 - type: list
   name: deliverables
   label: What services where delivered?
@@ -95,6 +90,17 @@ fields:
   - type: text
     name: author
     label: Persons Name, Position or Company
+- name: tags
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: services-39346801-1ae1-4184-aa9c-a59c35d2ee33
+  label: What services does this project relate to?
+  description: Select which services areas you want this project to appear in
 pages:
 - content/projects/bespoke-office-space-for-growing-sunshine-coast-business.md
 - content/projects/marina-bay-sands-casino.md
