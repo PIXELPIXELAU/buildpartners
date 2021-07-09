@@ -1,5 +1,5 @@
 +++
-deliverables = []
+deliverables = ["Management", "Full planned interior"]
 description = "A full fitout project at the prestigious Marina Bay Sands Casino in Singapore. the brief included the design, project management with a scope that including gaming rooms, kitchens and lobby."
 featured = true
 image = "uploads/mbs-private-gaming-room-6.jpg"
