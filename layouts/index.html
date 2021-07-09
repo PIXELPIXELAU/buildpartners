@@ -203,24 +203,28 @@
   </div>
 </section>
 
-<section class="container py-6">
-  <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
-
-  <div class="columns lm-clients mb-6 is-multiline is-vcentered">
-    {{ $projects := where .Site.RegularPages "Section" "projects"}}
-    {{ range $projects }}
-      {{with .Params.project.src}}
-        {{$logo := resources.Get .}}
-        {{if ne $logo nil}}
-          <div class="column is-3">
-            <img src="{{$logo.Permalink}}" height="48">
-          </div>
-        {{end}}
-      {{end}}
-    {{end}}
+<section class=" py-6">
+  <div class="container">
+    <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
   </div>
-  
 
+  <div class="scroll__wrapper section">
+    <div class="columns lm-clients mb-6 is-vcentered">
+      {{ range (seq 14) }}
+          {{$index := string .}}
+          {{$logopath := printf "img/png/logo_%s.png" $index }}
+          {{$logo := resources.Get $logopath }}
+          {{if ne $logo nil}}
+            <div class="column is-2">
+              <img src="{{$logo.Permalink}}" height="48">
+            </div>
+          {{end}}
+      {{end}}
+    </div>
+  </div>
+  <div class="container">
+  
+  {{ $projects := where .Site.RegularPages "Section" "projects"}}
   <blockquote class="lm-testimonial py-6">
     {{ range first 1 $projects }}
       {{with .Params.quote}}

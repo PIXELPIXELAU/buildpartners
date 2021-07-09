@@ -556,3 +556,18 @@ nav img {
 .contact__content {
   a {font-weight: 500;}
 }
+.scroll__wrapper {
+  .columns {
+    &::-webkit-scrollbar {display: none;}
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+    overflow: auto;
+    .column { width: 240px; height: auto; ;}
+  }
+  img {
+    filter: saturate(0%);
+    opacity: .8;
+    
+  }
+
+}
