@@ -4,5 +4,6 @@ email = "enquries@buildpartners-projects.com.au"
 location = "Noosa"
 phone = "1300 655 506"
 title="Noosa"
+weight = 1
 
 +++
