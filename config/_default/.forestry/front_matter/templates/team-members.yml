@@ -44,4 +44,5 @@ fields:
   description: What order should this person appear in. Lower numbers will be prioritised
     (excluding 0 which is ignored).
 pages:
+- content/team/eve-briere.md
 - content/team/luke-murry.md
