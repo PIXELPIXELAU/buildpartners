@@ -1,5 +1,5 @@
 +++
-deliverables = []
+deliverables = ["Quality furnishings", "Outdoor space", "Training facilities"]
 description = "Custom design, project management of construction and furnishing of Office HQ's new offices on the Sunshine Coast."
 featured = true
 image = "uploads/003-8-84-wises-rd-office-hq.jpg"
