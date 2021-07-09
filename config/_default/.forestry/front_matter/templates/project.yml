@@ -33,7 +33,7 @@ fields:
     max: 
     source:
       type: pages
-      section: services-39346801-1ae1-4184-aa9c-a59c35d2ee33
+      section: services
   label: What services does this project relate to?
   description: Select which services areas you want this project to appear in
 - type: list
