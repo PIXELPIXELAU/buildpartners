@@ -35,6 +35,13 @@ fields:
   label: What services where delivered?
   description: Summarise what key items was delivered in this project. Be short and
     succinct
+  config:
+    use_select: true
+    source:
+      type: pages
+      section: services-39346801-1ae1-4184-aa9c-a59c35d2ee33
+      file: content/services/regional-construction-rollout-partner.md
+      path: cardsummary
 - type: field_group
   name: project
   label: Company Summary
@@ -95,6 +102,3 @@ fields:
   - type: text
     name: author
     label: Persons Name, Position or Company
-pages:
-- content/projects/bespoke-office-space-for-growing-sunshine-coast-business.md
-- content/projects/marina-bay-sands-casino.md
