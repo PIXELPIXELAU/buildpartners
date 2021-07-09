@@ -13,15 +13,14 @@ hero:
   overline: Commercial Design & Project Management
 intro:
   overline: Commerical Design & Project Management
-  heading: We deliver our partners premium building services including space design,
-    quantity surveying, project management and retail and venue maintenance.
+  heading: We deliver our partners premium building services
   src: uploads/mbs-private-gaming-room-6.jpg
   content: "\nOur clients are high-end retail and hospitality as well as expanding
     businesses across Australia and New Zealand.  If you need a partner to help your
     business with its workspaces or specialist attention for your project, Build Partners
     can help.  \n\nSpeak to one of our friendly team members about your next project"
 whatwedo:
-  headline: Heading
+  headline: ske
 whowework:
   headline: Who we've worked with
   clients:
@@ -42,6 +41,5 @@ expertise:
   headline: What makes us different is our personalised and true partnership approach.
   description: We bring a broad range of experience in commercial building projects
     - including as designer, builder, cost consultant and project manager
-
 
 ---
