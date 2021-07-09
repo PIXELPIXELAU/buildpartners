@@ -8,28 +8,27 @@
       {{.Content}}
     </div>
     
-    <div class="py-6">
+    <div class="py-6 ">
             {{ $pages := .RegularPages }}
             {{range $pages}}
-            <div >
+            <div class="pb-6 " >
                 <article class="media">
                     <figure class="media-left">
                       <figure class="image is-128x128">
                         {{$avatar := resources.Get .Params.src }}
                         {{ $avatar := $avatar.Fill "128x128" }}
-
                         <img class="is-rounded has-elevation" src="{{$avatar.Permalink}}" width="128" height="128">
                       </figure>
                     </figure>
                     <div class="media-content">
                       <div class="content ml-6">
                         <p class="is-overline mb-0">{{.Params.position}}</p>
-                        <p class="title is-size-3">{{.Title}}</p>
-                        <p class="subtitle is-size-4">{{.Description}}</p>
-
+                        <p class="title is-size-3">{{.Title}} {{with .Params.linkedin}}<a href="{{.}}" target="_blank" class="is-size-4 ml-3"><i class="fab fa-linkedin is-text-primary"></i></a>{{end}}</p>
+                        <p class="subtitle is-size-5">{{.Description}}</p>
                         <div class="content">
                           {{.Content}}
                         </div>
+                        
                       </div>
                     </div>
                   </article>
