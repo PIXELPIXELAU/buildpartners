@@ -3,8 +3,8 @@ deliverables = []
 description = "Custom design, project management of construction and furnishing of Office HQ's new offices on the Sunshine Coast."
 featured = true
 image = "uploads/003-8-84-wises-rd-office-hq.jpg"
-keystats = ["Project completed within budget offering high quality, comfortable office space for future growth and flexible use", "Training facilities was supplied as well as an outdoor space for company social events"]
-tags = ["Project Management", "Cost Management", "Retail and Venue Maintenance"]
+keystats = ["Project completed within budget", "Training facilities was supplied as well as an outdoor space for company social events"]
+tags = ["content/services/budget-cost-management.md", "content/services/workplaces-concept-to-construction-service.md", "content/services/project-management.md"]
 title = "Bespoke Office Space for OfficeHQ"
 [project]
 location = "Maroochydore"
@@ -17,13 +17,7 @@ message = "They handled everything from obtaining builder quotations and negotia
 photos = ["uploads/001-8-84-wises-rd-office-hq.jpg", "uploads/003-8-84-wises-rd-office-hq.jpg", "uploads/002-8-84-wises-rd-office-hq.jpg"]
 title = ""
 [[services]]
-description = ""
-title = "Project Management"
-[[services]]
-description = "Insert some information about the concept design process"
-title = "Concept design"
-[[services]]
-description = "Inset some information about cost management"
-title = "Cost management"
+description = "High quality, comfortable office space for future growth and flexible use"
+title = "Designed for growth"
 
 +++
