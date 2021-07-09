@@ -11,8 +11,8 @@ location = "Singapore"
 name = "Marina Bay Sands"
 src = "uploads/marina-bay.png"
 [quote]
-author = "John Smith"
-message = "Great work"
+author = "MARINA BAY SANDS"
+message = "Very impressed by the quality and management of the project"
 [zones]
 photos = ["uploads/mbs-private-gaming-room-6.jpg", "uploads/mbs-private-gaming-room-4.jpg"]
 title = ""
