@@ -129,6 +129,11 @@ body {
 .hero {
   position: relative;
 
+  &.is-fullheight-with-navbar {
+    min-height: 0 !important;
+    height: calc(100vh - 12rem) !important;
+  }
+
   &-overlay {
     position: absolute;
     top: -100px;
@@ -417,6 +422,7 @@ body {
 
 .navbar {
   overflow: hidden;
+
   &-item {
     &.active {
       font-weight: 600;
@@ -426,7 +432,7 @@ body {
     position: absolute;
     height: 100vh;
     top: 0;
-    left: -40px;
+    left: -15rem;
     pointer-events: none;
     @media screen and (max-width: 769px) {
       left: 0;
@@ -533,4 +539,13 @@ nav img {
 
 .has-elevation {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+#blog_page {
+  .blog__content {
+    max-width: 48rem;
+    p:first-child {
+      font-size: larger;
+    }
+  }
 }

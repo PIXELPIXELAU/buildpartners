@@ -1,8 +1,11 @@
 <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
     <a href="{{ .context.Permalink }}">
+        {{$img := resources.Get .context.Params.Image }}
+        {{if ne $img nil}}
         <figure class="image has-shadow mb-5">
-            <img alt="Project" src="{{ .context.Params.Image }}">
+          <img src="{{ $img.Permalink }}" alt="{{$.Title}}" />
         </figure>
+        {{end}}
         <h3 class="is-size-4 has-text-black has-text-weight-semibold">{{ .context.Title }}</h3>
         <h4 class="is-overline has-text-black has-text-weight-semibold">
             {{ .context.Params.Project.Name }}, {{ .context.Params.Project.Location }}

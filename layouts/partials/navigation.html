@@ -1,6 +1,7 @@
 <nav class="navbar is-primary {{ if not .IsHome }}navbar-internal{{ end }}" role="navigation" aria-label="main navigation">
-  {{ if not .IsHome }}<img src="/img/headzone.svg" class="navbar-overlay">{{ end }}
+  
   <div class="container">
+    {{ if not .IsHome }}<img src="/img/headzone.svg" class="navbar-overlay">{{ end }}
       <div class="navbar-brand">
           <a href="/">
               <img src="/img/logo.svg" alt="{{ .Site.Title }}" class="navbar-logo">

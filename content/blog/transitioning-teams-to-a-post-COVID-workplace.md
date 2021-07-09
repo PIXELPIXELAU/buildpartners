@@ -5,7 +5,6 @@ image = "uploads/img_1942-jpg-adidas.jpeg"
 title = "Transitioning teams to a post-COVID workplace"
 
 +++
-## Transitioning teams to a post-COVID workplace
 
 Last year, COVID-19 forced businesses to adapt to restrictions, with most transitioning to an online workspace. The use of virtual meeting software like Zoom and team messaging apps like Slack skyrocketed for jobs that could still be completed online.
 
