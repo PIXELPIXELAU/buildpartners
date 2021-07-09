@@ -20,7 +20,7 @@ intro:
     business with its workspaces or specialist attention for your project, Build Partners
     can help.  \n\nSpeak to one of our friendly team members about your next project"
 whatwedo:
-  headline: Full service construction project management, support & maintenance
+  headline: Full service construction project management
 whowework:
   headline: Who we've worked with
   clients:
