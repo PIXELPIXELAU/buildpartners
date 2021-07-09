@@ -1,8 +1,8 @@
 +++
-description = "summary here"
+description = ""
 draft = true
-position = "Hello world"
-src = "uploads/mastic-joint-2.jpg"
+position = "Director"
+src = ""
 title = "Luke Murry"
 
 +++
