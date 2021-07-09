@@ -40,6 +40,6 @@ expertise:
   overline: EXPERIENCE AT ALL LEVELS
   headline: What makes us different is our personalised and true partnership approach.
   description: We bring a broad range of experience in commercial building projects
-    - including as designer, builder, cost consultant and project manager
+    - including as designer, builder, cost consultant and project manager.
 
 ---
