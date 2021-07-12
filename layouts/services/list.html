@@ -3,8 +3,41 @@
 <section class="container py-6">
     <h2 class="is-overline">{{ .Params.Overline }}</h2>
     <h1 class="is-size-1 has-text-weight-semibold mb-4">{{ .Params.Headline }}</h1>
-    <p class="mb-6 limit-width at-500">{{ .Description }}</p>
+    <p class="mb-6 limit-width at-600 is-size-5">{{ .Description }}</p>
+    <!-- <div class="tile is-ancestor">
+        {{ range first 3 .RegularPages }}
+        <div class="tile is-parent">
+            <a class="tile is-child box is-primary" href="{{ .Permalink }}">
+                <h3 class="is-box-title has-text-white mb-4">{{ .Title }}</h3>
+                <p class="has-text-weight-medium">{{ .Params.Description }}</p>
+            </a>
+        </div>
+        {{ end }}
+    </div> -->
     <div class="tile is-ancestor">
+        <div class="tile is-vertical">
+            {{ $pages := .RegularPages }}
+            {{ range seq 2 }}
+                {{ $index_a := . }}
+                <div class="tile">
+                    {{ range seq 3 }}
+                        {{ $index_b := . }}
+                        {{ with (index $pages (sub (add (mul (sub $index_a 1) 2) $index_b) 1)) }}
+                            <div class="tile is-4 is-parent">
+                                <a class="tile is-child lm-service-tile" href="{{ .Permalink }}">
+                                    <div class="p-4">
+                                        <h3 class="is-box-title has-text-white mb-4">{{ .Title }}</h3>
+                                        <p class="has-text-black is-size-5">{{ .Description }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+    <!-- <div class="tile is-ancestor">
         {{ $pages := .RegularPages }}
         {{ range seq 3 }}
         {{ $index_a := . }}
@@ -20,18 +53,18 @@
             {{ end }}
         </div>
         {{ end }}
-    </div>
+    </div> -->
 </section>
-<section class="container py-6">
-    {{ range .RegularPages }}
-    <article class="lm-service-explanation mb-6" id="project-management">
-        <h3 class="is-box-title mb-3">{{ .Title }}</h3>
-        {{ range .Params.CardSummary }}
-        <p class="block">{{ . }}</p>
+    <!-- <section class="container py-6">
+        {{ range .RegularPages }}
+        <article class="lm-service-explanation mb-6" id="project-management">
+            <h3 class="is-box-title mb-3">{{ .Title }}</h3>
+            {{ range .Params.CardSummary }}
+            <p class="block">{{ . }}</p>
+            {{ end }}
+        </article>
         {{ end }}
-    </article>
-    {{ end }}
-</section>
+    </section> -->
 {{- partial "hero.html" . -}}
 
 {{ end }}

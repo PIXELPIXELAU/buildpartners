@@ -1,18 +1,26 @@
 {{ define "main" }}
 
 <section class="container py-6">
+    
+    {{$FeaturedArticle := index .RegularPages 0}}
     <div class="columns">
-        <div class="column is-8">
-            <a class="image is-16by9 mb-4" href="{{ (index .Pages 0).Permalink }}">
-                <img alt="cool picture" src="{{ (index .Pages 0).Params.Image }}">
+        <div class="column is-9">
+            {{$hero := resources.Get $FeaturedArticle.Params.image }}
+            {{if ne $hero nil }}
+            <a class="image is-16by9 mb-4" href="{{$FeaturedArticle.Permalink}}" title="{{$FeaturedArticle.Title}}">
+                <img src="{{$hero.Permalink}}" alt="{{$FeaturedArticle.Title}}">
             </a> 
-            <a class="has-text-black" href="{{ (index .Pages 0).Permalink }}">
-                <h2 class="is-box-title">{{ (index .Pages 0).Title }}</h2>
+            {{end}}
+            <a class="has-text-black content" href="{{$FeaturedArticle.Permalink}}">
+                <h2 class="is-box-title">{{$FeaturedArticle.Title}}</h2>
+                <p class="is-size-5">{{$FeaturedArticle.Params.description}}</p>
+                <p>Read More</p>
             </a>
         </div>
-        <div class="column">
+        <div class="column is-3">
             <div class="box is-primary p-4 is-fullheight">
-                <h1 class="is-box-title has-text-white">{{ .Params.Statement }}</h1>
+                <h1 class="is-box-title has-text-white">{{.Title}}</h1>
+                <p>{{.Description}}</p>
             </div>
         </div>
     </div>
@@ -21,7 +29,7 @@
 {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
 <section class="container py-6">
     <div class="hero-sub mb-4">
-        <h2 class="is-overline"><span class="has-text-black has-text-weight-bold">{{ $name }} &mdash;</span> <a href="{{ .Page.Permalink }}">View all</a></h2>
+        <h2 class="is-overline"><span class="has-text-black">{{ $name }} &mdash;</span> <a href="{{ .Page.Permalink }}">View all</a></h2>
     </div>
     <div class="columns is-multiline is-variable is-6">
         {{ range first 3 .Pages }}

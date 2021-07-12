@@ -1,22 +1,11 @@
----
-title: Project Manangement
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, dolore alias itaque quidem asperiores nobis ipsa minima laboriosam aut? Perferendis soluta dolore libero quo quae laudantium laboriosam, similique doloremque incidunt!
++++
+description = "If you have a complex or high priority building project that needs some extra support, we can partner with you to bring expertise to the process.  Build Partners provides quality assurance on project planning, cost management and design to help our clients to get exactly what they need, whilst leveraging various suppliers and contracts. \n"
+headline = "Avoid unnecessary complications and bring in the right expertise to help manage your project.  "
+title = "Project Management"
 
-cardsummary:
-    - Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores rerum corrupti voluptatibus esse repellendus delectus nam quod non alias labore itaque dolorem quas obcaecati expedita repellat, facere id voluptatem.
-    - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatum dicta, deleniti sapiente nisi ut a quos distinctio similique molestiae dignissimos officiis cumque obcaecati hic, debitis repellat accusamus accusantium nihil.
++++
+## This is missing some info.
 
-headline: A cool and gripping headline about effective project management.
+Some more information needs to be put in here.
 
-writeup:
-    - title: Project Management
-      description:
-        - Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores rerum corrupti voluptatibus esse repellendus delectus nam quod non alias labore itaque dolorem quas obcaecati expedita repellat, facere id voluptatem.
-        - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatum dicta, deleniti sapiente nisi ut a quos distinctio similique molestiae dignissimos officiis cumque obcaecati hic, debitis repellat accusamus accusantium nihil.
-    - title: Lorem Ipsum
-      description:
-        - Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi asperiores rerum corrupti voluptatibus esse repellendus delectus nam quod non alias labore itaque dolorem quas obcaecati expedita repellat, facere id voluptatem.
-        - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione voluptatum dicta, deleniti sapiente nisi ut a quos distinctio similique molestiae dignissimos officiis cumque obcaecati hic, debitis repellat accusamus accusantium nihil.
-
----
-
+There is **markdown** _here_

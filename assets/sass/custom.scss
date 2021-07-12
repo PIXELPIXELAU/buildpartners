@@ -1,5 +1,13 @@
+.has-text-shadow { text-shadow: 1px 0 rgba(0,0,0,.5);}
+
+// Lazy bum
+
 body {
   width: 100%;
+}
+
+#content {
+  min-height: 600px;
 }
 
 .columns.is-variable {
@@ -9,8 +17,11 @@ body {
 }
 
 .box {
+  // padding: 3rem;
+  padding-left: 2rem; padding-right: 2rem;
   &.is-primary {
     background: $primary;
+    color: rgba(0,0,0,.9);
   }
 
   &.is-fullheight {
@@ -59,6 +70,22 @@ body {
   letter-spacing: 3.5px;
   text-transform: uppercase;
   font-size: 14px;
+
+  &.has-items-left {
+    justify-content: flex-start;
+  }
+
+  &.has-items-right {
+    justify-content: flex-end;
+  }
+
+  &.is-transparent {
+    background: transparent !important;
+  }
+
+  @media screen and (max-width: 769px) {
+    justify-content: center !important;
+  }
 }
 
 .has-shadow {
@@ -81,6 +108,7 @@ body {
   @extend .has-text-weight-semibold;
   @extend .is-size-5;
   @extend .mb-6;
+  @extend .has-text-black;
 
   letter-spacing: 1px;
 }
@@ -100,6 +128,12 @@ body {
 
 .hero {
   position: relative;
+
+  &.is-fullheight-with-navbar {
+    min-height: 0 !important;
+    height: calc(100vh - 12rem) !important;
+  }
+
   &-overlay {
     position: absolute;
     top: -100px;
@@ -113,11 +147,13 @@ body {
       left: 0;
     }
   }
+
   &-sub {
+
     color: $primary;
     border-left: solid 4px $primary;
     padding: 0.25rem 0.5rem;
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.8);
     width: max-content;
   
     &.on-primary {
@@ -125,7 +161,12 @@ body {
       color: $white;
       background: none;
     }
+
+    & > h2 {
+      @extend .has-text-weight-semibold;
+    }
   }
+
   &-body {
     position: relative;
     z-index: 100;
@@ -143,11 +184,12 @@ body {
 
     & > .box.is-overlain {
       position: absolute;
-      bottom: -4rem;
+      bottom: -6rem;
       left: 0;
 
       &.is-right {
         left: unset;
+        bottom: -18rem;
         right: 0;
       }
 
@@ -190,11 +232,27 @@ body {
   &-banner {
     position: relative;
 
-    & > img {
-      position: relative;
-      right: 0;
+    & > h2 {
+      position: absolute;
+      background: #FFF;
+      padding: 0.5rem 1rem;
+      // Column padding is 0.75rem, cancel it out
+      top: calc(0.75rem + 2rem);
     }
+
+    // & > img {
+    //   position: absolute;
+    //   right: 0;
+    // }
   }
+}
+
+.lm-project-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .lm-pdf-push {
@@ -226,22 +284,69 @@ body {
     max-width: 700px;
     width: 100%;
   }
+
+  &-tile {
+    position: relative;
+    // height: 0;
+    background: $primary;
+    color: $white !important;
+    // padding-top: 100%;
+
+    &::before {
+      padding-bottom: 100%;
+      content: "";
+      float: left;
+    }
+
+    &::after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      & > :first-child {
+        flex-grow: 1;
+      }
+    }
+
+    @media screen and (max-width: 769px) {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 // .lm-clients {
 
 // }
 
+.lm-testimonial-quote {
+  q {
+   &:before {margin-left: -1.25rem;} 
+  }
+  p {
+    line-height: 1.2em;
+  }
+  text-align: right;
+}
 .lm-testimonial {
   &-quote {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    & q {
+      line-height: 130%;
+    }
   }
 
-  & q {
-    line-height: 130%;
-  }
 
   @media screen and (max-width: 769px) {
     text-align: center;
@@ -282,15 +387,15 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -4rem;
+    bottom: -1.5rem;
     width: 100%;
   }
 
-  @media screen and (max-width: 769px) {
-    & > svg {
-      bottom: -1.5rem;
-    }
-  }
+  // @media screen and (max-width: 769px) {
+  //   & > svg {
+  //     bottom: -1.5rem;
+  //   }
+  // }
 }
 
 .flex-col {
@@ -314,8 +419,6 @@ body {
 }
 
 .lm-blog-post {
-  border: solid 1px $grey-lightest;
-
   @media screen and (max-width: 769px) {
     padding: 1rem !important;
   }
@@ -323,11 +426,17 @@ body {
 
 .navbar {
   overflow: hidden;
+
+  &-item {
+    &.active {
+      font-weight: 600;
+    }
+  }
   &-overlay {
     position: absolute;
     height: 100vh;
     top: 0;
-    left: -40px;
+    left: -15rem;
     pointer-events: none;
     @media screen and (max-width: 769px) {
       left: 0;
@@ -355,16 +464,23 @@ body {
     z-index: 999;
     background: $primary;
     position: relative;
+    .navbar-overlay {
+      display: none !important;
+    }
   }
+  
 }
 
 nav img {
   height: 100%;
 }
 
-.navbar-menu.is-active {
-  margin-left: -1rem;
-  margin-right: -1rem;
+.navbar-menu {
+  &.is-active {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .navbar-item {font-weight: 600; padding-left: 1.25em; padding-right: 1.25em;}
 }
 
 .tile {
@@ -387,8 +503,131 @@ nav img {
 }
 
 .container {
+  max-width: 1024px !important;
+
   @media screen and (max-width: 769px) {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+
+
+/* Home */
+#page_home {
+ .box.is-overlain {
+   max-width: 30rem;
+ }
+}
+
+/* Projects */
+#projects_page {
+
+  .hero.is-fullheight {
+    min-height: calc(100vh - 18rem);
+  }
+  ul.is-size-5 {
+    li {
+      position: relative;
+      margin-left: 1rem;
+      margin-bottom: .5rem;
+      &:before {
+        content: '';
+        width: .5em; height: .5em;
+        background-color: $primary;
+        position: absolute;
+        top: .5em; left: 0;
+        display: block;
+        left: -1rem;
+      }
+    }
+  }
+
+}
+
+.has-elevation {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+#blog_page {
+  .blog__content {
+    max-width: 48rem;
+    p:first-child {
+      font-size: larger;
+    }
+  }
+}
+.contact__content {
+  a {font-weight: 500;}
+}
+.scroll__wrapper {
+  .columns {
+    &::-webkit-scrollbar {display: none;}
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+    overflow: auto;
+    .column { width: 240px; height: auto; ;}
+  }
+  img {
+    filter: saturate(0%);
+    opacity: .8;
+    
+  }
+
+}
+
+@media screen and (max-width: 769px) {
+  $mobileScale:1.2;
+  h1,.is-size-1 { font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h2,.is-size-2 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h3,.is-size-3 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale !important;}
+  h4,.is-size-4 {font-size: 1rem * $mobileScale * $mobileScale !important;}
+  h5,.is-size-5 {font-size: 1rem * $mobileScale !important;}
+  h6,.is-size-6 {font-size: 1rem;}
+  h7,.is-size-7,.is-overline {font-size: 1rem / $mobileScale !important;}
+  .is-overline {
+    span { display: block;}
+  }
+  .content {
+    h1,.is-size-1 { font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h2,.is-size-2 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h3,.is-size-3 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale !important;}
+  h4,.is-size-4 {font-size: 1rem * $mobileScale * $mobileScale !important;}
+  h5,.is-size-5 {font-size: 1rem * $mobileScale !important;}
+  h6,.is-size-6 {font-size: 1rem;}
+  h7,.is-size-7,.is-overline {font-size: 1rem / $mobileScale !important;}
+  .is-overline {
+    span { display: block;}
+  }
+  }
+  .navbar-burger {right: -1rem;}
+
+  #content > .hero.img-bg:first-child {
+    padding:0 !important;
+    .hero-body {
+      padding:0; margin-top: 40vh;
+    }
+    .hero-body {}
+    .container {padding: 0;}
+    .hero-foot { display: none;}
+    .columns { margin: 0;}
+    .column {padding: 0;}
+  }
+  .container {padding-left: 1rem; padding-right: 1rem;}
+  .hero.img-bg.img-hero { 
+    background-size: contain;
+    padding-top: 30%;
+  }
+  article.media {
+    display: block;
+    .media-content {
+      margin-top: 1rem;
+      .content {
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  .button {width: 100%;}
+
 }

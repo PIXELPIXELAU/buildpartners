@@ -1,9 +1,7 @@
 <a href="{{ .Permalink }}" class="column is-one-third-desktop is-half-tablet is-full-mobile">
-    <div>
-        <figure class="image has-shadow mb-5">
-            <img alt="Project" src="{{ .Params.Image }}">
-        </figure>
-        <h3 class="is-size-4 has-text-black has-text-weight-bold">{{ .Title }}</h3>
-        <h4 class="is-overline has-text-black has-text-weight-semibold">{{ .Params.Project.Name }}, {{ .Params.Project.Location }}</h4>
-    </div>
+    <figure class="image has-shadow mb-5">
+        <img alt="Project" src="{{ .Params.Image }}">
+    </figure>
+    <h3 class="is-size-4 has-text-black has-text-weight-semibold">{{ .Title }}</h3>
+    <h4 class="is-overline has-text-black has-text-weight-semibold">{{ .Params.Project.Name }}, {{ .Params.Project.Location }}</h4>
 </a>

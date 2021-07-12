@@ -1,4 +1,2 @@
-baseURL = "https://develop.buildpartners.com/"
-
-[params]
-  netlifyaml = "conf/develop.yml"
+# baseURL = "https://develop.buildpartners.com/"
+baseURL = "/"

@@ -1,9 +1,10 @@
 {{ define "main" }}
-<section class="hero is-primary is-fullheight-with-navbar img-bg py-6" style="--image: url('{{ .Params.Image }}');">
+{{$hero := resources.Get .Params.Image}}
+<section class="hero is-primary is-fullheight-with-navbar img-bg py-6" style="--image: url('{{ $hero.Permalink}}');">
     <div class="hero-head">
         <div class="container">
             <div class="hero-sub">
-                <h2 class="is-overline"><span class="has-text-black has-text-weight-bold"><a href="/blog" class="has-text-dark">Blog</a> &mdash;</span> <a href="/categories/{{ index .Params.categories 0 | anchorize }}">{{ index .Params.categories 0 }}</a></h2>
+                <h2 class="is-overline"><span class="has-text-black"><a href="/blog" class="has-text-dark">Blog</a> &mdash;</span> <a href="/categories/{{ index .Params.categories 0 | anchorize }}">{{ index .Params.categories 0 }}</a></h2>
             </div>
         </div>
     </div>
@@ -12,13 +13,15 @@
     <article class="box is-shadowless move-up p-6 lm-blog-post">
         <header class="mb-6">
             <h2 class="is-overline">{{ .Params.Subline }}</h2>
-            <h1 class="is-box-title has-text-black mb-2">{{ .Title }}</h1>
+            <h1 class="is-box-title is-size-1 has-text-black mb-2">{{ .Title }}</h1>
+            {{/* <p class="subtitle is-size-4">{{.Description}}</p> */}}
         </header>
-        <main class="content">
+        <main class="content blog__content">
             {{ .Content }}
         </main>
     </article>
 </section>
+{{if gt (len .RegularPages) 2 }}
 <section class="container py-6 mb-6">
     <h2 class="is-section-header">Have a look at some other of our blog posts</h2>
     <div class="columns">
@@ -41,4 +44,5 @@
         {{ end }}{{ else }}<span>&nbsp;</span>{{ end }}
     </div>
 </section>
+{{end}}
 {{ end }}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<section class="container py-6 px-4">
+    <h1 class="is-box-title has-text-black mb-6">{{ .Title }}</h1>
+    
+    <div class="columns is-multiline">
+        {{ range .Params.Downloads }}
+            <div class="column is-one-third-desktop is-half-tablet is-full-mobile">
+                <a href="{{ .download }}" class="button is-fullwidth is-primary" download>{{ .text }}</a>
+            </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}

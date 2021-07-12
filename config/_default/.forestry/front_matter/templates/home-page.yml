@@ -1,0 +1,119 @@
+---
+label: Home Page
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: SEO Title
+  description: Title that will show in a search
+  config:
+    required: true
+- type: text
+  name: description
+  label: SEO Description
+  description: The description that will show in a search
+  config:
+    required: true
+- type: field_group
+  name: hero
+  label: Page Hero
+  fields:
+  - name: overline
+    type: text
+    config:
+      required: false
+    label: Overline
+    description: Keyword summary of content
+  - type: text
+    name: heading
+    label: Heading
+  - name: src
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - type: field_group
+    name: cta
+    label: Buttons
+    fields:
+    - type: text
+      name: text
+      label: Button Text
+    - type: text
+      name: href
+      label: Page URL
+  description: Main focus of the page
+- type: field_group
+  name: intro
+  label: Business Summary
+  fields:
+  - type: text
+    name: overline
+    label: Overline
+  - type: text
+    name: heading
+    label: Heading
+  - type: textarea
+    name: content
+    label: Summary
+  - type: file
+    name: src
+    label: Background Image
+  description: Primary outline of the business
+- type: field_group
+  name: whatwedo
+  label: What We Do
+  fields:
+  - type: text
+    name: headline
+    label: Heading
+  description: Summary of your services
+- type: field_group
+  name: whowework
+  label: whowework
+  fields:
+  - type: text
+    name: headline
+    label: headline
+  - type: field_group_list
+    name: clients
+    label: clients
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: img
+      label: img
+  - type: field_group
+    name: quote
+    label: quote
+    fields:
+    - type: text
+      name: message
+      label: message
+    - type: text
+      name: author
+      label: author
+    - type: textarea
+      name: image
+      label: image
+  hidden: true
+- type: field_group
+  name: expertise
+  label: Expertise
+  fields:
+  - type: text
+    name: overline
+    label: Overline
+    description: Keyword summary or statement
+  - type: text
+    name: headline
+    label: Heading
+  - type: textarea
+    name: description
+    label: Summary
+  description: Summary of your expertise
+pages:
+- content/_index.md

@@ -1,5 +1,4 @@
 ---
-title: Blog
-menu: primary
-statement: Page Statement about expertise
+title: Inside Workspaces & Design Blog
+description:  The business of designing spaces and places for people and workforce
 ---

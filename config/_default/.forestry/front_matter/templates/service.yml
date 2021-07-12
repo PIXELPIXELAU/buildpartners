@@ -1,0 +1,25 @@
+---
+label: Service Detail
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Service Title
+  description: Title that will show in a search and in thumbnails throughout the site
+  config:
+    required: true
+- type: textarea
+  name: description
+  label: Service Summary
+  description: The description that will show in a search and in thumbnails throughout
+    the site
+  config:
+    required: true
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Heading
+  description: A clear statement about the service provided which is displayed on
+    service's detail page

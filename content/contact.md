@@ -1,3 +1,5 @@
 ---
-title: Make an Enquiry
+title: Contact Us
+type: custom
+layout: contact
 ---

@@ -1,0 +1,85 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: heading
+  label: Site Pages
+- type: document
+  path: content/_index.md
+  label: Home
+- type: document
+  path: content/services/_index.md
+  label: Services
+- type: document
+  path: content/projects/_index.md
+  label: Projects
+- type: document
+  path: content/team/_index.md
+  label: Team
+- type: document
+  path: content/blog/_index.md
+  label: Blog
+- type: heading
+  label: Content
+- type: directory
+  path: content/projects
+  label: Projects
+  create: documents
+  match: "*"
+  exclude: "*index.md"
+  templates:
+  - project
+- type: directory
+  path: content/services
+  label: Services
+  create: documents
+  match: "*"
+  exclude: "*index.md"
+  templates:
+  - service
+- type: directory
+  path: content/blog
+  label: Blog
+  create: documents
+  match: "*"
+  exclude: _index.md
+  templates:
+  - blog-post
+  - blog-post
+- type: directory
+  path: content/team
+  label: Team Members
+  create: documents
+  match: "*"
+  exclude: _index.md
+  templates:
+  - team-members
+- type: heading
+  label: Settings
+- type: directory
+  path: content/locations
+  label: Locations
+  create: documents
+  match: "*"
+  exclude: _index.md
+  templates:
+  - locations
+upload_dir: assets/uploads
+public_path: uploads
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=develop
+  - HUGO_VERSION=0.79.0
+  preview_output_directory: public
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/hugo:node12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
+version: 0.79.0

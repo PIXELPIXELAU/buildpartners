@@ -1,9 +1,8 @@
 ---
 title: Services
-menu: primary
-
+description: Build Partners approach every project as your partner, with or ranging skills and our track record for on time to scope delivery, combined with our collaborative,  transparent approach you can be sure that your project will be in safe hands.
 overline: What We Do
-headline: This is an example headline.
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quas aliquam facilis aperiam pariatur sit sint iure soluta provident natus quibusdam voluptas libero laboriosam nostrum voluptatibus. Aperiam incidunt laudantium enim.
+headline: Our Services
 
 ---
+Build Partners approach every project as your partner, with or ranging skills and our track record for on time to scope delivery, combined with our collaborative,  transparent approach you can be sure that your project will be in safe hands.

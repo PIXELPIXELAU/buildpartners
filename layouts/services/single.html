@@ -1,55 +1,60 @@
 {{ define "main" }}
-<section class="hero is-primary is-fullheight-with-navbar">
+<section class="hero is-primary py-6 is-medium">
     <div class="hero-head">
         <div class="container">
             <div class="hero-sub on-primary">
-                <h2 class="is-overline"><span class="has-text-black has-text-weight-bold">What We Do &mdash;</span> Project Management</h2>
+                <h2 class="is-overline"><span class="has-text-black">What We Do &mdash;</span> Project Management</h2>
             </div>
         </div>
     </div>
     <div class="hero-body">
         <div class="container">
-            <h1 class="limit-width at-500 is-size-2 has-text-weight-bold mb-6">A cool and gripping headline about effective project management.</h1>
-            <div class="buttons">
+            <h2 class="is-size-1 has-text-weight-semibold mb-3">{{.Params.headline}}</h2>
+            <p class="is-size-3 subtitle  mb-6">{{.Description}}</p>
+            <p class="buttons">
                 <a href="/contact" class="button is-primary is-inverted">Make an Enquiry</a> <a class="button is-primary" href="/services">All Our Services</a>
-            </div>
+            </p>
         </div>
     </div>
 </section>
 <section class="container pt-6">
-    {{ range .Params.Writeup }}
+    
     <div class="lm-service-explanation mb-6" id="project-management">
-        <h3 class="is-box-title mb-3">{{ .title }}</h3>
-        {{ range .description }}
-        <p class="block">{{ . }}</p>
-        {{ end }}
+        <!-- <h1 class="title is-size-1">{{ .Title }}</h1> -->
+        <div class="content">
+            {{.Content}}
+        </div>
     </div>
-    {{ end }}
+    
 </section>
-<section class="section pb-2">
+<!-- <section class="section pb-2">
     <div class="container">
         <h2 class="title is-uppercase">Our {{ .Title }} Projects</h2>
     </div>
-</section>
+</section> -->
 <section class="section has-background-light">
     <div class="container">
-        <h2 class="is-section-header">Some of our select {{ .Title }} projects</h2>
+        <h2 class="is-section-header">Some of our selected {{ .Title }} projects</h2>
         <div class="columns is-multiline is-variable is-6">
             {{ $projects := ((.Site.GetPage "/projects").Pages) }}
-            {{ range where $projects "Params.tags" .File.TranslationBaseName }}
+            {{ $tags := slice .Title }}
+            {{ range where .Site.RegularPages "Params.tags" "intersect" $tags }}
             <div class="column is-4">
                 <div>
                     <figure class="image has-shadow mb-5">
-                        <img alt="Project" src="{{ .Params.Image }}">
+                        {{$image := resources.Get .Params.Image }}
+                        <img alt="Project" src="{{$image.Permalink}}">
                     </figure>
-                    <h3 class="is-size-4 has-text-black has-text-weight-bold">{{ .Params.Title }}</h3>
-                    <h4 class="is-overline has-text-weight-semibold">Company Name, Location</h4>
+                    <div class="content">
+                        <h3 class="is-size-5 has-text-black has-text-weight-semibold">{{ .Params.Title }}</h3>
+                        <h4 class="is-overline has-text-weight-semibold">{{.Params.project.name}}, {{.Params.project.location}}</h4>
+                    </div>
                 </div>
             </div>
             {{ end }}
         </div>
         <div class="buttons is-right">
-            <a class="button is-primary is-inverted" href="/projects">View All Projects</a>
+            <a class="button is-primary is-inverted is-transparent" href="/projects">View All Projects</a>
         </div>
     </div>
 </section>

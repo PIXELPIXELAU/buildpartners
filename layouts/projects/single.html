@@ -1,10 +1,10 @@
 {{ define "main" }}
-
-<section class="hero is-primary is-fullheight img-bg py-6" style="--image: url('https://images.unsplash.com/photo-1601334168575-faa1f2640cff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');">
+{{$heroImage := resources.Get .Params.image }}
+<section class="hero is-primary is-fullheight img-bg py-6" {{if ne $heroImage nil}} style="--image: url('{{$heroImage.Permalink}}');"{{end}}>
     <div class="hero-head">
         <div class="container">
             <div class="hero-sub">
-                <h2 class="is-overline"><span class="has-text-black has-text-weight-bold">Our Work &mdash;</span> {{ .Title }}</h2>
+                <h2 class="is-overline"><span class="has-text-black">Our Work &mdash;</span> <span class="">{{ .Title }}</span></h2>
             </div>
         </div>
     </div>
@@ -17,41 +17,62 @@
                 {{ range .Params.Deliverables }}<li>{{ . }}</li>{{ end }}
             </ul>
             <div class="spacer"></div>
-            <h2 class="is-size-3 has-text-weight-bold is-uppercase block pt-5">{{ .Params.Zones.Title }}</h2>
+            <h2 class="is-size-3 has-text-weight-semibold is-uppercase block pt-5">{{ .Params.Zones.Title }}</h2>
         </div>
+
         <div class="column is-6">
-            <article class="box is-shadowless move-up">
+            <article class="box is-shadowless move-up" style="padding: 2rem;">
                 <h2 class="is-overline">{{ .Params.Project.Name }}, {{ .Params.Project.Location }}</h2>
                 <h1 class="is-box-title has-text-black mb-2">{{ .Title }}</h1>
-                {{ .Content }}
+                <div class="content">
+                    {{ .Description }}
+                </div>
             </article>
         </div>
     </div>
 </section>
 
 <section class="container py-3">
+    {{$imageURL1 := index .Params.Zones.Photos 0 }}
+    {{$imageURL2 := index .Params.Zones.Photos 1 }}
+    {{$imageURL3 := index .Params.Zones.Photos 2 }}
     <div class="tile is-ancestor is-mobile">
         <div class="tile is-vertical-mobile">
+            {{with $imageURL1 }}
             <div class="tile is-8 is-parent">
                 <figure class="tile is-child image is-16by9 has-shadow">
-                    <img alt="" src="{{ index .Params.Zones.Photos 0 }}">
+                    {{$image := resources.Get . }}
+                    {{if ne $image nil}}
+                    <img alt="" src="{{$image.Permalink}}">
+                    {{end}}
                 </figure>
             </div>
+            {{end}}
             <div class="tile is-vertical is-horizontal-mobile">
+                {{with $imageURL2}}
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <figure class="image is-16by9 has-shadow">
-                            <img alt="" src="{{ index .Params.Zones.Photos 1 }}">
+                            {{$image := resources.Get .}}
+                            {{if ne $image nil}}
+                            <img alt="" src="{{$image.Permalink}}">
+                            {{end}}
                         </figure>
                     </div>
                 </div>
+                {{end}}
+                {{with $imageURL3}}
                 <div class="tile is-parent">
                     <div class="tile is-child">
                         <figure class="image is-16by9 has-shadow">
-                            <img alt="" src="{{ index .Params.Zones.Photos 2 }}">
+                            {{$image := resources.Get . }}
+                            {{if ne $image nil}}
+                            <img alt="" src="{{$image.Permalink}}">
+                            {{end}}
                         </figure>
                     </div>
                 </div>
+                {{end}}
             </div>
         </div>
     </div>
@@ -63,14 +84,14 @@
             {{ range .Params.Services }}
             <div class="block limit-width at-600">
                 <h3 class="is-box-title mb-2">{{ .title }}</h3>
-                {{ range .description }}
-                <p class="block">{{ . }}</p>
-                {{ end }}
+                <div class="content">
+                    {{.description | markdownify}}
+                </div>
             </div>
             {{ end }}
         </div>
         <div class="column box is-primary p-5">
-            <h3 class="is-overline has-text-weight-bold mb-5">Key Stats & Takeaway</h3>
+            <h3 class="is-overline has-text-weight-semibold mb-5">Key Stats & Takeaway</h3>
             {{ range .Params.KeyStats }}
             <p class="block">{{ . }}</p>
             {{ end }}
@@ -79,8 +100,11 @@
 </section>
 
 <section class="container py-6">
-    <div class="lm-testimonial-quote">
-        <q class="is-size-2 is-box-title has-text-black has-text-weight-semibold mb-2 limit-width at-600">{{ .Params.Quote.Message }}</q> <span class="is-overline">{{ .Params.Quote.Author }}</span>
+    <div class="section">
+        <div class="lm-testimonial-quote">
+            <q class="is-size-2 has-text-black has-text-weight-semibold mb-4">{{ .Params.Quote.Message }}</q>
+            <span class="is-overline">{{ .Params.Quote.Author }}</span>
+        </div>
     </div>
 </section>
 
