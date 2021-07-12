@@ -464,7 +464,11 @@ body {
     z-index: 999;
     background: $primary;
     position: relative;
+    .navbar-overlay {
+      display: none !important;
+    }
   }
+  
 }
 
 nav img {
@@ -569,5 +573,61 @@ nav img {
     opacity: .8;
     
   }
+
+}
+
+@media screen and (max-width: 769px) {
+  $mobileScale:1.2;
+  h1,.is-size-1 { font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h2,.is-size-2 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h3,.is-size-3 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale !important;}
+  h4,.is-size-4 {font-size: 1rem * $mobileScale * $mobileScale !important;}
+  h5,.is-size-5 {font-size: 1rem * $mobileScale !important;}
+  h6,.is-size-6 {font-size: 1rem;}
+  h7,.is-size-7,.is-overline {font-size: 1rem / $mobileScale !important;}
+  .is-overline {
+    span { display: block;}
+  }
+  .content {
+    h1,.is-size-1 { font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h2,.is-size-2 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h3,.is-size-3 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale !important;}
+  h4,.is-size-4 {font-size: 1rem * $mobileScale * $mobileScale !important;}
+  h5,.is-size-5 {font-size: 1rem * $mobileScale !important;}
+  h6,.is-size-6 {font-size: 1rem;}
+  h7,.is-size-7,.is-overline {font-size: 1rem / $mobileScale !important;}
+  .is-overline {
+    span { display: block;}
+  }
+  }
+  .navbar-burger {right: -1rem;}
+
+  #content > .hero.img-bg:first-child {
+    padding:0 !important;
+    .hero-body {
+      padding:0; margin-top: 40vh;
+    }
+    .hero-body {}
+    .container {padding: 0;}
+    .hero-foot { display: none;}
+    .columns { margin: 0;}
+    .column {padding: 0;}
+  }
+  .container {padding-left: 1rem; padding-right: 1rem;}
+  .hero.img-bg.img-hero { 
+    background-size: contain;
+    padding-top: 30%;
+  }
+  article.media {
+    display: block;
+    .media-content {
+      margin-top: 1rem;
+      .content {
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  .button {width: 100%;}
 
 }
