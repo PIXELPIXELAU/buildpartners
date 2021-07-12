@@ -4,4 +4,3 @@ headline = "We work with you to explore your needs and options to provide for a 
 title = "Workplaces - From Concept to Construction"
 
 +++
-Insert content
