@@ -28,5 +28,3 @@ fields:
   name: categories
   label: Select Tags
   description: Select the areas of the site this blog relates to
-pages:
-- content/blog/first-article.md
