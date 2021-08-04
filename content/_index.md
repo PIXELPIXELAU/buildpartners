@@ -4,7 +4,7 @@ description: Commercial Design & Project Management servicing Brisbane, Sunshine
   Gold Coast, Sydney
 hero:
   heading: Structuring expertise & creativity to deliver impactful spaces
-  src: uploads/img_1328-jpg-ap.jpeg
+  src: uploads/img_2141.JPG
   cta:
   - href: "/projects/"
     text: View Our Work
