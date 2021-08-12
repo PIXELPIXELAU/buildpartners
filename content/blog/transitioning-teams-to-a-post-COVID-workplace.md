@@ -1,11 +1,10 @@
 +++
 categories = []
 description = "How can you transition your team post COVID-19 when forced to adapt to restrictions and social distancing"
-image = "uploads/img_1942-jpg-adidas.jpeg"
+image = "uploads/mbs-all-day-dinning.jpg"
 title = "Transitioning teams to a post-COVID workplace"
 
 +++
-
 Last year, COVID-19 forced businesses to adapt to restrictions, with most transitioning to an online workspace. The use of virtual meeting software like Zoom and team messaging apps like Slack skyrocketed for jobs that could still be completed online.
 
 However, as Australia gradually bounces back from the devastating effects that COVID-19 had on its economy and people, businesses are becoming more confident in welcoming their staff back into the office and adapting to a new post-COVID workplace.
