@@ -17,7 +17,7 @@ window.app = {
   }
 
 const form = document.querySelector("form");
-if (form.length > 0) {
+if (form && form.length > 0) {
   form.addEventListener("submit", handleSubmit);
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -33,6 +33,31 @@ if (form.length > 0) {
 }
 
   })();
+
+const nav = document.querySelector('.navbar');
+const navTop = nav.offsetTop;
+
+let waitForScroll;
+function stickyNavigation() {
+  // console.log('navTop = ' + navTop);
+  clearTimeout(waitForScroll)
+  waitForScroll = setTimeout(function(){
+    console.log(`${scrollY}//${nav.offsetHeight}`);
+    if (window.scrollY > nav.offsetHeight) {
+      // nav offsetHeight = height of nav
+      // document.body.style.paddingTop = nav.offsetHeight + 'px';
+      nav.classList.add('is-stuck');
+    
+    } else {
+      // document.body.style.paddingTop = 0;
+      nav.classList.remove('is-stuck');
+    }
+  },200)
+  waitForScroll;
+  
+}
+
+window.addEventListener('scroll', stickyNavigation);
 
 $(function(){
 

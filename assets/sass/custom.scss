@@ -426,6 +426,38 @@ body {
 
 .navbar {
   overflow: hidden;
+  position: absolute !important;
+  &.is-fixed-top {
+    z-index: 101 !important;
+    top: -6rem;
+    margin-top: 6rem;
+    will-change: top, box-shadow, background-color;
+    box-shadow: none;
+    transition: top .2s $cubic, box-shadow .2s $cubic;
+    &.is-stuck {
+      transition: top .3s .1s $cubic, box-shadow .3s .3s $cubic;
+      position: fixed !important;
+      top: 0;
+      margin-top: 0;
+      // box-shadow: $elevation2;
+      background-color: #363636;
+      .navbar-logo {
+        filter : invert(1);
+        background-color: transparent;
+        height: 4.5rem;
+      }
+      a { color: white;}
+    }
+  }
+  
+  .navbar-logo {
+    padding: 1rem 1.5rem;
+    background-color: $primary;
+    margin-left: -0.75rem;
+    height: 6rem;
+    // will-change: height;
+    // transition: height .1s $cubic;
+  }
 
   &-item {
     &.active {
