@@ -1,9 +1,11 @@
 .has-text-shadow { text-shadow: 1px 0 rgba(0,0,0,.5);}
 
 // Lazy bum
-
+$white-ter: hsl(0, 0%, 98%);
+html {background-color: $primary;}
 body {
   width: 100%;
+  background-color:$white-ter;
 }
 
 #content {
@@ -14,6 +16,10 @@ body {
   @media screen and (max-width: 1024px) {
     --columnGap: 0.75rem !important;
   }
+}
+
+.button.is-primary.is-inverted {
+  background-color: $white-ter !important;
 }
 
 .box {
@@ -426,37 +432,41 @@ body {
 
 .navbar {
   overflow: hidden;
-  position: absolute !important;
-  &.is-fixed-top {
-    z-index: 101 !important;
-    top: -6rem;
-    margin-top: 6rem;
-    will-change: top, box-shadow, background-color;
-    box-shadow: none;
-    transition: top .2s $cubic, box-shadow .2s $cubic;
-    &.is-stuck {
-      transition: top .3s .1s $cubic, box-shadow .3s .3s $cubic;
-      position: fixed !important;
-      top: 0;
-      margin-top: 0;
-      // box-shadow: $elevation2;
-      background-color: #363636;
-      .navbar-logo {
-        filter : invert(1);
-        background-color: transparent;
-        height: 4.5rem;
+  z-index: 101 !important;
+  @media screen and (min-width: 769px) {
+    position: absolute !important;
+    &.is-fixed-top {
+      top: -6rem;
+      margin-top: 6rem;
+      will-change: top, box-shadow, background-color;
+      box-shadow: none;
+      background-color: transparent !important;
+      transition: top .2s $cubic, box-shadow .2s $cubic;
+      &.is-stuck {
+        transition: top .3s .1s $cubic, box-shadow .3s .3s $cubic;
+        position: fixed !important;
+        top: 0;
+        margin-top: 0;
+        // box-shadow: $elevation2;
+        background-color: $primary !important;
+        background-color: #363636;
+        .navbar-logo {
+          filter : invert(1);
+          background-color: transparent;
+          height: 2.5rem;
+        }
+        a { color: white;}
       }
-      a { color: white;}
     }
-  }
-  
-  .navbar-logo {
-    padding: 1rem 1.5rem;
-    background-color: $primary;
-    margin-left: -0.75rem;
-    height: 6rem;
-    // will-change: height;
-    // transition: height .1s $cubic;
+    
+    .navbar-logo {
+      // padding: 1rem 1.5rem;
+      background-color: $primary;
+      margin-left: -0.75rem;
+      height: 4rem;
+      // will-change: height;
+      // transition: height .1s $cubic;
+    }
   }
 
   &-item {
@@ -511,6 +521,17 @@ nav img {
   &.is-active {
     margin-left: -1rem;
     margin-right: -1rem;
+    height: 100vh;
+    .navbar-end {
+      padding-top: 1.5rem;
+      a {
+        font-size: 2rem;
+        display:block;
+        height: 5rem;
+        line-height: 5rem;
+        text-align: center;
+      }
+    }
   }
   .navbar-item {font-weight: 600; padding-left: 1.25em; padding-right: 1.25em;}
 }
