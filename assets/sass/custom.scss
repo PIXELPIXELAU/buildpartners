@@ -817,3 +817,11 @@ nav img {
   
 
 }
+
+#custom_page {
+  @media screen and (min-width: 1024px) {
+    .contact__content {
+      .py-3 {float: left; width: 50%;}}
+  }
+  
+}
