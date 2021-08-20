@@ -42,7 +42,7 @@ function stickyNavigation() {
   // console.log('navTop = ' + navTop);
   clearTimeout(waitForScroll)
   waitForScroll = setTimeout(function(){
-    console.log(`${scrollY}//${nav.offsetHeight}`);
+    // console.log(`${scrollY}//${nav.offsetHeight}`);
     if (window.scrollY > nav.offsetHeight) {
       // nav offsetHeight = height of nav
       // document.body.style.paddingTop = nav.offsetHeight + 'px';

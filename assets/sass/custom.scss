@@ -20,6 +20,7 @@ body {
 
 .button.is-primary.is-inverted {
   background-color: $white-ter !important;
+  border:1px solid rgba(0,0,0,.1);
 }
 
 .box {
@@ -32,6 +33,11 @@ body {
 
   &.is-fullheight {
     height: 100%;
+  }
+
+  .button.is-primary.is-inverted {
+    background-color: #FFFFFF !important;
+    border:1px solid rgba(0,0,0,.1);
   }
 }
 
@@ -107,7 +113,7 @@ body {
 
 .is-box-title {
   @extend .has-text-weight-semibold;
-  @extend .is-size-3;
+  @extend .is-size-4;
 }
 
 .is-section-header {
@@ -691,6 +697,7 @@ nav img {
 }
 
 @media screen and (max-width: 769px) {
+  body {overflow: hidden; width: 100vw;}
   $mobileScale:1.2;
   h1,.is-size-1 { font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
   h2,.is-size-2 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
@@ -703,7 +710,7 @@ nav img {
     span { display: block;}
   }
   .content {
-    h1,.is-size-1 { font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
+  h1,.is-size-1 { font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
   h2,.is-size-2 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale * $mobileScale !important;}
   h3,.is-size-3 {font-size: 1rem * $mobileScale * $mobileScale * $mobileScale !important;}
   h4,.is-size-4 {font-size: 1rem * $mobileScale * $mobileScale !important;}
@@ -731,6 +738,7 @@ nav img {
   .hero.img-bg.img-hero { 
     background-size: contain;
     padding-top: 30%;
+    background-repeat: no-repeat;
   }
   article.media {
     display: block;
@@ -742,6 +750,60 @@ nav img {
     }
   }
 
+  #page_home {
+    .hero.is-first {
+      padding: 0;
+      margin: 0;
+      .hero-body {
+        height: auto !important;
+        max-height: none !important;
+        padding-top:0;
+      }
+      .container-wrapper {
+        position: initial !important;
+        .container {padding: 0;}
+        .box {
+          position: initial !important; padding: 1rem 1rem 3rem 1rem;
+          .is-size-1 {font-size: 1.75rem !important; margin-bottom: 1.5rem !important;}
+          .buttons {
+            a {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+    .hero.img-bg.img-hero {
+      background-position: 0 0;
+    }
+
+  }
+  .hero-body {padding: 1rem 0;}
+  .section { padding: 0;}
+
   .button {width: 100%;}
+  .box:not(.image) {padding: 1rem !important;}
+  .is-right {
+    text-align: left;
+  }
+  .buttons.is-right {
+    a {justify-content: center !important; }
+
+  }
+
+  .lm-clients {
+    .column.is-2 {
+      width: 50%;
+      float: left;
+    }
+  }
+  .lm-testimonial-quote  {
+    .is-size-1,
+    .is-size-2 {
+      font-size: 1.75rem !important;;
+      text-align: left;
+    }
+  }
+  
 
 }
