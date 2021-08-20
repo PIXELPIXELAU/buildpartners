@@ -485,8 +485,7 @@ body {
       // background-color: $primary;
       @media screen and (min-width: 1200px) {
         margin-left: -0.75rem;
-        height: 8.5rem;
-        height: 8.5rem;
+        height: 5rem;
         left: -5rem;
         position: relative;
         transform: scale(1.7);
@@ -603,6 +602,9 @@ nav img {
 
 /* Home */
 #page_home {
+    .navbar-logo {
+      height: 8.5rem;
+    }
   .hero {
     &.is-first {
       padding-top: 1rem;
