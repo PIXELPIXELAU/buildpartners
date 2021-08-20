@@ -3,14 +3,17 @@
 {{with .Params.hero}}
 
   {{$heroImage := resources.Get .src }}
-  <section class="hero img-hero is-primary">
-    <img src="/img/headzone.svg" class="hero-overlay" />
+  <section class="hero img-hero is-primary is-first">
+    {{/*<img src="/img/headzone.svg" class="hero-overlay" />*/}}
     <div class="hero-body">
-      <div class="container">
+      
+        <div class="box-wrapper">
         <figure class="box image is-16by9">
-          <img src="{{ $heroImage.Permalink }}" alt="{{.heading}}" width="1600" height="900" />
-        </figure>
-
+            <img src="{{ $heroImage.Permalink }}" alt="{{.heading}}" width="1600" height="900" />
+          </figure>
+        </div>  
+        <div class="container-wrapper">
+        <div class="container">
         <div class="box is-overlain">
           <h1 class="is-overline mb-1">{{.overline}}</h1>
           <h2 class="has-text-black mb-6 title is-size-1">
@@ -24,6 +27,7 @@
             {{end}}
           </div>
           {{end}}
+        </div>
         </div>
       </div>
     </div>

@@ -1,10 +1,13 @@
 <nav class="navbar is-primary {{ if not .IsHome }}navbar-internal{{ end }} is-fixed-top" role="navigation" aria-label="main navigation">
   
   <div class="container">
-    {{ if not .IsHome }}<img src="/img/headzone.svg" class="navbar-overlay">{{ end }}
+{{/*    {{ if not .IsHome }}<img src="/img/headzone.svg" class="navbar-overlay">{{ end }} */}}
       <div class="navbar-brand">
           <a href="/">
-              <img src="/img/logo.svg" alt="{{ .Site.Title }}" class="navbar-logo">
+            {{$logoOnLight := resources.Get "img/svg/logo__horizontal--on-light.svg"}}
+            {{$logoOnDark := resources.Get "img/svg/logo__horizontal--on-dark.svg"}}
+              <img src="{{$logoOnLight.Permalink}}" alt="{{ .Site.Title }}" class="navbar-logo navbar-logo--on-light">
+              <img src="{{$logoOnDark.Permalink}}" alt="{{ .Site.Title }}" class="navbar-logo navbar-logo--on-dark" hidden>
           </a>
 
           <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">

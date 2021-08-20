@@ -433,7 +433,10 @@ body {
 .navbar {
   overflow: hidden;
   z-index: 101 !important;
-  @media screen and (min-width: 769px) {
+  .navbar-logo {
+    // margin-left: 1.75rem;
+  }
+  @media screen and (min-width: 1024px) {
     position: absolute !important;
     &.is-fixed-top {
       top: -6rem;
@@ -441,19 +444,31 @@ body {
       will-change: top, box-shadow, background-color;
       box-shadow: none;
       background-color: transparent !important;
-      transition: top .2s $cubic, box-shadow .2s $cubic;
+      transition: top .2s $cubic, box-shadow 0 $cubic;
       &.is-stuck {
         transition: top .3s .1s $cubic, box-shadow .3s .3s $cubic;
         position: fixed !important;
         top: 0;
         margin-top: 0;
-        // box-shadow: $elevation2;
-        background-color: $primary !important;
-        background-color: #363636;
+        box-shadow: $elevation2;
+        // background-color: $primary !important;
+        background-color: #363636 !important;
         .navbar-logo {
-          filter : invert(1);
-          background-color: transparent;
-          height: 2.5rem;
+          &.navbar-logo--on-light {
+          display: none;
+          } 
+          &.navbar-logo--on-dark {
+            display: inline;
+            } 
+          height: 5rem;
+          transform: scale(1.7);
+          top: -8px;
+          left:-.5rem;
+          position: relative;
+          // filter : invert(1);
+          // background-color: transparent;
+          // height: 2.5rem;
+          // box-shadow: none;
         }
         a { color: white;}
       }
@@ -461,9 +476,19 @@ body {
     
     .navbar-logo {
       // padding: 1rem 1.5rem;
-      background-color: $primary;
-      margin-left: -0.75rem;
-      height: 4rem;
+      // background-color: $primary;
+      @media screen and (min-width: 1200px) {
+        margin-left: -0.75rem;
+        height: 8.5rem;
+        height: 8.5rem;
+        left: -5rem;
+        position: relative;
+        transform: scale(1.7);
+        
+        top: -0.5rem;
+      }
+      // height: 4rem;
+      // box-shadow: 0 0 0 1rem $primary;
       // will-change: height;
       // transition: height .1s $cubic;
     }
@@ -498,7 +523,7 @@ body {
   &-internal {
     @media screen and (max-width: 769px) {
       .navbar-logo {
-        filter: invert(1);
+        // filter: invert(1);
       }
     }
   }
@@ -564,13 +589,49 @@ nav img {
   }
 }
 
-
+.navbar-brand {
+  img {
+    height: 5rem;
+  }
+}
 
 /* Home */
 #page_home {
- .box.is-overlain {
-   max-width: 30rem;
- }
+  .hero {
+    &.is-first {
+      padding-top: 1rem;
+      position: relative;
+      padding-bottom: 6rem;
+      .hero-body {
+        height: 100vh; overflow: hidden;
+        max-height: 950px;
+      }
+      .container-wrapper {
+        height: initial;
+        position: absolute;
+        left: 0; bottom: -3rem;
+        width: 100%;
+      }
+      .box-wrapper {
+        max-width: 90rem;
+        margin: auto;
+        img {object-fit: cover;}
+      }
+      .box.is-overlain {
+        position: relative;
+        
+        top:-6rem;
+        @media screen and (min-width: 1200px) {
+          left: -3.5rem;
+        }
+        max-width: 50rem;
+        z-index: 1;
+      }
+      .buttons.is-full {
+        a { width: auto;}
+      }
+    }
+  }
 }
 
 /* Projects */
