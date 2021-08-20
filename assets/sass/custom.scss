@@ -602,9 +602,17 @@ nav img {
 
 /* Home */
 #page_home {
+  .navbar {
     .navbar-logo {
       height: 8.5rem;
     }
+    &.is-stuck {
+      .navbar-logo {
+      height: 5rem;
+      }
+    }
+    }
+
   .hero {
     &.is-first {
       padding-top: 1rem;
