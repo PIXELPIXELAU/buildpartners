@@ -1,6 +1,5 @@
 +++
 description = ""
-draft = true
 linkedin = ""
 position = "Marketing Manager"
 src = "uploads/121a7883f.jpg"
