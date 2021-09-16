@@ -6,7 +6,7 @@
           <a href="/">
             {{$logoOnLight := resources.Get "img/svg/logo__horizontal--on-light.svg"}}
             {{$logoOnDark := resources.Get "img/svg/logo__horizontal--on-dark.svg"}}
-              <img src="{{$logoOnLight.Permalink}}" alt="{{ .Site.Title }}" class="navbar-logo navbar-logo--on-light">
+              <img src="{{$logoOnDark.Permalink}}" alt="{{ .Site.Title }}" class="navbar-logo navbar-logo--on-light">
               <img src="{{$logoOnDark.Permalink}}" alt="{{ .Site.Title }}" class="navbar-logo navbar-logo--on-dark" hidden>
           </a>
 
