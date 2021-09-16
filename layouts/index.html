@@ -209,27 +209,10 @@
   </div>
 </section>
 
-<section class=" py-6">
-  <div class="container">
-    <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
-  </div>
 
-  <div class="scroll__wrapper section">
-    <div class="columns lm-clients mb-6 is-vcentered">
-      {{ range (seq 14) }}
-          {{$index := string .}}
-          {{$logopath := printf "img/png/logo_%s.png" $index }}
-          {{$logo := resources.Get $logopath }}
-          {{if ne $logo nil}}
-            <div class="column is-2">
-              <img src="{{$logo.Permalink}}" height="48">
-            </div>
-          {{end}}
-      {{end}}
-    </div>
-  </div>
-  <div class="container">
+<section class="py-6">
   
+  <div class="container">
   {{ $projects := where .Site.RegularPages "Section" "projects"}}
   <blockquote class="lm-testimonial py-6">
     {{ range first 1 $projects }}
@@ -254,6 +237,25 @@
       />
     </div> -->
   </blockquote>
+  </div>
+  <div class="container">
+    <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
+  </div>
+
+  <div class="scroll__wrapper section">
+    <div class="columns lm-clients mb-6 is-vcentered">
+      {{ range (seq 14) }}
+          {{$index := string .}}
+          {{$logopath := printf "img/png/logo_%s.png" $index }}
+          {{$logo := resources.Get $logopath }}
+          {{if ne $logo nil}}
+            <div class="column is-2">
+              <img src="{{$logo.Permalink}}" height="48">
+            </div>
+          {{end}}
+      {{end}}
+    </div>
+  </div>
 </section>
 
 {{/*  <section class="section pb-2">
