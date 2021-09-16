@@ -1,3 +1,4 @@
+$blackish : #363636;
 .has-text-shadow { text-shadow: 1px 0 rgba(0,0,0,.5);}
 
 // Lazy bum
@@ -437,19 +438,23 @@ body {
 }
 
 .navbar {
+  
   overflow: hidden;
   z-index: 101 !important;
   .navbar-logo {
     // margin-left: 1.75rem;
   }
+
   @media screen and (min-width: 1024px) {
     position: absolute !important;
+    
     &.is-fixed-top {
       top: -6rem;
       margin-top: 6rem;
       will-change: top, box-shadow, background-color;
       box-shadow: none;
-      background-color: transparent !important;
+      // background-color: transparent !important;
+      background-color: $blackish !important;
       transition: top .2s $cubic, box-shadow 0 $cubic;
       &.is-stuck {
         transition: top .3s .1s $cubic, box-shadow .3s .3s $cubic;
@@ -458,7 +463,7 @@ body {
         margin-top: 0;
         box-shadow: $elevation2;
         // background-color: $primary !important;
-        background-color: #363636 !important;
+        background-color: $blackish !important;
         .navbar-logo {
           &.navbar-logo--on-light {
           display: none;
@@ -488,9 +493,8 @@ body {
         height: 5rem;
         left: -5rem;
         position: relative;
-        transform: scale(1.7);
-        
-        top: -0.5rem;
+        transform: scale(1);
+        // top: -0.5rem;
       }
       // height: 4rem;
       // box-shadow: 0 0 0 1rem $primary;
@@ -615,12 +619,16 @@ nav img {
 
   .hero {
     &.is-first {
+      &.is-primary {
+        // background-color: $blackish;
+      }
       padding-top: 1rem;
       position: relative;
       padding-bottom: 6rem;
       .hero-body {
         height: 100vh; overflow: hidden;
         max-height: 950px;
+        padding:0;
       }
       .container-wrapper {
         height: initial;
@@ -629,7 +637,7 @@ nav img {
         width: 100%;
       }
       .box-wrapper {
-        max-width: 90rem;
+        // max-width: 90rem;
         margin: auto;
         img {object-fit: cover;}
       }
