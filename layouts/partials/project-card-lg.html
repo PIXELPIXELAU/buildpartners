@@ -1,45 +1,58 @@
 {{$image := resources.Get .Params.image }}
-<section class="hero is-primary is-medium img-bg py-5" {{if ne $image nil }}style="--image: url('{{ $image.Permalink }}');"{{end}}>
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-5-desktop is-offset-7-desktop">
-                    <div class="box" style="padding: 2rem;">
-                        <h2 class="is-overline">Featured Project, Location</h2>
-                        <h1 class="is-box-title has-text-black mb-5">{{ .Title }}</h1>
-                        <a class="button is-primary" style="width: 66%;" href="{{ .Permalink }}">View</a>
-                    </div>
-                </div>
-            </div>
+<section
+  class="hero is-primary is-medium img-bg py-5"
+  {{if
+  ne
+  $image
+  nil
+  }}style="--image: url('{{ $image.Permalink }}');"
+  {{end}}
+>
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-5-desktop is-offset-7-desktop">
+          <div class="box" style="padding: 2rem">
+            <h2 class="is-overline">Featured Project, Location</h2>
+            <h1 class="is-box-title has-text-black mb-5">{{ .Title }}</h1>
+            <a
+              class="button is-primary"
+              style="width: 66%"
+              href="{{ .Permalink }}"
+              >View</a
+            >
+          </div>
         </div>
+      </div>
     </div>
-    <div class="hero-foot">
-        <div class="container">
-            <div class="columns is-hidden-touch">
-                {{ range .Params.Zones.Photos }}
-                {{$image := resources.Get . }}
-                <div class="column is-2">
-                    <figure class="image is-16by9 has-shadow">
-                        {{if ne $image nil}}
-                        <img alt="" src="{{$image.Permalink}}">
-                        {{end}}
-                    </figure>
-                </div>
-                {{ end }}
-            </div>
+  </div>
+  {{/*
+  <div class="hero-foot">
+    <div class="container">
+      <div class="columns is-hidden-touch">
+        {{ range .Params.Zones.Photos }} {{$image := resources.Get . }}
+        <div class="column is-2">
+          <figure class="image is-16by9 has-shadow">
+            {{if ne $image nil}}
+            <img alt="" src="{{$image.Permalink}}" />
+            {{end}}
+          </figure>
+        </div>
+        {{ end }}
+      </div>
 
-            <div class="columns is-hidden-desktop is-mobile px-4">
-                {{ range .Params.Zones.Photos }}
-                {{$image := resources.Get . }}
-                <div class="column">
-                    <figure class="image is-16by9 has-shadow">
-                        {{if ne $image nil}}
-                        <img alt="" src="{{$image.Permalink}}">
-                        {{end}}
-                    </figure>
-                </div>
-                {{ end }}
-            </div>
+      <div class="columns is-hidden-desktop is-mobile px-4">
+        {{ range .Params.Zones.Photos }} {{$image := resources.Get . }}
+        <div class="column">
+          <figure class="image is-16by9 has-shadow">
+            {{if ne $image nil}}
+            <img alt="" src="{{$image.Permalink}}" />
+            {{end}}
+          </figure>
         </div>
+        {{ end }}
+      </div>
     </div>
+  </div>
+  */}}
 </section>
