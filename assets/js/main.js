@@ -33,7 +33,7 @@ const handleSubmit = (e) => {
     myForm.nextElementSibling.hidden = false
 
   }).catch((error) =>
-    alert(error))
+    alert('We\'re sorry but there has been an issue submitting your form. Please contact us for further assistance.'))
 }
 document.querySelector("form").addEventListener("submit", handleSubmit);
 
