@@ -35,7 +35,8 @@ const handleSubmit = (e) => {
   }).catch((error) =>
     alert('We\'re sorry but there has been an issue submitting your form. Please contact us for further assistance.'))
 }
-document.querySelector("form").addEventListener("submit", handleSubmit);
+const form = document.querySelector("form");
+if (form) form.addEventListener("submit", handleSubmit);
 
 
 
