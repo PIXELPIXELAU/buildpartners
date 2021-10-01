@@ -830,17 +830,30 @@ nav img {
 
 }
 
-// #custom_page {
-//   @media screen and (min-width: 1024px) {
-//     .contact__content {
-//       // .py-3 {float: left; width: 50%;}
-//     }
-//   }
+#custom_page {
+  @media screen and (min-width: 1024px) {
+    .contact__content {
+      display: flex;
+
+    flex-wrap: wrap;
+
+      .py-3 {
+        flex: 50%;
+
+      }
+    }
+  }
   
-// }
+}
 
+.has-margin-auto {
+  margin: auto;
+}
+.has-max-width-tablet {
+  max-width: 780px;
 
-@media screen and (min-width: 769px) {
+}
+@media screen and (min-width: 780px) {
   .has-animate-scroll {
     animation: scrolloverflow 30s infinite linear;
   }
