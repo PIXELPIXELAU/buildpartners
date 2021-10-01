@@ -16,21 +16,28 @@ window.app = {
     })
   }
 
-const form = document.querySelector("form");
-if (form && form.length > 0) {
-  form.addEventListener("submit", handleSubmit);
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    let myForm = document.getElementById('pizzaOrder');
-    let formData = new FormData(myForm)
-    fetch('/', {
-      method: 'POST',
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString()
-    }).then(() => console.log('Form successfully submitted')).catch((error) =>
-      alert(error))
-  }
+  
+  
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  let myForm = document.getElementById('form__contact');
+  let formData = new FormData(myForm)
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  }).then(() => {
+
+    myForm.hidden = true
+    myForm.nextElementSibling.hidden = false
+
+  }).catch((error) =>
+    alert(error))
 }
+document.querySelector("form").addEventListener("submit", handleSubmit);
+
+
 
   })();
 

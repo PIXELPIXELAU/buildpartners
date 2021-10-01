@@ -2,86 +2,104 @@
 
 <section class="container py-6 px-4">
   <h1 class="is-box-title has-text-black mb-6">{{ .Title }}</h1>
-  <div class="columns">
-    
-    <div class="column contact__content">
-      {{ $section := "locations"}}
 
-      {{ range (where .Site.RegularPages "Section" "locations" ) }}
-      <div class="py-3">
-            <!-- <h2 class="is-size-3 has-text-weight-semibold mb-2">Head Office</h2> -->
-            <ul class="lm-location mb-1 mt-3">
-                <li><p class="title is-size-5 is-uppercase mb-4">{{if eq .Title "Noosa"}}Head Office{{else}}{{.Title}}{{end}}</p></li>
-                <li>
-                    <a class="" href="mailto:{{ .Params.email }}"><i class="fas fa-envelope fa-fw has-text-primary"></i> {{ .Params.email }}&nbsp;</a>
-                </li>
-                <li>
-                    <a class="" href="tel:+61{{ replace .Params.phone " " "" }}"><i class="fas fa-phone fa-fw has-text-primary"></i> {{ .Params.phone }}&nbsp;</a>
-                </li>
-                {{$address := replace .Params.address "\n" "<br />" | safeHTML}}
-                <li class="py-3">{{$address}}</li>
-            </ul>
-          </div>
-      {{end}}
 
-    </div>
-    {{/*
-    <div class="column">
-      <p class="title is-size-4">Send us an Enquiry</p>
-      <form name="contact" method="POST" netlify>
-        <div class="field">
-          <label for="name" class="label">Your name</label>
-          <div class="control">
-            <input name="name" type="text" class="input" placeholder="John Doe" />
+
+    <div class="columns">
+
+      <div class="column contact__content">
+        {{ $section := "locations"}}
+        {{ range (where .Site.RegularPages "Section" "locations" ) }}
+        <div class="py-3">
+              <!-- <h2 class="is-size-3 has-text-weight-semibold mb-2">Head Office</h2> -->
+              <ul class="lm-location mb-1 mt-3">
+                  <li><p class="title is-size-5 is-uppercase mb-4">{{if eq .Title "Noosa"}}Head Office{{else}}{{.Title}}{{end}}</p></li>
+                  <li>
+                      <a class="" href="mailto:{{ .Params.email }}"><i class="fas fa-envelope fa-fw has-text-primary"></i> {{ .Params.email }}&nbsp;</a>
+                  </li>
+                  <li>
+                      <a class="" href="tel:+61{{ replace .Params.phone " " "" }}"><i class="fas fa-phone fa-fw has-text-primary"></i> {{ .Params.phone }}&nbsp;</a>
+                  </li>
+                  {{$address := replace .Params.address "\n" "<br />" | safeHTML}}
+                  <li class="py-3">{{$address}}</li>
+              </ul>
+            </div>
+        {{end}}
+  
+      </div>
+
+      <div class="column is-5">
+        <form id="form__contact" name="contact" method="POST" netlify netlify-honeypot="website">
+          <p class="title is-size-4">Send us an Enquiry</p>
+          <div hidden>
+              <input name="website" readonly>
           </div>
-        </div>
-    
-        <div class="field">
-          <label for="email" class="label">Your email</label>
-          <div class="control">
-            <input
-              name="email"
-              type="email"
-              class="input"
-              placeholder="john@example.com"
-            />
+          <div class="field">
+            <label for="name" class="label">Your name</label>
+            <div class="control">
+              <input name="name" type="text" class="input" placeholder="John Doe" />
+            </div>
           </div>
-        </div>
-    
-        <div class="field">
-          <label for="subject" class="label">Subject line</label>
-          <div class="control">
-            <input
-              name="subject"
-              type="text"
-              class="input"
-              placeholder="Your subject"
-            />
-          </div>
-        </div>
-    
-        <div class="field">
-          <label for="message" class="label">Your message</label>
-          <div class="control">
-            <textarea
-              name="message"
-              class="textarea"
-              placeholder="Provide us with a brief summary of your project."
-            ></textarea>
-          </div>
-        </div>
-    
-        <div class="field mt-6">
-          <div class="control">
-            <button class="button is-primary" type="submit">Submit</button>
-          </div>
-        </div>
-      </form>
       
-    </div>
-    */}}
+          <div class="field">
+            <label for="email" class="label">Your email</label>
+            <div class="control">
+              <input
+                name="email"
+                type="email"
+                class="input"
+                placeholder="john@example.com"
+              />
+            </div>
+          </div>
+      
+          <div class="field">
+            <label for="subject" class="label">Subject line</label>
+            <div class="control">
+              <input
+                name="subject"
+                type="text"
+                class="input"
+                placeholder="Your subject"
+              />
+            </div>
+          </div>
+      
+          <div class="field">
+            <label for="message" class="label">Your message</label>
+            <div class="control">
+              <textarea
+                name="message"
+                class="textarea"
+                placeholder="Provide us with a brief summary of your project."
+              ></textarea>
+            </div>
+          </div>
+      
+          <div class="field mt-6">
+            <div class="control">
+              <button class="button is-primary" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+        <article class="message is-primary" hidden="hidden">
+          <div class="message-header">
+            <p>Your enquiry has been submitted</p>
+            
+          </div>
+          <div class="message-body content">
+            <p>Thank-you for your enquiry.</p>
+            <p>One of our team members will be in contact with you shortly.</p>
+          </div>
+        </article>
+        
+      </div>
+      </div>
+    
+      
+    
 
-  </div>
+  
   
 
   
