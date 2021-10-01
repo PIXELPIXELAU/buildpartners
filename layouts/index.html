@@ -39,15 +39,12 @@
 
 
 
-<section class="hero img-bg img-hero is-primary" 
-  {{with .Params.intro.src }}
-    {{$introImage := resources.Get .}}
-    {{if ne $introImage nil }}style="--image: url('{{ $introImage.Permalink }}');"{{end}}
-  {{end}}
-  
-  >
+<section class="hero img-bg img-hero is-primary" >
   <div class="hero-body">
-    <div class="container">
+    <div class="container" {{with .Params.intro.src }}
+    {{$introImage := resources.Get .}}
+    {{if ne $introImage nil }}style="background-image: url('{{ $introImage.Permalink }}'); background-size:cover; background-repeat:no-repeat;"{{end}}
+  {{end}}>
       <div class="box is-overlain is-right content" style="max-width: 550px">
         <h2 class="is-overline mb-1">{{ .Params.intro.overline }}</h2>
         <h3 class="is-box-title has-text-black mb-2 mt-3">
@@ -209,10 +206,27 @@
   </div>
 </section>
 
-
-<section class="py-6">
-  
+<section class=" py-6">
   <div class="container">
+    <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
+  </div>
+
+  <div class="scroll__wrapper section">
+    <div class="columns lm-clients mb-6 is-vcentered">
+      {{ range (seq 14) }}
+          {{$index := string .}}
+          {{$logopath := printf "img/png/logo_%s.png" $index }}
+          {{$logo := resources.Get $logopath }}
+          {{if ne $logo nil}}
+            <div class="column is-2">
+              <img src="{{$logo.Permalink}}" height="48">
+            </div>
+          {{end}}
+      {{end}}
+    </div>
+  </div>
+  <div class="container">
+  
   {{ $projects := where .Site.RegularPages "Section" "projects"}}
   <blockquote class="lm-testimonial py-6">
     {{ range first 1 $projects }}
@@ -237,37 +251,18 @@
       />
     </div> -->
   </blockquote>
-  </div>
-  <div class="container">
-    <h2 class="is-section-header">{{ .Params.WhoWeWork.Headline }}</h2>
-  </div>
-
-  <div class="scroll__wrapper section">
-    <div class="columns lm-clients mb-6 is-vcentered">
-      {{ range (seq 14) }}
-          {{$index := string .}}
-          {{$logopath := printf "img/png/logo_%s.png" $index }}
-          {{$logo := resources.Get $logopath }}
-          {{if ne $logo nil}}
-            <div class="column is-2">
-              <img src="{{$logo.Permalink}}" height="48">
-            </div>
-          {{end}}
-      {{end}}
-    </div>
-  </div>
 </section>
 
-{{/*  <section class="section pb-2">
+<section class="section pb-2">
   <div class="container">
     <h2 class="title is-uppercase">Expertise</h2>
   </div>
-</section>  */}}
+</section>
 
 <section class="container pt-2 pb-6 mb-6">
-  {{/*  <h2 class="is-section-header">
+  <h2 class="is-section-header">
     How can you get the most out of your project?
-  </h2>  */}}
+  </h2>
 
   <div class="columns">
     <div class="column is-8">
