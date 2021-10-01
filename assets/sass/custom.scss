@@ -838,3 +838,14 @@ nav img {
 //   }
   
 // }
+
+
+@media screen and (min-width: 769px) {
+  .has-animate-scroll {
+    animation: scrolloverflow 30s infinite linear;
+  }
+  @keyframes scrolloverflow {
+    from {margin-left: 0%}
+    to {margin-left: -100%}
+  }
+}
