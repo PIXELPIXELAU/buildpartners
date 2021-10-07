@@ -1,9 +1,8 @@
 +++
 description = ""
-draft = true
 linkedin = ""
 position = "Project and Costing Coordinator "
-src = ""
+src = "uploads/fio.jpg"
 title = "Fiorella Caceres"
 weight = 0
 
