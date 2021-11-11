@@ -12,13 +12,14 @@
     {{ $pages := .RegularPages }} {{range $pages}}
     <div class="pb-6">
       <article class="media">
+        {{$avatar := resources.Get .Params.src }} {{if ne $avatar nil}}
         <figure class="media-left">
           <figure class="image is-128x128">
-            {{$avatar := resources.Get .Params.src }} {{ $avatar :=
-            $avatar.Resize "128x" }}
+            {{ $avatar := $avatar.Resize "128x" }}
             <img class="has-elevation" src="{{$avatar.Permalink}}" />
           </figure>
         </figure>
+        {{end}}
         <div class="media-content">
           <div class="content ml-6">
             <p class="is-overline mb-0">{{.Params.position}}</p>
